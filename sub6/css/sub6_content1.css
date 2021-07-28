@@ -1,0 +1,14 @@
+#content {width:100%; margin:0 auto; }
+
+.content_area {font-family:'Nanum Gothic', sans-serif;}
+.content_area .title {font-family:'Nanum Gothic', sans-serif; font-weight:700; font-size:1.95em; color:#333; text-align:center; 
+    display:block; width:fit-content; margin:0 auto; padding-top:300px; padding-bottom:80px; line-height:1.9em; position:relative;}
+.content_area .title span:nth-of-type(1) {color:rgba(218,41,28,.8);}
+
+.content_1 {width:600px; margin:40px auto 180px; overflow:hidden; padding:0;}
+.content_1 label {display:block; margin:10px;}
+.content_1 input {width:90%;}
+.content_1 textarea {width:90%;}
+.content_1 #success {width:90%; margin:0 auto;}
+.content_1 #success strong {text-align:center;}
+.content_1 button {width:94.5%;}

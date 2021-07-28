@@ -1,0 +1,134 @@
+@charset "utf-8";
+
+/* CSS Reset */
+
+html, body, div , span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, input {margin: 0; padding: 0; border: 0; font-size: 100%;}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section{display: block;}
+body{font-family: "돋움", Dotum,"굴림",Gulim, sans-serif; font-size: 18px;
+  color: #333}
+ol, ul{list-style: none;}
+table{border-collapse: collapse; border-spacing: 0;}
+address{font-style: normal}
+a{color: #333; text-decoration: none}
+img{border: 0; vertical-align: top}
+
+.hidden{display: block; position: absolute;
+ left: -1000%; width: 1px; height: 1px;
+  overflow: hidden; color: #fff}
+
+ /*헤드라인 폰트 연결 */
+ @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+ /* font-family: 'Nanum Gothic', sans-serif; font-weight:400 700 800; */
+
+ @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+ /* font-family: 'Nanum Myeongjo', serif; font-weight:400 700 800; */
+
+/*skipNav*/
+#skipNav{position:relative; width:100%; overflow:hidden; z-index:300;}
+#skipNav a{display:block; height:1px; margin-bottom:-1px;
+           overflow:hidden; text-align:center; text-decoration:none; color:#333; font-size:16px;}
+#skipNav a:hover,#skipNav a:focus,#skipNav a:active{display:block; height:auto; padding:10px 0; background:#f2f2f2;}
+/*entire wrap*/
+.wrap {width:100%; overflow:hidden;}
+/* Header */
+#headerArea {width:100%; height:150px; color:#333; background:#fff; overflow:hidden; position:fixed; top:0; z-index:100;}
+#headerArea a {font-family:'Nanum Gothic', sans-serif; color:#333;}
+.header_inner {width:1200px; margin:0 auto;}
+.top_menu {width:1200px; position:relative; z-index:200; overflow:hidden;}
+.top_menu ul {float:right;}
+.top_menu ul li>a {font-size:.7em;}
+.top_menu .login {padding: 6px 34px 7px 0; float:left;}
+.top_menu .join {padding: 6px 60px 7px 0; float:right;}
+.top_menu .wellcome {padding: 6px 24px 7px 0; float:left;}
+.top_menu .logout {padding: 6px 34px 7px 0; float:left;}
+.top_menu .change_info {padding: 6px 60px 7px 0; float:right;}
+/* top_menu hover End */
+
+.logo {margin-top:15px;}
+.logo a {display:block; width:305px; height:44px; margin:0 auto; background: url(../../common/images/logo.png) 0 0 no-repeat; text-indent: -9999px; overflow:hidden;}
+
+#content{width:700px; margin:160px auto 120px; position:relative;}
+.member_delete {display:block; padding:9px 40px; position:absolute; right:40px; top:111px; background:rgba(218,41,28,.8); border-radius:0 0 20px 20px; 
+  font-family:'Nanum Gothic', sans-serif; color:#fff;}
+#content form {padding:50px 15px; border:4px solid rgba(218,41,28,.7); border-radius:30px;}
+#content form>span {display:block; width:100%; margin:0 auto 20px;}
+#content span {font-size:.9em; text-align:center; color:rgba(218,41,28,.8);}
+h2 {font-family:'Nanum Gothic', sans-serif; font-size:20px; text-align:center; color:#fff; font-weight:700; letter-spacing:2px;
+      border-radius:50px; width:180px; margin:0 auto 50px; padding:15px 40px; background:rgba(218,41,28,.8);}
+table{font-family:'Nanum Gothic', sans-serif; font-size:18px; width:90%; margin:0 5%; color:#666; letter-spacing:1px;}
+th,td{padding:13px;}
+th{width:30%}
+td{width:70%}
+tr:nth-of-type(1), tr:nth-of-type(5) {position:relative;}
+tr:nth-of-type(1) td {font-size:20px; font-weight:700; padding:10px 20px 15px;}
+tr:nth-of-type(5) td, tr:nth-of-type(5) th  {padding-bottom:35px;}
+#loadtext, #loadtext2 {font-size:.8em; position:absolute; left:29%; bottom:5px;}
+input, select{width:90%; border-radius:10px; padding:15px 0 15px 5%; font-size:1em; border:0; background:#eee; outline:0;}
+#hp1 {width:20%; padding:14px 10px; text-align:center;}
+#hp2 {width:27%;}
+#hp3 {width:28%;}
+#email1 {width:38.5%;}
+#email2 {width:39%;}
+table tr:last-child td{text-align:center; padding:40px 0 0;}
+table tr:last-child td a {font-family:'Nanum Gothic', sans-serif; font-weight:700; color:#fff; background:#ccc; display:block; text-align:center; padding:15px 60px; border-radius:30px;}
+table tr:last-child td a:nth-of-type(1) {float:left; margin-left:50px; background:rgba(218,41,28,.8);}
+table tr:last-child td a:nth-of-type(2) {float:right; margin-right:50px; background:#999;}
+tr th label {position:relative;}
+tr th label span {color:rgba(218,41,28,.8);}
+
+/* Footer Start */
+#footerArea {width:100%; height:345px; background-color: rgb(101,100,96);}
+#footerArea .footer_inner {width: 1200px; margin:0 auto;}
+#footerArea .topMove {display:none; width:80px; height:52px; padding-top:27px; font-size:1.22em; background:rgba(218,41,28,.8); border-radius:20px; z-index:20;
+  position:fixed; left:50%; margin-left:610px; bottom:100px; font-family:'Arial','sans-serif'; font-weight:700; text-transform:capitalize; color:#fff; text-align:center;}
+/* footer_top */
+.footer_top {width:720px; margin:0 auto;}
+.footer_top .f_menu {float:left; position:relative;}
+.footer_top .f_menu>li {margin: 60px 40px 60px 0; float:left;}
+.footer_top .f_menu>li>a {color:#fff; font-weight:bold; font-size:.75em; position:relative;}
+.footer_top .f_menu>li:nth-last-child(1)>a {font-family:'Nanum Gothic','sans-serif'; display:block; width:90px; color:#333; padding:3px 22px 5px 18px; font-size:.8em;}
+.footer_top .f_menu>li a:after {content: ''; display: block; width:2px; height:10px; background:#fff;
+  position:absolute; right:-22px; bottom:2px;}
+.footer_top .f_menu>li:nth-last-child(1) a::after {display:none;}
+.footer_top .f_menu .family {float:right; margin-right:0; background:#fff; border:1px solid #ccc; position:absolute; right:-135px; top:-4px; border-radius:4px;}
+.footer_top .f_menu .family .fa_title span {display:block; width:30px; height:30px; position:absolute; right:0; top:0;}
+.footer_top .f_menu .family .fa_title span::before {content:''; display:block; width:10px; height:10px; background:rgb(101,100,96); transform:rotate(45deg);
+  position:absolute; right:13px; top:12px; transition:all .1s linear;}
+.footer_top .f_menu .family .fa_title span::after {content:''; display:block; width:20px; height:8px; background:#fff;
+  position:absolute; right:9px; top:17px; transition:all .1s linear;}
+.footer_top .f_menu .family .fa_title .show::before {top:5px;}
+.footer_top .f_menu .family .fa_title .show::after {top:2px;}
+.family .fam_list {width:100%; height:144px; overflow:auto; position:absolute; border:1px solid #ccc; border-bottom:0; bottom:28px; left:-1px; background:#fff; display:none;}
+.family .fam_list li a {display:block; width:100%; padding:10px 0; font-weight:400; font-size:.75em; text-align:center;}
+.family .fam_list li:hover {background:#f3f3f3;}
+/* footer_top End */
+
+/* footer_logo */
+.footer_logo {display:block; margin:0 auto 52px; clear:both;} 
+/* footer_logo End */
+
+/*footer_bottom */
+.footer_bottom {float:left;}
+.footer_bottom address {margin:0 auto 3px 314px; text-align:center; color:#fff; font-weight:bold; font-size: .75em; line-height: 1.7em;}
+.footer_bottom p {margin:0 auto 34px 314px; text-align:center; color:#fff; font-weight:bold; font-size: .75em; line-height: 1.7em;}
+.sns {width:125px; margin:13px 0 0 192px; float:right;}
+.sns li {margin-right:10px; float:left;}
+.sns li a {display:block; text-indent: -9999px; overflow:hidden;}
+.sns .instar a {width:24px; height:24px; background:url(../../common/images/instar_icon.png) 0 bottom no-repeat; background-size:contain;}
+.sns .facebook a {width:13px; height:24px; background:url(../../common/images/face_icon.png) 0 bottom no-repeat; background-size:contain;}
+.sns .blog a {width:16px; height:24px; background:url(../../common/images/blog_icon.png) 0 bottom no-repeat; background-size:contain;}
+/* footer_bottom End */
+/* Footer End */

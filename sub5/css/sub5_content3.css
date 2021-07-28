@@ -1,0 +1,47 @@
+#content {width:100%; margin:0 auto; }
+
+.content_area {font-family:'Nanum Gothic', sans-serif;}
+.content_area .title {font-family:'Nanum Gothic', sans-serif; font-weight:700; font-size:1.95em; color:#333; text-align:center; 
+    display:block; width:fit-content; margin:0 auto; padding-top:300px; padding-bottom:80px; line-height:1.9em; position:relative;}
+.content_area .title span:nth-of-type(1) {color:rgb(225,84,73);}
+.content_area h3 {font-family:'Nanum Gothic', sans-serif; font-weight:700; font-size:1.6em; color:#666; text-align:center; padding:20px 20px; width:400px; 
+    border:6px solid rgb(225,84,73); border-radius:20px; margin:80px auto; background:#fff; position:relative;}
+
+.content_1 {width:1200px; margin:0 auto 100px; position:relative;}
+.con1_box {overflow:hidden;}
+.con1_box li {width:400px; margin:30px 75px 0 90px; float:left;}
+.con1_box li:nth-child(2) {font-size:1.33em; color:#fff; font-weight:700; text-align:center; float:right; margin:80px 110px 0 0; 
+    padding:140px 0; position:relative;}
+.con1_box li dl {margin:0 20px; padding:10px; border-radius:15px; font-weight:700; color:#666; text-align:center; background:rgb(233,127,119); transition:all .4s ease-out;}
+.con1_box li dl dt {font-size:1.33em; color:#fff; margin:20px 0;}
+.con1_box li dl dd {font-size:.95em; margin-top:2px; padding:20px 30px; background:#fff; font-size:1.13em; line-height:1.85em; border-radius:12px; position:relative;}
+
+.content_2 {background:#fafafa; padding-bottom:180px; overflow:hidden;}
+.con2_box {width:1200px; margin:0 auto; overflow:hidden;}
+.con2_box li {width:400px; float:left; }
+.con2_box li dl {margin:0 20px 40px; padding:5px; border-radius:15px; text-align:center; color:#666; background:rgb(233,127,119); transition:all .4s ease-out;}
+.con2_box li dl dt {font-size:1.13em; color:#fff; margin:10px 0; position:relative;}
+.con2_box li dl dd {background:#fff; font-size:.8em; margin-top:1px; padding:20px 0; font-size:.95em; line-height:2em;}
+.con2_box li dl dd:nth-last-child(1) {border-radius:0 0 12px 12px;}
+
+/* Hover Area Start */
+.con1_box li dl:hover {background:rgb(218,41,28); color:#333;}
+.con2_box li dl:hover {background:rgb(218,41,28); color:#333;}
+.con1_box li:nth-child(2):hover::after {background:rgb(218,41,28);}
+/* Hover End */
+
+/* After & Before Area */
+.content_area .title::before {content:''; display:block; width:75px; height:24px; position:absolute; left:50%; margin-left:-38px; top:138px;
+    background:url(../common/images/point.svg) 0 0 no-repeat; background-size:contain; transform:rotate(90deg);}
+.content_area .title::after {content:''; display:block; width:10px; height:10px; background:rgb(225,84,73); border-radius:50%;
+    position:absolute; left:50%; margin-left:-5px; bottom:0;}
+.content_area h3::before, .content_area h3::after {content:''; display:block; width:16px; height:16px; background:rgb(225,84,73); transform:rotate(45deg);
+    position:absolute; bottom:50%; margin-bottom:-8px;}
+.content_area h3::before {left:-12px;}
+.content_area h3::after {right:-12px;}
+.content_1::after {content:'+'; display:block; width:200px; height:100px; font-size:5em; color:rgb(225,84,73); text-align:center;
+   position:absolute; right:50%; margin-right:-120px; bottom:175px;}
+.con1_box li:nth-child(2)::after {content:''; display:block; width:200px; height:200px; transform:rotate(45deg); background:rgb(233,127,119); 
+        border-radius:20px; position:absolute; right:100px; top:50px; z-index:-1; transition:all .4s ease-out;}
+.con1_box li dl dd:nth-last-child(1)::after {display:none;}
+/* After & Before End */

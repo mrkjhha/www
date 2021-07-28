@@ -1,0 +1,33 @@
+#content {width:100%; margin:0 auto;}
+
+.content_area {font-family:'Nanum Gothic', 'Arial', sans-serif; position:relative;}
+.content_area h3 {font-family:'Nanum Gothic','Arial', sans-serif; font-weight:700; font-size:2.1em; text-align:center; text-transform:uppercase; 
+    display:block; margin:0 auto; padding:28px 0; line-height:1.9em; position:relative;}
+.content_area h3 span:nth-of-type(1) {color:rgba(218,41,28,.8);}
+
+.content_1, .content_2 {width:1100px; margin:0 auto; padding:250px 50px 0; overflow:hidden; position:relative;}
+.content_1 h3 {border-radius:20px 0 0 0; background:#49659f; color:#fff;}
+.content_2 h3 {border-radius:20px 20px 0 0; background:#1da1f2; color:#fff;}
+.right_box {width:590px; height:696px; float:left; border:2px solid #f0f0f0; border-radius:25px 0 0 25px;}
+.left_box {width:590px; height:540px; float:right; border:2px solid #f0f0f0; border-left:0; border-radius:0 0 25px 0;}
+.sub_title {font-weight:700; font-size:2.1em; text-align:center; line-height:1.8em; margin-top:90px; position:relative;}
+.sub_con {font-size:1.13em; text-align:justify; line-height:1.7em; padding:60px; color:#666; position:relative;}
+.right_box p span {color:rgb(252, 220, 125);}
+.left_box p span {color:rgba(218,41,28,.8); text-transform:uppercase;}
+.content_1 .facebook {width:500px; height:700px; float:right;}
+.content_2 .twitter {width:500px; height:500px; padding-top:40px; margin:0 auto 180px; overflow:auto; float:left; border:2px solid #f0f0f0;}
+
+/* After & Before Area */
+.content_area::before {content:''; display:block; width:100%; height:1px; background:#ccc; position:absolute; left:0; top:100px;}
+.sub_title::before {content:''; display:block; width:40px; height:42px; background:url(../images/content3/colon_right.svg)0 0 no-repeat; background-size:contain;
+    position:absolute;}
+.sub_title::after {content:''; display:block; width:40px; height:42px; background:url(../images/content3/colon_left.svg)0 0 no-repeat; background-size:contain;
+    position:absolute;}
+.content_1 .sub_title::before {right:70px; top:-10px;}
+.content_1 .sub_title::after {left:70px; top:-10px;}
+.content_2 .sub_title::before {right:30px; top:-20px;}
+.content_2 .sub_title::after {left:30px; top:-20px;}
+.content_1 .sub_con::after {content:'...'; display:block; font-size:2.8em; color:#49659f; text-align:center; margin-top:30px; letter-spacing:8px;}
+.content_2 .sub_con::after {content:'...'; display:block; font-size:2.8em; color:#1da1f2; text-align:center; margin-top:50px; letter-spacing:8px;}
+.content_2::before {content:''; display:block; width:75px; height:24px; position:absolute; left:50%; margin-left:-38px; top:113px;
+    background:url(../common/images/point.svg) 0 0 no-repeat; background-size:contain; transform:rotate(90deg);}

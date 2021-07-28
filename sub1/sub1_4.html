@@ -1,0 +1,86 @@
+<? 
+	session_start();
+    @extract($_SESSION);
+?>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>롯데알미늄</title>
+
+    <link rel="stylesheet" href="../common/css/common.css">
+    <link rel="stylesheet" href="./common/css/sub1common.css">
+    <link rel="stylesheet" href="./css/sub1_content4.css">
+        <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f52763a90c26ac43fef91ce13f70c7c4"></script>
+    <script src="./js/content_4/kakao_map.js"></script>
+    <script src="../mainjs/mainpopup.js"></script>
+    <script src="../common/js/prefixfree.min.js"></script>
+    <script src="https://kit.fontawesome.com/cd5818eb23.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="wrap">
+        <!-- Header Area -->
+        <? include "../common/sub_head.html" ?>
+        <!-- Header Area End -->
+        <div class="visual">
+            <img src="./common/images/sub1_visual.jpg" alt="">
+        </div>
+        <span></span>
+        <div class="sub_menu">
+            <h3>회사소개</h3>
+            <p>company introduction</p>
+            <ul>
+                <li><a href="sub1_1.html">기업개요</a></li>
+                <li><a href="sub1_2.html">비전</a></li>
+                <li><a href="sub1_3.html">경영철학</a></li>
+                <li class="current"><a href="sub1_4.html">오시는길</a></li>
+            </ul>
+        </div>
+
+        <article id="content">
+            <div class="title_area">
+                <div class="line_map">
+                    home &gt; 회사소개 &gt; <span>오시는길</span>
+                </div>
+                <h2>오시는길</h2>
+            </div>
+            <div class="content_area">
+                <div class="content_inner">
+                    <div id="kakaoMap"></div>                    
+                    <div class="con_info">
+                        <h3>contact us</h3>
+                        <ul>
+                            <li>
+                                <dl>
+                                    <dt>info.</dt>
+                                    <dd>서울특별시 동작구 보라매로 5길 51 (신대방동, 롯데타워)</dd>
+                                    <dd>TEL. 02-801-8000   FAX. 02-6234-2055</dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>public trans.</dt>
+                                    <dd><span class="second">2</span>신대방역 :<span>마을</span>동작 05-1<span>지선</span>6516, 6511, 5522A, 5524</dd>
+                                    <dd><span class="second">2</span>신림역 :<span>마을</span>03<span>지선</span>5525, 5522B, 5516, 6513</dd>
+                                    <dd><span class="seventh">7</span>신대방삼거리역 :<span>마을</span>05<span>지선</span>6516, 6514, 6513<span class="other_line">간선</span>153</dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </div>
+                </div>                
+            </div>
+        </article>
+        <!-- Footer Area -->
+        <? include "../common/sub_foot.html" ?>
+        <!-- Footer Area End -->
+    </div>
+    <!-- JQuery -->
+    <script src="../common/js/jquery-1.12.4.min.js"></script>
+    <script src="../common/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="../common/js/gnb.js"></script>
+    <script src="./js/content_2/sub1_scroll2.js"></script>
+</body>
+</html>

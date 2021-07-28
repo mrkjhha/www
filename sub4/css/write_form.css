@@ -1,0 +1,51 @@
+#contents {width:100%; margin:0 auto;}
+
+.content_area {font-family:'Nanum Gothic', sans-serif; width:100%; margin:0 auto 180px; position:relative; overflow:hidden;}
+.content_area h3 {font-family:'Arial', sans-serif; font-weight:700; font-size:2.3em; color:#333; text-align:center; text-transform:capitalize;
+    padding-top:180px; line-height:1.9em; position:relative;}
+.con_inner {width:1100px; margin:40px auto 0; padding:20px 50px; text-align:center;}
+
+#board_form {width:100%; margin:0 auto; position:relative;}
+.write_form {width:100%; border-radius:15px 15px 0 0; overflow:hidden;}
+#write_row1, #write_row2, #write_row3 {width:100%; overflow:hidden; margin-bottom:2px;}
+#write_row1 div {padding:15px 0;}
+#write_row1 .col1 {float:left; width:20%; background:rgba(218,41,28,.8); color:#fff;}
+#write_row1 .col2 {float:left; width:35%; padding-left:5%; text-align:left;}
+#write_row1 .col3 {float:right; width:40%; background:rgba(218,41,28,.8); color:#fff;}
+#write_row2 div, #write_row2 label {padding:15px 0; float:left;}
+#write_row2 .col1 {float:left; width:20%; background:rgba(218,41,28,.8); color:#fff;}
+#write_row2 .col2 {float:right; width:77%; padding:7px 2% 5px 0;}
+#write_row2 .col2 #subject {outline:0; width:98.5%; margin-left:0; padding:12px 0 12px 4%; font-size:20px; border:0; border-radius:10px; background:#eee;}
+#write_row3 .col1 {background:rgba(218,41,28,.8); color:#fff;}
+#write_row3 .col2 {width:99%; margin:20px auto;}
+#write_row3 .col2 textarea {font-family:'Nanum Gothic', sans-serif; width:92%; padding:20px 4%; line-height:1.9em; font-size:18px; color:#333;}
+
+.row4_wrap, .row5_wrap, .row6_wrap {width:33.33%; float:left;}
+.row4_wrap #write_row4, .row5_wrap #write_row5, .row6_wrap #write_row6 {width:100%;}
+#write_row4 .col1, #write_row5 .col1, #write_row6 .col1 {padding:15px 0; background:rgba(218,41,28,.8); color:#fff;}
+#write_row4 label, #write_row5 label, #write_row6 label {display:block; padding:10px 0 10px 30px; margin:0 auto;}
+#write_row4 input, #write_row5 input, #write_row6 input {display:block; margin:10px auto; text-align:center; font-size:16px;}
+.delete_ok {display:block; width:100%; font-size:14px; color:#fff; background:rgba(218,41,28,.8); padding:15px 0;}
+.empty {width:100%; height:49px; background:rgba(218,41,28,.4);}
+.row5_wrap {position:relative;}
+
+#write_button {width:fit-content; overflow:hidden; margin:50px auto 0; clear:both;}
+#write_button a {display:block; width:120px; text-align:center; float:left; margin-right:85px; padding:15px 45px; font-size:18px; color:#fff; border-radius:15px; background:rgba(218,41,28,.8);}
+#write_button a:nth-of-type(2) {margin-right:0;}
+
+#confirm {width:800px; padding:60px 0; border:1px solid rgba(218,41,28,.8); background:#fff; border-radius:15px; 
+    position:fixed; left:50%; top:50%; transform:translateX(-50%) translateY(-50%); display:none; z-index:5;}
+#confirm p {width:90%; font-family:'Nanum Gothic', sans-serif; text-align:center; margin:0 auto; font-size:22px; color:rgba(218,41,28,.8);}
+.confirmBtn_box {width:fit-content; margin:40px auto 0; overflow:hidden;}
+.confirmBtn_box a {display:block; float:left; width:180px; margin-right:80px; padding:15px 0; background:rgba(218,41,28,.8); border-radius:15px;
+    font-family:'Nanum Gothic', sans-serif; color:#fff;}
+.confirmBtn_box a:nth-of-type(2) {margin-right:0;}
+#confirmBg {width:100%; background:rgba(255,255,255,.8); position:fixed; left:0; bottom:0; z-index:1}
+/* After & Before Area */
+.content_area::before {content:''; display:block; width:100%; height:1px; background:#ccc; position:absolute; left:0; top:100px;}
+.before::before {content:''; display:block; width:12px; height:12px; background:rgba(218,41,28,.8); position:absolute; left:-20px; top:50%; transform:rotate(45deg) translateY(-63%);}
+.before::after {content:''; display:block; width:12px; height:12px; background:#fff; position:absolute; left:-14px; top:50%; transform:rotate(45deg) translateY(-63%);}
+.next::before {content:''; display:block; width:12px; height:12px; background:rgba(218,41,28,.8); position:absolute; right:-7px; top:50%; transform:rotate(45deg) translateY(-63%);}
+.next::after {content:''; display:block; width:12px; height:12px; background:#fff; position:absolute; right:-1px; top:50%; transform:rotate(45deg) translateY(-63%);}
+.row5_wrap::before {content:''; display:block; width:2px; height:100%; background:#fff; position:absolute; left:-1px; top:0;}
+.row5_wrap::after {content:''; display:block; width:2px; height:100%; background:#fff; position:absolute; right:-1px; top:0;}

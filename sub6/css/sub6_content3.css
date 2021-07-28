@@ -1,0 +1,30 @@
+.title_area h2 span:nth-of-type(1) {text-transform:none; color:rgb(225,84,73);}
+.title_area h2 span:nth-of-type(2) {color:rgba(90,91,159,.8);}
+
+#content {width:100%; margin:0 auto;}
+.content_area {font-family:'Nanum Gothic', 'Arial', sans-serif; position:relative; padding-top:300px;}
+.content_area .title {font-family:'Nanum Gothic','Arial', sans-serif; font-weight:700; font-size:1.8em; color:#666; text-align:center; text-transform:uppercase; 
+    display:block; width:fit-content; margin:0 auto; padding-top:300px; padding-bottom:120px; line-height:1.9em; position:relative;}
+.content_area h3 {font-family:'Nanum Gothic', sans-serif; font-weight:700; font-size:2.1em; color:#333; text-align:center; text-transform:uppercase; padding-top:300px; padding-bottom:90px; position:relative;}
+.clear {clear:both;}
+.content_1 {width:1000px; position:relative; margin:0 auto 180px;}
+.all {overflow:hidden;}
+.all a {display:block; width:860px; margin:0 auto; height:30px; background:rgb(233,127,119); padding:15px 70px; font-size:1.1em; border-radius:13px 13px 0 0;font-weight:700; color:#fff;}
+.all a::before {content:''; display:block; width:50px; height:2px; background:#fff; position:absolute; left:0; top:28px;}
+.all .a_hide {background:rgb(225,84,73);}
+.content_1 ul {text-transform:uppercase; font-weight:400;}
+.content_inner {background:#fff;}
+.left_qbox {float:left; width:496px; border:2px solid #fff; border-right:0;}
+.right_qbox {float:right; width:496px; border:2px solid #fff; border-left:0;}
+.content_1 ul li {border-bottom:2px solid #ccc; overflow:hidden;}
+.content_1 ul li:nth-last-child(1) {border-bottom:0;}
+.content_1 ul li .qes {background:#fff;}
+.content_1 ul li .ans {position:relative; background:#fafafa;}
+.content_1 ul li .qes span {font-size:1.22em; font-weight:normal; position:absolute; left:30px; top:30px; color:rgb(225,84,73);}
+.content_1 ul li .ans {padding:40px; line-height:1.95em; text-align:justify; font-size:.9em; color:#666; display:none; border:2px solid #999;}
+.content_1 ul li .qes a {display:block; padding:30px 40px 30px 80px; font-size:.95em; line-height:1.8em; color:#666; letter-spacing:3px; position:relative;}
+
+/* After & Before Area */
+.content_area::before {content:''; display:block; width:100%; height:340px; background:#fafafa; border-bottom:1px solid #eee; position:absolute; left:0; top:-190px; z-index:-1;}
+.content_area::after {content:''; display:block; width:75px; height:24px; position:absolute; left:50%; margin-left:-38px; top:138px;
+    background:url(../common/images/point.svg) 0 0 no-repeat; background-size:contain; transform:rotate(90deg);}

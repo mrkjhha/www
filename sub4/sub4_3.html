@@ -1,0 +1,94 @@
+<? 
+	session_start();
+    @extract($_SESSION);
+?>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>롯데알미늄</title>
+
+    <link rel="stylesheet" href="../common/css/common.css">
+    <link rel="stylesheet" href="./common/css/sub4common.css">
+    <link rel="stylesheet" href="./css/sub4_content3.css">
+
+    <script src="../mainjs/mainpopup.js"></script>
+    <script src="../common/js/prefixfree.min.js"></script>
+    <script src="https://kit.fontawesome.com/cd5818eb23.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="wrap">
+        <!-- Header Area -->
+        <? include "../common/sub_head.html" ?>
+        <!-- Header Area End -->
+        <div class="visual">
+            <img src="./common/images/sub4_visual.jpg" alt="">
+        </div>
+        <div class="sub_menu">
+            <h3>홍보센터</h3>
+            <p>promotional center</p>
+            <ul>
+                <li><a href="sub4_1.php">알미늄소식</a></li>
+                <li><a href="sub4_2.html">PR자료실</a></li>
+                <li class="current"><a href="sub4_3.html">롯데SNS</a></li>
+                <li><a href="sub4_4.html">공모전</a></li>
+            </ul>
+        </div>
+        <article id="content">
+            <div class="title_area">
+                <div class="line_map">
+                    home &gt; 홍보센터 &gt; <span>롯데SNS</span>
+                </div>
+                <h2>롯데SNS</h2>
+            </div>
+            <div class="content_area">
+                <div class="content_1">
+                    <div class="right_box">
+                        <h3>facebook</h3>
+                        <p class="sub_title"><span>설레는 봄에도</span><br>함께 가는 친구, 롯데</p>
+                        <p class="sub_con">롯데만의 새로운 소식과 다양한 이벤트가 기다리고 있는 페이스북 페이지로 여러분을 초대합니다. 
+                            이벤트의 참여는 페이스북 페이지내에서 댓글로 정답을 남기시면 참여가 가능합니다.</p>
+                    </div>
+                    <div class="facebook">
+                        <div id="fb-root"></div>
+                        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v10.0" nonce="hpg2pMra"></script>
+                        <div class="fb-page" data-href="https://www.facebook.com/lotte" data-tabs="timeline" data-width="500" data-height="700" data-small-header="false" 
+                                        data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                            <blockquote cite="https://www.facebook.com/lotte" class="fb-xfbml-parse-ignore">
+                                <a href="https://www.facebook.com/lotte" class="lotte_facebook">롯데 (LOTTE)</a>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_2">
+                    <h3>twitter</h3>
+                    <div class="con_inner">
+                        <div class="left_box">
+                            <p class="sub_title">가장 <span>hot</span> 한 문화생활</p>
+                            <p class="sub_con">롯데만의 새로운 소식과 다양한 이벤트가 기다리고 있는 페이스북 페이지로 여러분을 초대합니다. 
+                                이벤트의 참여는 페이스북 페이지내에서 댓글로 정답을 남기시면 참여가 가능합니다.</p>
+                        </div>
+                        <div class="twitter">
+                            <div class="snsContent">
+                                <a class="twitter-timeline" data-lang="ko" data-theme="light" href="https://twitter.com/lotte_ent">Tweets by LOTTE_ent</a>
+                                <script async src="https://platform.twitter.com/widgets.js"></script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!-- Footer Area -->
+        <? include "../common/sub_foot.html" ?>
+        <!-- Footer Area End -->
+    </div>
+    <!-- JQuery -->
+    <script src="../common/js/jquery-1.12.4.min.js"></script>
+    <script src="../common/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="../common/js/gnb.js"></script>
+    <script src="./common/js/sub4_scroll.js"></script>
+</body>
+</html>

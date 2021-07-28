@@ -1,0 +1,107 @@
+<div id="skipNav">
+    <a href="#content">본문 바로가기</a>
+    <a href="#gnb">글로벌 네비게이션 바로가기</a>
+</div>
+<!-- Header Start -->
+<header id="headerArea">
+    <div class="header_inner">
+        <!-- login & Join Start -->
+        <div class="top_menu">
+            <ul>
+                <?
+                    if(!$userid)
+                    {
+                ?>
+                <li class="login">
+                    <a href="../login/login_form.php">로그인</a>
+                </li>
+                <li class="join">
+                    <a href="../member/member_check.html">회원가입</a>
+                </li>
+                <?
+                    }
+                    else
+                    {
+                ?>
+                <li class="wellcome">
+                    <a href=""><?=$usernick?>님 환영합니다.</a>
+                </li>
+                <li class="logout">
+                    <a href="../login/logout.php">로그아웃</a>
+                </li>
+                <li class="change_info">
+                    <a href="../login/member_form_modify.php">정보수정</a>
+                </li>
+                <?
+                    }
+                ?>
+            </ul>
+        </div>
+        <!-- login & Join End -->
+        
+        <!-- logo Start -->
+        <h1 class="logo">
+            <a href="../index.html">롯데알미늄</a>
+        </h1>
+        <!-- logo End -->
+
+        <!-- GNB Start -->
+        <nav id="gnb">
+            <h2 class="hidden">글로벌네비게이션영역</h2>
+            <ul class="gnb_dropmenu">
+                <li class="dropmenu_1 menu">
+                    <h3><a href="../sub1/sub1_1.html">회사소개</a></h3>
+                    <ul class="depth_menu">
+                        <li><a href="../sub1/sub1_1.html">기업개요</a></li>
+                        <li><a href="../sub1/sub1_2.html">비전</a></li>
+                        <li><a href="../sub1/sub1_3.html">경영철학</a></li>
+                        <li><a href="../sub1/sub1_4.html">오시는길</a></li>
+                    </ul>
+                </li>
+                <li class="dropmenu_2 menu">
+                    <h3><a href="../sub2/sub2_1.html">사업소개</a></h3>
+                    <ul class="depth_menu">
+                        <li><a href="../sub2/sub2_1.html">인쇄&#47;포장</a></li>
+                        <li><a href="../sub2/sub2_2.html">전기&#47;전자</a></li>
+                        <li><a href="../sub2/sub2_3.html">산업자재</a></li>
+                        <li><a href="../sub2/sub2_4.html">판지소재</a></li>
+                    </ul>
+                </li>
+                <li class="dropmenu_3 menu">
+                    <h3><a href="../sub3/sub3_1.html">R&amp;D</a></h3>
+                    <ul class="depth_menu">
+                        <li><a href="../sub3/sub3_1.html">신규사업</a></li>
+                        <li><a href="../sub3/sub3_2.html">연구분야</a></li>
+                    </ul>
+                </li>
+                <li class="dropmenu_4 menu">
+                    <h3><a href="../sub4/sub4_1.html">홍보센터</a></h3>
+                    <ul class="depth_menu">
+                        <li><a href="../sub4/sub4_1.php">알미늄소식</a></li>
+                        <li><a href="../sub4/sub4_2.html">PR자료실</a></li>
+                        <li><a href="../sub4/sub4_3.html">롯데SNS</a></li>
+                        <li><a href="../sub4/sub4_4.html">공모전</a></li>
+                    </ul>
+                </li>
+                <li class="dropmenu_5 menu">
+                    <h3><a href="../sub5/sub5_1.html">채용센터</a></h3>
+                    <ul class="depth_menu">
+                        <li><a href="../sub5/sub5_1.html">인재상</a></li>
+                        <li><a href="../sub5/sub5_2.html">채용절차</a></li>
+                        <li><a href="../sub5/sub5_3.html">복리후생</a></li>
+                    </ul>
+                </li>
+                <li class="dropmenu_6 menu">
+                    <h3><a href="../sub6/sub6_1.html">고객센터</a></h3>
+                    <ul class="depth_menu">
+                        <li><a href="../sub6/sub6_1.html">온라인문의</a></li>
+                        <li><a href="../sub6/sub6_2.php">제품검색</a></li>
+                        <li><a href="../sub6/sub6_3.html">FAQ</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!-- GNB End -->
+    </div>
+</header>
+<!-- Header End -->

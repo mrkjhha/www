@@ -1,0 +1,440 @@
+<? 
+	session_start();
+    @extract($_POST);
+    @extract($_GET);
+    @extract($_SESSION);
+
+    $table = "news";
+?>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>롯데알미늄</title>
+    <link rel="shortcut icon" type="image/x-icon"  href="./favicon.ico">
+    <link rel="stylesheet" href="common/css/common.css">
+    <link rel="stylesheet" href="maincss/main.css">
+    <script src="./mainjs/mainpopup.js"></script>
+    <script src="common/js/prefixfree.min.js"></script>
+    <script src="https://kit.fontawesome.com/cd5818eb23.js" crossorigin="anonymous"></script>
+
+    <!--[if IE 9]>  
+          <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+
+</head>
+<?
+	include "./lib/dbconn.php";
+
+    // echo("
+    //         <script>
+    //         window.alert($news_scale);
+    //         window.alert($news_find);
+    //         </script>
+	// 	");
+
+    $scale=3;// 한 화면에 표시되는 글 수
+    
+	$sql = "select * from $table order by num desc";
+
+	$result = mysql_query($sql, $connect);
+
+	$total_record = mysql_num_rows($result); // 전체 글 수
+
+	// 전체 페이지 수($total_page) 계산 
+	if ($total_record % $scale == 0)     
+		$total_page = floor($total_record/$scale);      
+	else
+		$total_page = floor($total_record/$scale) + 1; 
+ 
+	if (!$page) // 페이지번호($page)가 0 일 때
+		$page = 1; // 페이지 번호를 1로 초기화
+ 
+	// 표시할 페이지($page)에 따라 $start 계산
+	$start = ($page - 1) * $scale;
+	$number = $total_record - $start;
+?>
+<body>
+    <div class="wrap">
+        <!-- Header Area -->
+        <? include "./common/main_head.html" ?>
+        <!-- Header Area End -->
+        <!-- Visual Start -->
+        <div class="visual">
+            <ul class="visual_img">
+                <li>
+                    <img src="images/main1.jpg" alt="">
+                </li>
+                <li>
+                    <img src="images/main2.jpg" alt="">
+                </li>
+                <li>
+                    <img src="images/main3.jpg" alt="">
+                </li>
+            </ul>
+            <ul class="visual_text">
+                <li>
+                    <dl>
+                        <dt>
+                            be the champion
+                        </dt>
+                        <dd>
+                            아시아를 선도하는 기업 롯데 알미늄이 도전합니다.
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>
+                            green company
+                        </dt>
+                        <dd>
+                            롯데 알미늄은 사람과 환경을 존중하고 지속가능경영을 실천합니다.
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>
+                            beyond expectation
+                        </dt>
+                        <dd>
+                            롯데 알미늄은 언제나 더 높은 목표를 향해 달려갑니다.
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+            <div class="visual_dock">
+                <span class="dock_init dock_1"></span>
+                <span class="dock_init dock_2"></span>
+                <span class="dock_init dock_3"></span>
+                <span class="ps"></span>
+            </div>
+        </div>
+        <!-- Visual End -->
+        <!-- Content Start -->
+        <article id="content">
+            <h2 class="hidden">본문콘텐츠영역</h2>
+            <!-- Business Start -->   
+            <section class="business">
+                <h3>business<span>사업분야</span></h3>   
+                <div class="bizcon_wrap">
+                    <ul>
+                        <li class="con_box">
+                            <div class="bizcon_1">
+                                <div class="con_title">
+                                    <h4><a href="sub2/sub2_1.html">인쇄&#47;포장</a></h4>
+                                    <p>printing &amp;packaging</p>
+                                </div>
+                                <ul class=item_list>
+                                    <li><a href="sub2/sub2_1.html">식품포장재</a></li>
+                                    <li><a href="sub2/sub2_1.html">약품포장재</a></li>
+                                    <li><a href="sub2/sub2_1.html">파우치류</a></li>
+                                    <li><a href="sub2/sub2_1.html">용기류</a></li>
+                                    <li><a href="sub2/sub2_1.html">라벨용</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="con_box">
+                            <div class="bizcon_2">
+                                <div class="con_title">
+                                    <h4><a href="sub2/sub2_2.html">전기&#47;전자</a></h4>
+                                    <p>electrical materials</p>
+                                </div>
+                                <ul class=item_list>
+                                    <li><a href="sub2/sub2_2.html">전선류</a></li>
+                                    <li><a href="sub2/sub2_2.html">2차전지소재</a></li>
+                                    <li><a href="sub2/sub2_2.html">가전&#47;자동차부품</a></li>
+                                    <li><a href="sub2/sub2_2.html">열교환기 Fin재용</a></li>
+                                    <li><a href="sub2/sub2_2.html">라벨용</a></li>
+                                </ul>                           
+                            </div>
+                        </li>
+                        <li class="con_box">
+                            <div class="bizcon_3">
+                                <div class="con_title">
+                                    <h4><a href="sub2/sub2_3.html">산업소재</a></h4>
+                                    <p>industrial materials</p> 
+                                </div>
+                                <ul class=item_list>
+                                    <li><a href="sub2/sub2_3.html">레진백</a></li>
+                                    <li><a href="sub2/sub2_3.html">실리콘활물질</a></li>
+                                    <li><a href="sub2/sub2_3.html">단열재</a></li>
+                                    <li><a href="sub2/sub2_3.html">건축자재</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="con_box">
+                            <div class="bizcon_4">
+                                <div class="con_title">
+                                    <h4><a href="sub2/sub2_4.html">판지소재</a></h4>
+                                    <p>corrugated cardboard</p>  
+                                </div>
+                                <ul class=item_list>
+                                    <li><a href="sub2/sub2_4.html">A형상자</a></li>
+                                    <li><a href="sub2/sub2_4.html">변형상자</a></li>
+                                    <li><a href="sub2/sub2_4.html">오프셋상자</a></li>
+                                    <li><a href="sub2/sub2_4.html">프리프린팅</a></li>
+                                    <li><a href="sub2/sub2_4.html">고급인쇄상자</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- Business End -->
+            <!-- Management Start -->
+            <section class="management">
+                <h3 class="hidden">지속가능경영</h3>
+                <p>: 사람과 환경을 존중하는 롯데 알미늄은 <span>지속가능경영</span>을 실천합니다</p>
+                <div class="management_wrap">
+                    <ul class="con_wrap">
+                        <li class="manag_con">
+                            <div class="lr_wrap">
+                                <div class="con_left">
+                                    <h4>01. 환경경영</h4>
+                                    <p>
+                                        롯데알미늄은 녹색비전을 수립하고 환경경영시스템을 지속적으로 유지 및 관리하며,
+                                        자원 및 에너지 소비를 최소화하여 환경보전에 최선을 다합니다.
+                                    </p>
+                                    <a href="./sub1/sub1_3.html" class="more">자세히보러가기</a>
+                                </div>
+                                <div class="con_right"><img src="./images/manage_1.svg" alt="환경경영 픽토그램"></div>
+                            </div>
+                        </li>
+                        <li class="manag_con">
+                            <div class="lr_wrap">
+                                <div class="con_left">
+                                    <h4>02. 품질경영</h4>
+                                    <p>
+                                        롯데알미늄은 품질시스템을 지속적으로 개선, 관리하고 우수한 전문기술을 개발, 유지하여
+                                        당사에서 제조되는 제품의 안정성을 확보하고 있습니다.
+                                    </p>
+                                    <a href="./sub1/sub1_3.html" class="more">자세히보러가기</a>
+                                </div>
+                                <div class="con_right"><img src="./images/manage_2.svg" alt="품질경영 픽토그램"></div>
+                            </div>
+                        </li>
+                        <li class="manag_con">
+                            <div class="lr_wrap">
+                                <div class="con_left">
+                                    <h4>03. 안전보건경영</h4>
+                                    <p>
+                                        롯데알미늄은 안전보건경영시스템을 지속적으로 유지, 관리하여 모든 직원, 외주업체, 
+                                        협력업체의 안전과 건강을 보호하고 증진시키고 있습니다..
+                                    </p>
+                                    <a href="./sub1/sub1_3.html" class="more">자세히보러가기</a>
+                                </div>
+                                <div class="con_right"><img src="./images/manage_3.svg" alt="안전보건경영 픽토그램"></div>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="#" class="lr_btn next"><span></span>다음페이지</a>
+                    <a href="#" class="lr_btn before"><span></span>이전페이지</a>
+                </div>
+            </section>
+            <!-- Management End -->
+            <!-- Careers Start -->
+            <section class="careers">
+                <div class="careers_inner">
+                    <h3>careers</h3>
+                    <p>
+                        ‘사랑(LOVE)이 넘치는 세상’, ‘자유(LIBERTY)가 숨 쉬는 사회’, ‘풍요로운 삶(LIFE)’를 누릴 수 있는<br>
+                        미래를 만들어 가는 롯데의 꿈에 동참할 다음과 같은 젊은이를 초대합니다.
+                    </p>
+                    <ul class="carrer_box">
+                        <li class="career_con">
+                            <a href="./sub5/sub5_1.html" class="more">
+                                <span></span>
+                                <span>인재상</span>
+                                <span>자세히보러가기</span>
+                            </a>
+                        </li>
+                        <li class="career_con">
+                            <a href="./sub5/sub5_2.html" class="more">
+                                <span></span>
+                                <span>채용절차</span>
+                                <span>자세히보러가기</span>
+                            </a>
+                        </li>
+                        <li class="career_con">
+                            <a href="./sub5/sub5_3.html" class="more">
+                                <span></span>
+                                <span>복리후생</span>
+                                <span>자세히보러가기</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- Careers End-->
+            <!-- Promotion Start-->
+            <section class="design">
+                <div class="design_inner">
+                    <div class="design_head">
+                        <h3>design story</h3>
+                        <p>
+                            : LOTTE 제품들만의 이야기들을 패키지에 그려내는<br>
+                            <span>story designer</span> 에 도전하세요.
+                        </p>    
+                    </div>            
+                    <ul class="prcon_wrap">    
+                        <li>
+                            <a href="./sub4/sub4_4.html">
+                                <img src="images/design_1.jpg" alt="">
+                                <span>자세히보러가기</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./sub4/sub4_4.html">
+                                <img src="images/design_2.jpg" alt="">
+                                <span>자세히보러가기</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./sub4/sub4_4.html">
+                                <img src="images/design_3.jpg" alt="">
+                                <span>자세히보러가기</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./sub4/sub4_4.html">
+                                <img src="images/design_4.jpg" alt="">
+                                <span>자세히보러가기</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./sub4/sub4_4.html">
+                                <img src="images/design_5.jpg" alt="">
+                                <span>자세히보러가기</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="doc">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <a href="#" class="d_next">다음이미지</a>
+                </div>
+            </section>
+            <!-- Promotion End -->
+            <!-- Others Start-->
+            <div class="others">
+                <div class="others_inner">                
+                    <section class="news">
+                        <h3>news</h3>
+                        <ul class="list_item">
+                        <?		
+                            for ($i=$start; $i<$start+$scale && $i < $total_record; $i++) {
+                                mysql_data_seek($result, $i);       
+                                // 가져올 레코드로 위치(포인터) 이동  
+                                $row = mysql_fetch_array($result);       
+                                // 하나의 레코드 가져오기
+                                
+                                $item_num     = $row[num];
+                                $item_id      = $row[id];
+                                $item_name    = $row[name];
+                                $item_nick    = $row[nick];
+                                $item_hit     = $row[hit];
+                                $item_date    = $row[regist_day];
+                                $item_date = substr($item_date, 0, 10);  
+                                $item_subject = str_replace(" ", "&nbsp;", $row[subject]);
+                                        
+                                if($row[file_copied_0]){ 
+                                    $item_img = './data/'.$row[file_copied_0];  
+                                }else{
+                                    $item_img = './data/default.jpg'  ;
+                                }
+                        ?>
+                                
+                                    <li class="news_box list_item2">
+                                        <a href="./sub4/view.php?table=<?=$table?>&num=<?=$item_num?>&page=<?=$page?>">
+                                            <p><?= $item_subject ?></p>
+                                            <span><?= $item_date ?></span>
+                                        </a>
+                                    </li>
+                                
+                        <?
+                                $number--;
+                            }
+                        ?>
+                        </ul>
+                        <!-- <ul>
+                            <li class="news_box">
+                                <a href="./sub4/sub4_1.php">
+                                    <p>롯데지주 "올해 그룹 역량 결집해 재도약 터닝포인트" 어쩌구저쩌구..</p>
+                                    <span>[SBS Biz] 2021.3.31</span>
+                                </a>
+                            </li>
+                            <li class="news_box">
+                                <a href="./sub4/sub4_1.php">
+                                    <p>롯데알미늄, 아동학대 근절 위해 진상조사 특별법 통과 롯데알미늄, 아동학대 근절 위해 진상조사 특별법 통과 ..</p>
+                                    <span>[SR 타임즈] 2021.03.08</span>
+                                </a>
+                            </li>
+                            <li class="news_box">
+                                <a href="./sub4/sub4_1.php">
+                                    <p>롯데중앙연구소, 알미늄과 협업하여 대기오염 유발 유기 데중앙연구소, 알미늄과 협업하여 대기오염 유발 유기..</p>
+                                    <span>[한국경제] 2021.03.05</span>
+                                </a>
+                            </li>
+                        </ul> -->
+                        <a href="./sub4/sub4_1.php" class="more">자세히보러가기</a>
+                    </section>
+                    <ul class="customer">
+                        <li class="faq">
+                            <a href="./sub6/sub6_3.html"><span>F</span><span>A</span><span>Q</span></a>
+                        </li>
+                        <li class="online">
+                            <a href="./sub6/sub6_1.html">온라인 문의</a>
+                        </li>
+                        <li class="prod_search">
+                            <a href="./sub6/sub6_2.php">제품검색</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Others End -->
+        </article>
+        <!-- Content End -->
+        <!-- Footer Area -->
+        <? include "./common/main_foot.html" ?>
+        <!-- Footer Area End -->        
+    </div>
+
+    <!-- popup notice -->
+    <div id="showimage" style="z-index:99;position:absolute;width:322px;left:100px;top:250px;">
+        <script>
+          function closeWin(){
+             var chk = document.getElementById('Notice')
+             if ( chk.checked ) {
+                   setCookie( "Notice", "done" , 1); //1이란 숫자는 1일간 안보임을 뜻합니다. 날짜는 자신에 맞게 수정하세요
+              }
+          }
+         if ( getCookie( "Notice" ) == "done" ) {
+             hidebox();
+         }
+        </script>
+        <div>
+            <img src="popup/pop.png" alt="본 사이트는 상업적 목적이 아닌 개인 포트폴리오 용도로 만들어졌습니다. 홈페이지의 일부 내용과 기타 이미지 등은 그 출처가 따로 있음을 밝힙니다." />
+        </div>
+        <div style="font-size:12px;text-align:center;color:#fff;">
+            <input type="checkbox" name="Notice" id="Notice" value="" title="오늘은 이창을 열지 않음 선택상자"><label for="Notice">오늘은 이창을 열지 않음.</label>
+        <a href="#"  onclick="closeWin();hidebox();return false;" style="color:#fff;"> [close] </a>
+        </div>
+    </div>
+
+    <!-- JQuery -->
+    <script src="common/js/jquery-1.12.4.min.js"></script>
+    <script src="common/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="common/js/gnb.js"></script>
+    <script src="common/js/index_scroll.js"></script>
+    <script src="mainjs/visual_slide.js"></script>
+    <script src="mainjs/manag_slide.js"></script>
+    <script src="mainjs/design_slide.js"></script>
+</body>
+</html>

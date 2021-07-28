@@ -1,0 +1,71 @@
+#content {width:100%; margin:0 auto;}
+
+.content_area {width:1200px; margin:0 auto; font-family:'Nanum Gothic', sans-serif; position:relative;}
+.content_area .title {font-family:'Nanum Gothic', sans-serif; font-weight:700; font-size:1.95em; color:#333; text-align:center; 
+    display:block; width:fit-content; margin:0 auto; padding-top:300px; padding-bottom:100px; line-height:1.9em; position:relative;}
+.content_area .title span:nth-of-type(1) {color:rgba(218,41,28,.8);}
+.content_area .title span:nth-of-type(2) {color:rgba(90,91,159,.8);}
+
+.content_area p {width:1100px; margin:0 auto 160px; font-weight:400; font-size:1.133em; color:#666; position:relative; text-align:justify; line-height:2em;}
+.content_area p:nth-of-type(2), .content_area>p:nth-of-type(3) {margin-bottom:40px; position:relative;}
+.content_area>ul {width:1100px; margin:0 auto 180px; position:relative;}
+.content_area>ul>li {position:relative;}
+.content_area ul li h3 {font-family:'Nanum Gothic', sans-serif; font-weight:700; font-size:1.6em; color:#fff; text-align:center;
+    display:block; width:180px; padding:70px 0; border-radius:50%;}
+.content_1 h3 {border:10px solid rgb(225,84,73); background:rgba(218,41,28,.7); margin-left:200px;}
+.content_2 h3 {border:10px solid rgba(225,84,73,.6); background:rgba(225,84,73,1); margin-left:360px; margin-bottom:50px;}
+.content_3 h3 {border:10px solid rgb(240,169,164); background:rgb(233,127,119); margin-left:360px;}
+.content_4 h3 {border:10px solid rgb(248,212,210); background:rgba(233,127,119,.8); margin-left:200px;}
+.content_area ul li>ul {width:370px; padding:30px 40px; position:absolute; border:4px solid rgba(218,41,28,.6); border-radius:15px; opacity:0;}
+.content_area ul li>ul li {font-weight:700; font-size:1.13em; line-height:1.85em; color:#666; padding-left:20px; margin-bottom:20px; position:relative;}
+.content_area ul li>ul li:nth-last-child(1) {margin-bottom:0;}
+.divided_circle {display:block; width:300px; height:300px; background:url(../images/content2/divided_circle.svg) center center no-repeat; opacity:.9;
+    background-size:contain; transform:rotate(45deg); position:absolute; left:30px; bottom:268px;}
+
+/* Non-active Start*/
+.content_1 ul {right:0; bottom:-367px;}
+.content_2 ul {right:0; bottom:-190px;}
+.content_3 ul {right:0; bottom:130px;}
+.content_4 ul {right:0; bottom:335px;}
+/* Non-active End */
+
+/* Before & After Area Start */
+.content_area .title::before {content:''; display:block; width:75px; height:24px; position:absolute; left:50%; margin-left:-38px; top:138px;
+    background:url(../common/images/point.svg) 0 0 no-repeat; background-size:contain; transform:rotate(90deg);}
+.content_area p:nth-of-type(2)::before {content:''; display:block; width:10px; height:10px; background:rgb(218,41,28); transform:rotate(45deg); position:absolute;
+    left:50%; margin-left:-445px; top:-170px;}
+.content_area p:nth-of-type(2)::after {content:''; display:block; width:10px; height:10px; background:rgb(218,41,28); transform:rotate(45deg); position:absolute;
+    right:50%; margin-right:-445px; top:-170px;}
+.content_area p:nth-last-of-type(1)::after {content:''; display:block; width:80px; height:4px; background:rgba(218,41,28,.8); border-radius:20px; position:absolute;
+    left:50%; margin-left:-40px; bottom:-80px;}
+.content_area ul li>ul li::before {content:''; display:block; width:4px; height:14px; background:rgba(218,41,28,.6); position:absolute; left:0; top:12px;}
+.content_area>ul::before {content:''; display:block; width:300px; height:4px; border-top:3px dotted rgb(218,41,28);
+    position:absolute; left:-375px; top:445px;}
+/* Before & After End */
+
+/* Hover Area Start */
+.content_area ul li:hover>ul {opacity:1;}
+.content_1:hover h3::before, .content_4:hover h3::before {content:''; display:block; border-radius:50%; width:175px; height:175px; left:203px; top:2px; 
+    border:10px solid rgb(218,41,28); position:absolute; animation: in_circle1 2s infinite ease-in;}
+@keyframes in_circle1{0% {opacity:.9;} 100% {left:220px; top:-30px; border:30px; opacity:0;}}
+.content_1:hover h3::after, .content_4:hover h3::before {content:''; display:block; border-radius:50%; width:175px; height:175px; left:203px; top:2px;
+    border:10px solid rgb(218,41,28); position:absolute; animation: in_circle1 4s infinite ease-out;}
+@keyframes in_circle1{0% {opacity:.9;} 100% {left:150px; top:-50px; border:60px; opacity:0;}}
+.content_2:hover h3::before, .content_3:hover h3::before {content:''; display:block; border-radius:50%; width:175px; height:175px; left:363px; top:2px;
+    border:10px solid rgb(218,41,28); position:absolute; animation: in_circle2 2s infinite ease-in;}
+@keyframes in_circle2{0% {opacity:.9;} 100% {left:333px; top:-30px; border:30px; opacity:0;}}
+.content_2:hover h3::after, .content_3:hover h3::after {content:''; display:block; border-radius:50%; width:175px; height:175px; left:363px; top:2px;
+    border:10px solid rgb(218,41,28); position:absolute; animation: in_circle2 4s infinite ease-out;}
+@keyframes in_circle2{0% {opacity:.9;} 100% {left:313px; top:-55px; border:60px; opacity:0;}}
+
+.content_1:hover::before {content:''; display:block; width:300px; height:165px; border:3px dotted rgb(218,41,28); border-radius:0 40px 0 0; 
+    border-left:0; border-bottom:0; position:absolute; right:370px; top:100px;}
+.content_1:hover::after {content:''; display:block; width:14px; height:14px; background:rgba(218,41,28,.8); border-radius:50%; position:absolute; right:364px; top:280px;}
+.content_2:hover::before {content:''; display:block; width:20px; height:10px; border-top:3px dotted rgb(218,41,28); position:absolute; right:500px; top:100px;}
+.content_2:hover::after {content:''; display:block; width:14px; height:14px; background:rgba(218,41,28,.8); border-radius:50%; position:absolute; right:480px; top:95px;}
+.content_3:hover::before {content:''; display:block; width:70px; height:10px; border-top:3px dotted rgb(218,41,28); position:absolute; right:440px; top:100px;}
+.content_3:hover::after {content:''; display:block; width:14px; height:14px; background:rgba(218,41,28,.8); border-radius:50%; position:absolute; right:422px; top:95px;}
+.content_4:hover::before {content:''; display:block; width:305px; height:185px; border:3px dotted rgb(218,41,28); border-radius:0 0 40px 0; 
+    border-left:0; border-top:0; position:absolute; right:370px; bottom:100px;}
+.content_4:hover::after {content:''; display:block; width:14px; height:14px; background:rgba(218,41,28,.8); border-radius:50%; position:absolute; right:365px; bottom:300px;}
+/* Hover End */

@@ -1,0 +1,8 @@
+#confirm {width:800px; padding:60px 0; border:1px solid rgba(218,41,28,.8); background:#fff; border-radius:15px; 
+    position:fixed; left:50%; top:50%; transform:translateX(-50%) translateY(-50%);}
+#confirm p {width:90%; font-family:'Nanum Gothic', sans-serif; text-align:center; margin:0 auto; font-size:22px; color:rgba(218,41,28,.8);}
+.confirmBtn_box {width:fit-content; margin:40px auto 0; overflow:hidden;}
+.confirmBtn_box a {display:block; float:left; width:180px; margin-right:80px; padding:15px 0; background:rgba(218,41,28,.8); border-radius:15px;
+    font-family:'Nanum Gothic', sans-serif; color:#fff; text-align:center;}
+.confirmBtn_box a:nth-of-type(2) {margin-right:0;}
+#confirmBg {width:100%; background:rgba(255,255,255,.8); position:fixed; left:0; bottom:0; z-index:1}
