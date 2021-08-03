@@ -14,17 +14,6 @@
     // 이전화면에서 이름이 입력되지 않았으면 "이름을 입력하세요"
     // 메시지 출력
     // $id=>입력id값    $pass=>입력 pass
-    if($userid!='master' || $userid!='admin' || $level!=1){
-        echo "
-        <script>
-            alert('회원탈퇴가 정상적으로 처리되었습니다. 안녕히가세요~');
-            location.href = '../index.html';
-        </script>
-        </head>
-        </html>
-        ";
-        exit;
-    };
     
     include "../lib/dbconn.php";
     
