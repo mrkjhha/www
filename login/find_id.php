@@ -85,6 +85,8 @@
                 window.alert('이름을 입력하세요');
                 history.go(-1);
             </script>
+            </body>
+            </html>
             ");
             exit;
     }
@@ -95,6 +97,8 @@
                 window.alert('연락처를 입력하세요');
                 history.go(-1);
             </script>
+            </body>
+            </html>
             ");
             exit;
     }
@@ -113,6 +117,8 @@
                 window.alert('등록되지 않은 이름 입니다');
                 history.go(-1);
             </script>
+            </body>
+            </html>
             ");
     }
     else     //검색 레코드가 있으면
@@ -139,6 +145,8 @@
                 window.alert('등록된 정보가 없습니다');
                 history.go(-1);
             </script>
+            </body>
+            </html>
         ");
 
         exit;

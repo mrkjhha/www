@@ -1,11 +1,15 @@
 <?
-           session_start();
-?>
-<meta charset="utf-8">
-<?
+    session_start();
     @extract($_GET); 
     @extract($_POST); 
     @extract($_SESSION); 
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>삭제</title>
+<?
    
     // 이전화면에서 이름이 입력되지 않았으면 "이름을 입력하세요"
     // 메시지 출력
@@ -16,6 +20,8 @@
             alert('회원탈퇴가 정상적으로 처리되었습니다. 안녕히가세요~');
             location.href = '../index.html';
         </script>
+        </head>
+        </html>
         ";
         exit;
     };
@@ -40,6 +46,8 @@
             window.alert('비밀번호가 틀립니다.');
             history.go(-1);
             </script>
+            </head>
+            </html>
         ");
         exit;
     }
@@ -59,6 +67,10 @@
             alert('회원탈퇴가 정상적으로 처리되었습니다. 안녕히가세요~');
             location.href = '../index.html';
         </script>
+        </head>
+        </html>
         ";
     };
 ?>
+</head>
+</html>

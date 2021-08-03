@@ -1,9 +1,14 @@
-﻿<meta charset="utf-8">
-<?
+﻿<?
    @extract($_POST);
    @extract($_GET);
    @extract($_SESSION);
-
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>닉네임체크</title>
+<?
    if(!$nick) 
    {
       echo("닉네임을 입력하세요.");
@@ -30,4 +35,5 @@
       mysql_close();
    }
 ?>
-
+</head>
+</html>

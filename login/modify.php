@@ -1,11 +1,14 @@
 <?
 	session_start();
-
   @extract($_POST);
   @extract($_GET);
   @extract($_SESSION);
 ?>
-<meta charset="utf-8">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>수정</title>
 <?
    $hp = $hp1."-".$hp2."-".$hp3;
    $email = $email1."@".$email2;
@@ -33,6 +36,8 @@
 	     window.alert('회원정보가 수정되었습니다.');
 	    location.href = '../index.html';
 	   </script>
+     </head>
+     </html>
 	";
 ?>
 

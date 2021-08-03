@@ -1,11 +1,9 @@
 <? 
 	session_start();
-    
-      @extract($_POST);
-      @extract($_GET);
-      @extract($_SESSION);
+    @extract($_POST);
+    @extract($_GET);
+    @extract($_SESSION);
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

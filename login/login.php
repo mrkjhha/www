@@ -1,16 +1,18 @@
 ﻿<?
            session_start();
+           @extract($_GET); 
+           @extract($_POST); 
+           @extract($_SESSION); 
 ?>
-<meta charset="utf-8">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>로그인</title>
 <?
-  @extract($_GET); 
-  @extract($_POST); 
-  @extract($_SESSION); 
    // 이전화면에서 이름이 입력되지 않았으면 "이름을 입력하세요"
    // 메시지 출력
    // $id=>입력id값    $pass=>입력 pass
-   
-  
 
    if(!$id) {   //아무값도 입력되지 않았냐?
      echo("
@@ -18,6 +20,8 @@
              window.alert('아이디를 입력하세요.');
              history.go(-1);
            </script>
+            </head>
+            </html>
          ");
          exit;
    }
@@ -28,6 +32,8 @@
              window.alert('비밀번호를 입력하세요.');
              history.go(-1);
            </script>
+           </head>
+           </html>
          ");
          exit;
    }
@@ -46,6 +52,8 @@
              window.alert('등록되지 않은 아이디입니다.');
              history.go(-1);
            </script>
+           </head>
+           </html>
          ");
          exit;
     }
@@ -64,6 +72,8 @@
                 window.alert('비밀번호가 틀립니다.');
                 history.go(-1);
               </script>
+              </head>
+              </html>
            ");
            exit;
         }
@@ -86,7 +96,11 @@
 			    alert('로그인이 되었습니다.');
                 location.href = '../index.html';
               </script>
+              </head>
+              </html>
            ");
         }
    }
 ?>
+</head>
+</html>

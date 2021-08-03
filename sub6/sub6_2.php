@@ -31,212 +31,214 @@
         }
     </script>
 </head>
-<?
-	include "../lib/dbconn.php";
+<body>
+    <?
+        include "../lib/dbconn.php";
+        
+        $main_category_set=[$main_category_1,$main_category_2,$main_category_3,$main_category_4];
+        $sub_category_set=[$sub_category_1,$sub_category_2,$sub_category_3,$sub_category_4,$sub_category_5,$sub_category_6,$sub_category_7,$sub_category_8,$sub_category_9,$sub_category_10,$sub_category_11,$sub_category_12,$sub_category_13,$sub_category_14,$sub_category_15];
     
-    $main_category_set=[$main_category_1,$main_category_2,$main_category_3,$main_category_4];
-    $sub_category_set=[$sub_category_1,$sub_category_2,$sub_category_3,$sub_category_4,$sub_category_5,$sub_category_6,$sub_category_7,$sub_category_8,$sub_category_9,$sub_category_10,$sub_category_11,$sub_category_12,$sub_category_13,$sub_category_14,$sub_category_15];
-   
-    if (!$scale)
-        $scale=4;// 한 화면에 표시되는 글 수
+        if (!$scale)
+            $scale=4;// 한 화면에 표시되는 글 수
 
-    if ($mode=="search")
-	{
-        for($i=0;$i<4;$i++){ if($main_category_set[$i]!=null){ $main_cnt++; };};
-        for($i=0;$i<15;$i++){ if($sub_category_set[$i]!=null){ $sub_cnt++; };};
-        if($min_size_x!=null){ $x_cnt++; };
-        if($max_size_x!=null){ $x_cnt++; };
-        if($min_size_y!=null){ $y_cnt++; };
-        if($max_size_y!=null){ $y_cnt++; };
-        // echo("
-        // <script>
-        // window.alert('$y_cnt');
-        // </script>
-        // ");
-        //시작
-        $sql = "select * from $table where ";
+        if ($mode=="search")
+        {
+            for($i=0;$i<4;$i++){ if($main_category_set[$i]!=null){ $main_cnt++; };};
+            for($i=0;$i<15;$i++){ if($sub_category_set[$i]!=null){ $sub_cnt++; };};
+            if($min_size_x!=null){ $x_cnt++; };
+            if($max_size_x!=null){ $x_cnt++; };
+            if($min_size_y!=null){ $y_cnt++; };
+            if($max_size_y!=null){ $y_cnt++; };
+            // echo("
+            // <script>
+            // window.alert('$y_cnt');
+            // </script>
+            // ");
+            //시작
+            $sql = "select * from $table where ";
 
-        if(!$search){
-            if($x_cnt==0){
-                if($y_cnt==0){
-                    if($sub_cnt==0){
-                        if($main_cnt==0){
-                            echo("
-                                <script>
-                                window.alert('검색 체크항목 및 검색어를 입력해 주세요!');
-                                history.go(-1);
-                                </script>
-                            ");
-                            exit;
+            if(!$search){
+                if($x_cnt==0){
+                    if($y_cnt==0){
+                        if($sub_cnt==0){
+                            if($main_cnt==0){
+                                echo("
+                                    <script>
+                                    window.alert('검색 체크항목 및 검색어를 입력해 주세요!');
+                                    history.go(-1);
+                                    </script>
+                                    </body>
+                                    </html>
+                                ");
+                                exit;
+                            } else {
+                                $init2=0; include "./func_php/main_category.php";
+                                $sql.=" order by num desc";
+                            };
                         } else {
                             $init2=0; include "./func_php/main_category.php";
+                            $init2=0; include "./func_php/sub_category.php";
                             $sql.=" order by num desc";
                         };
                     } else {
-                        $init2=0; include "./func_php/main_category.php";
-                        $init2=0; include "./func_php/sub_category.php";
-                        $sql.=" order by num desc";
-                    };
-                } else {
-                    if($sub_cnt==0){
-                        if($main_cnt==0){
-                            $init2=2; include "./func_php/y_category.php";
-                            $sql.=" order by num desc";
+                        if($sub_cnt==0){
+                            if($main_cnt==0){
+                                $init2=2; include "./func_php/y_category.php";
+                                $sql.=" order by num desc";
+                            } else {
+                                $init2=0; include "./func_php/main_category.php";
+                                $init2=0; include "./func_php/y_category.php";
+                                $sql.=" order by num desc";
+                            };
                         } else {
                             $init2=0; include "./func_php/main_category.php";
+                            $init2=0; include "./func_php/sub_category.php";
                             $init2=0; include "./func_php/y_category.php";
                             $sql.=" order by num desc";
                         };
+                    };
+                } else {
+                    if($y_cnt==0){
+                        if($sub_cnt==0){
+                            if($main_cnt==0){
+                                $init2=2; include "./func_php/x_category.php";
+                                $sql.=" order by num desc";
+                            } else {
+                                $init2=0; include "./func_php/main_category.php";
+                                $init2=0; include "./func_php/x_category.php";
+                                $sql.=" order by num desc";
+                            };
+                        } else {
+                            $init2=0; include "./func_php/main_category.php";
+                            $init2=0; include "./func_php/sub_category.php";
+                            $init2=0; include "./func_php/x_category.php";
+                            $sql.=" order by num desc";
+                        };
                     } else {
-                        $init2=0; include "./func_php/main_category.php";
-                        $init2=0; include "./func_php/sub_category.php";
-                        $init2=0; include "./func_php/y_category.php";
-                        $sql.=" order by num desc";
+                        if($sub_cnt==0){
+                            if($main_cnt==0){
+                                $init2=2; include "./func_php/y_category.php";
+                                $init2=0; include "./func_php/x_category.php";
+                                $sql.=" order by num desc";
+                            } else {
+                                $init2=0; include "./func_php/main_category.php";
+                                $init2=0; include "./func_php/y_category.php";
+                                $init2=0; include "./func_php/x_category.php";
+                                $sql.=" order by num desc";
+                            };
+                        } else {
+                            $init2=0; include "./func_php/main_category.php";
+                            $init2=0; include "./func_php/sub_category.php";
+                            $init2=0; include "./func_php/y_category.php";
+                            $init2=0; include "./func_php/x_category.php";
+                            $sql.=" order by num desc";
+                        };
                     };
                 };
             } else {
-                if($y_cnt==0){
-                    if($sub_cnt==0){
-                        if($main_cnt==0){
-                            $init2=2; include "./func_php/x_category.php";
-                            $sql.=" order by num desc";
+                if($x_cnt==0){
+                    if($y_cnt==0){
+                        if($sub_cnt==0){
+                            if($main_cnt==0){
+                                $init2=1; include "./func_php/search_category.php";
+                                $sql.=" order by num desc";
+                            } else {
+                                $init2=0; include "./func_php/main_category.php";
+                                $init2=0; include "./func_php/search_category.php";
+                                $sql.=" order by num desc";
+                            };
                         } else {
                             $init2=0; include "./func_php/main_category.php";
-                            $init2=0; include "./func_php/x_category.php";
+                            $init2=0; include "./func_php/sub_category.php";
+                            $init2=0; include "./func_php/search_category.php";
                             $sql.=" order by num desc";
                         };
                     } else {
-                        $init2=0; include "./func_php/main_category.php";
-                        $init2=0; include "./func_php/sub_category.php";
-                        $init2=0; include "./func_php/x_category.php";
-                        $sql.=" order by num desc";
+                        if($sub_cnt==0){
+                            if($main_cnt==0){
+                                $init2=2; include "./func_php/y_category.php";
+                                $init2=0; include "./func_php/search_category.php";
+                                $sql.=" order by num desc";
+                            } else {
+                                $init2=0; include "./func_php/main_category.php";
+                                $init2=0; include "./func_php/y_category.php";
+                                $init2=0; include "./func_php/search_category.php";
+                                $sql.=" order by num desc";
+                            };
+                        } else {
+                            $init2=0; include "./func_php/main_category.php";
+                            $init2=0; include "./func_php/sub_category.php";
+                            $init2=0; include "./func_php/y_category.php";
+                            $init2=0; include "./func_php/search_category.php";
+                            $sql.=" order by num desc";
+                        };
                     };
                 } else {
-                    if($sub_cnt==0){
-                        if($main_cnt==0){
-                            $init2=2; include "./func_php/y_category.php";
-                            $init2=0; include "./func_php/x_category.php";
-                            $sql.=" order by num desc";
+                    if($y_cnt==0){
+                        if($sub_cnt==0){
+                            if($main_cnt==0){
+                                $init2=2; include "./func_php/x_category.php";
+                                $init2=0; include "./func_php/search_category.php";
+                                $sql.=" order by num desc";
+                            } else {
+                                $init2=0; include "./func_php/main_category.php";
+                                $init2=0; include "./func_php/x_category.php";
+                                $init2=0; include "./func_php/search_category.php";
+                                $sql.=" order by num desc";
+                            };
                         } else {
                             $init2=0; include "./func_php/main_category.php";
-                            $init2=0; include "./func_php/y_category.php";
+                            $init2=0; include "./func_php/sub_category.php";
                             $init2=0; include "./func_php/x_category.php";
+                            $init2=0; include "./func_php/search_category.php";
                             $sql.=" order by num desc";
                         };
                     } else {
-                        $init2=0; include "./func_php/main_category.php";
-                        $init2=0; include "./func_php/sub_category.php";
-                        $init2=0; include "./func_php/y_category.php";
-                        $init2=0; include "./func_php/x_category.php";
-                        $sql.=" order by num desc";
+                        if($sub_cnt==0){
+                            if($main_cnt==0){
+                                $init2=2; include "./func_php/y_category.php";
+                                $init2=0; include "./func_php/x_category.php";
+                                $init2=0; include "./func_php/search_category.php";
+                                $sql.=" order by num desc";
+                            } else {
+                                $init2=0; include "./func_php/main_category.php";
+                                $init2=0; include "./func_php/y_category.php";
+                                $init2=0; include "./func_php/x_category.php";
+                                $init2=0; include "./func_php/search_category.php";
+                                $sql.=" order by num desc";
+                            };
+                        } else {
+                            $init2=0; include "./func_php/main_category.php";
+                            $init2=0; include "./func_php/sub_category.php";
+                            $init2=0; include "./func_php/y_category.php";
+                            $init2=0; include "./func_php/x_category.php";
+                            $init2=0; include "./func_php/search_category.php";
+                            $sql.=" order by num desc";
+                        };
                     };
                 };
             };
         } else {
-            if($x_cnt==0){
-                if($y_cnt==0){
-                    if($sub_cnt==0){
-                        if($main_cnt==0){
-                            $init2=1; include "./func_php/search_category.php";
-                            $sql.=" order by num desc";
-                        } else {
-                            $init2=0; include "./func_php/main_category.php";
-                            $init2=0; include "./func_php/search_category.php";
-                            $sql.=" order by num desc";
-                        };
-                    } else {
-                        $init2=0; include "./func_php/main_category.php";
-                        $init2=0; include "./func_php/sub_category.php";
-                        $init2=0; include "./func_php/search_category.php";
-                        $sql.=" order by num desc";
-                    };
-                } else {
-                    if($sub_cnt==0){
-                        if($main_cnt==0){
-                            $init2=2; include "./func_php/y_category.php";
-                            $init2=0; include "./func_php/search_category.php";
-                            $sql.=" order by num desc";
-                        } else {
-                            $init2=0; include "./func_php/main_category.php";
-                            $init2=0; include "./func_php/y_category.php";
-                            $init2=0; include "./func_php/search_category.php";
-                            $sql.=" order by num desc";
-                        };
-                    } else {
-                        $init2=0; include "./func_php/main_category.php";
-                        $init2=0; include "./func_php/sub_category.php";
-                        $init2=0; include "./func_php/y_category.php";
-                        $init2=0; include "./func_php/search_category.php";
-                        $sql.=" order by num desc";
-                    };
-                };
-            } else {
-                if($y_cnt==0){
-                    if($sub_cnt==0){
-                        if($main_cnt==0){
-                            $init2=2; include "./func_php/x_category.php";
-                            $init2=0; include "./func_php/search_category.php";
-                            $sql.=" order by num desc";
-                        } else {
-                            $init2=0; include "./func_php/main_category.php";
-                            $init2=0; include "./func_php/x_category.php";
-                            $init2=0; include "./func_php/search_category.php";
-                            $sql.=" order by num desc";
-                        };
-                    } else {
-                        $init2=0; include "./func_php/main_category.php";
-                        $init2=0; include "./func_php/sub_category.php";
-                        $init2=0; include "./func_php/x_category.php";
-                        $init2=0; include "./func_php/search_category.php";
-                        $sql.=" order by num desc";
-                    };
-                } else {
-                    if($sub_cnt==0){
-                        if($main_cnt==0){
-                            $init2=2; include "./func_php/y_category.php";
-                            $init2=0; include "./func_php/x_category.php";
-                            $init2=0; include "./func_php/search_category.php";
-                            $sql.=" order by num desc";
-                        } else {
-                            $init2=0; include "./func_php/main_category.php";
-                            $init2=0; include "./func_php/y_category.php";
-                            $init2=0; include "./func_php/x_category.php";
-                            $init2=0; include "./func_php/search_category.php";
-                            $sql.=" order by num desc";
-                        };
-                    } else {
-                        $init2=0; include "./func_php/main_category.php";
-                        $init2=0; include "./func_php/sub_category.php";
-                        $init2=0; include "./func_php/y_category.php";
-                        $init2=0; include "./func_php/x_category.php";
-                        $init2=0; include "./func_php/search_category.php";
-                        $sql.=" order by num desc";
-                    };
-                };
-            };
+            $sql = "select * from $table order by num desc";
         };
-    } else {
-		$sql = "select * from $table order by num desc";
-	};
 
-	$result = mysql_query($sql, $connect);
+        $result = mysql_query($sql, $connect);
 
-	$total_record = mysql_num_rows($result); // 전체 글 수
+        $total_record = mysql_num_rows($result); // 전체 글 수
 
-	// 전체 페이지 수($total_page) 계산 
-	if ($total_record % $scale == 0)     
-		$total_page = floor($total_record/$scale);      
-	else
-		$total_page = floor($total_record/$scale) + 1; 
- 
-	if (!$page)  // 페이지번호($page)가 0 일 때
-		$page=1; // 페이지 번호를 1로 초기화
+        // 전체 페이지 수($total_page) 계산 
+        if ($total_record % $scale == 0)     
+            $total_page = floor($total_record/$scale);      
+        else
+            $total_page = floor($total_record/$scale) + 1; 
+    
+        if (!$page)  // 페이지번호($page)가 0 일 때
+            $page=1; // 페이지 번호를 1로 초기화
 
-	// 표시할 페이지($page)에 따라 $start 계산
-	$start = ($page - 1) * $scale;
-	$number = $total_record - $start;
-?>
-<body>
+        // 표시할 페이지($page)에 따라 $start 계산
+        $start = ($page - 1) * $scale;
+        $number = $total_record - $start;
+    ?>
     <div class="wrap">
         <div class="modal_bg"></div>
         <!-- Header Area -->

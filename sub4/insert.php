@@ -1,10 +1,15 @@
-<? session_start(); ?>
-
-<meta charset="utf-8">
+<? 
+	session_start(); 
+	@extract($_POST);
+	@extract($_GET);
+	@extract($_SESSION);
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>데이터입력</title>
 <?
-    @extract($_POST);
-    @extract($_GET);
-    @extract($_SESSION);
     //새글삽입  $table , 폼입력값 , 세션변수
 
 	if(!$userid) {
@@ -13,6 +18,8 @@
 			window.alert('로그인 후 이용해 주세요.')
 			history.go(-1)
 	   	</script>
+		</head>
+		</html>
 		");
 		exit;
 	}
@@ -67,6 +74,8 @@
 				alert('업로드 파일 크기가 지정된 용량(500KB)을 초과합니다!<br>파일 크기를 체크해주세요! ');
 				history.go(-1)
 				</script>
+				</head>
+				</html>
 				");
 				exit;
 			}
@@ -80,6 +89,8 @@
 						alert('JPG와 GIF 이미지 파일만 업로드 가능합니다!');
 						history.go(-1)
 					</script>
+					</head>
+					</html>
 					");
 				exit;
 			}
@@ -94,6 +105,8 @@
 					alert('파일을 지정한 디렉토리에 복사하는데 실패했습니다.');
 					history.go(-1)
 					</script>
+					</head>
+					</html>
 				");
 				exit;
 			}
@@ -186,5 +199,5 @@
 	   </script>
 	";
 ?>
-
-  
+</head>
+</html>

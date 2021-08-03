@@ -4,7 +4,13 @@
    @extract($_GET);
    @extract($_SESSION);
    //$table, $num , 세션변수
-
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>데이터삭제</title>
+<?
    include "../lib/dbconn.php";
 
    $sql = "select * from $table where num = $num";
@@ -37,4 +43,6 @@
 	   </script>
 	";
 ?>
+</head>
+</html>
 

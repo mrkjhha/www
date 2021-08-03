@@ -1,9 +1,15 @@
-<meta charset="utf-8">
 <?
-    @extract($_POST);
-    @extract($_GET);
-    @extract($_SESSION);
-   
+    session_start();
+    @extract($_GET); 
+    @extract($_POST); 
+    @extract($_SESSION); 
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>데이터입력</title>
+<?   
     //$id='';  (중복검사)
 		//$pass='';
 		//$pass_confirm='';
@@ -15,7 +21,6 @@
 
 		//$email1='메일아이디';
 		//$email2='nate.com';
-
 
    $hp = $hp1."-".$hp2."-".$hp3;  //010-0000-0000
    $email = $email1."@".$email2;  //bini@nate.com
@@ -35,6 +40,8 @@
              window.alert('해당 아이디가 존재합니다.');
              history.go(-1);
            </script>
+           </head>
+           </html>
          ");
          exit;
    }
@@ -52,5 +59,9 @@
 		  alert('회원가입이 정상적으로 처리되었습니다. 방가방가~');
 	    location.href = '../index.html';
 	   </script>
+     </head>
+     </html>
 	";
 ?>
+</head>
+</html>

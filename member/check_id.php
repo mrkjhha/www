@@ -1,11 +1,15 @@
-﻿<meta charset="utf-8">
-<?
-   
+﻿<?
    @extract($_POST);
    @extract($_GET);
    @extract($_SESSION);
     //$id='a';
-
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>아이디체크</title>
+<?
    if(!$id)
    {
       echo("아이디를 입력하세요.");
@@ -31,6 +35,6 @@
       
       mysql_close();
    }
-
 ?>
-
+</head>
+</html>
