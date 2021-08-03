@@ -1,12 +1,12 @@
 .visual {width:100%; position:relative; top:0; left:50%; margin-left:-1000px;}
 
-.sub_menu {width:1200px; position:absolute; left:50%; margin-left:-600px; top:302px; text-align:center;}
+.sub_menu {width:1200px; position:absolute; left:50%; margin-left:-600px; top:308px; text-align:center;}
 .sub_menu h3 {font-family:'Nanum Gothic', sans-serif; font-weight:400; font-size:2em; color:#fff;}
 .sub_menu p {font-family: 'Arial', sans-serif; font-weight:normal; font-size:.92em; text-transform:uppercase; color:#fff; margin-top:20px;}
 .sub_menu ul {overflow:hidden; margin-top:79px;}
 .sub_menu ul li {float:left;}
 .sub_menu ul li:nth-last-of-type(1) {float:right;}
-.sub_menu ul li>a {display:block; width:600px; padding:17px 0 17px 0; background:rgba(0,0,0,.3);
+.sub_menu ul li>a {display:block; width:600px; padding:19px 0; background:rgba(0,0,0,.3);
                     font-family:'Nanum Gothic', sans-serif; font-weight:700; font-size:1.13em; color:#fff;}
 .sub_menu ul li>a:hover{background:#fff;color:#666; position:relative;}
 .sub_menu ul li>a:hover::before {content:''; display:block; width:300px; height:3px; background:rgb(218,41,28); position:absolute; left:50%; margin-left:-150px; bottom:0;}

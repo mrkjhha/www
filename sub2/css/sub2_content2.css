@@ -15,11 +15,11 @@
 .content_area p {font-family:'Nanum Gothic', sans-serif; font-weight:400; font-size:1.133em; color:#666; text-align:center; line-height:2em; padding:0 52px 78px;}
 .content_1, .content_2, .content_3, .content_4 {width:1200px; margin:0 auto; position:relative;}
 .charactor {position:relative; margin-bottom:70px;}
-.charactor dt {display:block; width:120px; height:40px; background:#fff; padding-top:15px; margin:0 auto; position:relative;
+.charactor dt {display:block; width:120px; height:40px; background:#fff; padding-top:17px; margin:0 auto; position:relative;
                  font-size:1.3em; font-weight:700; color:#666; text-align:center;}
 .charactor dd {position:absolute; left:0; top:8px;}
 .charactor dd ul {width:1200px; text-align:center; overflow:hidden; position:relative;}
-.charactor dd ul li {display:block; width:160px; padding:10px 0; background:#f3f3f3; border-radius:50px; float:left; color:#666; font-weight:700;}
+.charactor dd ul li {display:block; width:160px; padding:12px 0; background:#f3f3f3; border-radius:50px; float:left; color:#666; font-weight:700;}
 
 .content_1 .charactor dd ul li:nth-child(1) {margin-left:300px;}
 .content_1 .charactor dd ul li:nth-child(2) {margin-right:300px; float:right;}
@@ -84,13 +84,13 @@
 .content_area h3::before {content:''; display:block; width:75px; height:24px; position:absolute; left:50%; margin-left:-38px; top:138px;
     background:url(../common/images/point.svg) 0 0 no-repeat; background-size:contain; transform:rotate(90deg);}
 .content_1::before, .content_2::before, .content_3::before, .content_4::before {content:''; display:block; height:2px; width:2000px; 
-    background:#f1f1f1; position:absolute; left:-400px; top:470px;}
-.charactor dt:before {content:''; display:block; width:10px; height:10px; background:#ccc; transform:rotate(45deg); position:absolute; left:0; top:26px;}
-.charactor dt:after {content:''; display:block; width:10px; height:10px; background:#ccc; transform:rotate(45deg); position:absolute; right:0; top:26px;}
+    background:#f1f1f1; position:absolute; left:-400px; top:466px;}
+.charactor dt:before {content:''; display:block; width:10px; height:10px; background:#ccc; transform:rotate(45deg); position:absolute; left:0; top:28px;}
+.charactor dt:after {content:''; display:block; width:10px; height:10px; background:#ccc; transform:rotate(45deg); position:absolute; right:0; top:28px;}
 .con1_main dl dt::before {content:''; display:block; width:520px; height:2px; background:rgb(218,41,28); position:absolute; left:0; bottom:30px;}
 .con1_main dl dt::after {content:''; display:block; width:4px; height:16px; background:rgb(218,41,28); position:absolute; right:0; bottom:23px;}
 .con1_sub::after {content:''; display:block; width:90px; height:355px; border:2px dotted rgb(218,41,28); border-left:0; border-radius:0 40px 40px 0;
-    position:absolute; right:-50px; top:-343px;}
+    position:absolute; right:-50px; top:-346px;}
 .con1_sub table caption::before {content:''; display:block; width:4px; height:16px; background:rgb(218,41,28); position:absolute; right:500px; bottom:2px;}
 .con1_sub table caption::after {content:''; display:block; width:510px; height:4px; border-bottom:2px dotted rgb(218,41,28); position:absolute; right:-8px; bottom:8px;}
 .con2_main::before {content:''; display:block; width:450px; height:2px; background:rgb(218,41,28); position:absolute; left:-400px; top:50%; margin-top:128px;}

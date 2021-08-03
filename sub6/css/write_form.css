@@ -1,6 +1,6 @@
 #contents {width:100%; margin:0 auto;}
 
-.content_area {font-family:'Nanum Gothic', sans-serif; width:100%; margin:50px auto 180px; position:relative; overflow:hidden;}
+.content_area {font-family:'Nanum Gothic', sans-serif; width:100%; padding-top:120px; margin:0 auto 180px; position:relative; overflow:hidden;}
 .con_inner {width:900px; margin:40px auto 0; padding:20px 50px; text-align:center;}
 
 input {border:0; outline:0; box-shadow:#eee 0 0 5px 2px inset;}
@@ -67,7 +67,7 @@ input {border:0; outline:0; box-shadow:#eee 0 0 5px 2px inset;}
 .confirmBtn_box a:nth-of-type(2) {margin-right:0;}
 #confirmBg {width:100%; background:rgba(255,255,255,.8); position:fixed; left:0; bottom:0; z-index:1}
 /* After & Before Area */
-.content_area::before {content:''; display:block; width:100%; height:1px; background:#ccc; position:absolute; left:0; top:10px;}
+.content_area::before {content:''; display:block; width:100%; height:1px; background:#ccc; position:absolute; left:0; top:75px;}
 .before::before {content:''; display:block; width:12px; height:12px; background:rgba(218,41,28,.8); position:absolute; left:-20px; top:50%; transform:rotate(45deg) translateY(-63%);}
 .before::after {content:''; display:block; width:12px; height:12px; background:#fff; position:absolute; left:-14px; top:50%; transform:rotate(45deg) translateY(-63%);}
 .next::before {content:''; display:block; width:12px; height:12px; background:rgba(218,41,28,.8); position:absolute; right:-7px; top:50%; transform:rotate(45deg) translateY(-63%);}

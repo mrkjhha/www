@@ -48,7 +48,7 @@
 .content_2 h3::after {content:''; display:block; width:520px; height:170px;  border:2px dotted rgb(218,41,28); border-radius:0 30px 30px 0;
         position:absolute; left:50%; margin-left:120px; top:324px; border-left:0;}
 .con2_inner::before {content:''; display:block; width:500px; height:45px; border:2px dotted rgb(218,41,28); border-radius:0 30px 0 0; transform:skewX(30deg); 
-    position:absolute; right:50%; margin-right:450px; top:-202px; border-left:0; border-bottom:0;}
+    position:absolute; right:50%; margin-right:450px; top:-197px; border-left:0; border-bottom:0;}
 .con2_inner::after {content:''; display:block; width:294px; height:45px; border:2px dotted rgb(218,41,28); border-radius:0 0 0 30px; transform:skewX(30deg); 
-    position:absolute; right:50%; margin-right:133px; top:-161px; border-top:0; border-right:0;}
+    position:absolute; right:50%; margin-right:133px; top:-156px; border-top:0; border-right:0;}
 /* Before & After End */

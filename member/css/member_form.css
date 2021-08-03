@@ -29,13 +29,6 @@ img{border: 0; vertical-align: top}
  left: -1000%; width: 1px; height: 1px;
   overflow: hidden; color: #fff}
 
- /*헤드라인 폰트 연결 */
- @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
- /* font-family: 'Nanum Gothic', sans-serif; font-weight:400 700 800; */
-
- @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
- /* font-family: 'Nanum Myeongjo', serif; font-weight:400 700 800; */
-
 /*skipNav*/
 #skipNav{position:relative; width:100%; overflow:hidden; z-index:300;}
 #skipNav a{display:block; height:1px; margin-bottom:-1px;
@@ -97,7 +90,7 @@ tr th label span {color:rgba(218,41,28,.8);}
 .footer_top .f_menu {float:left; position:relative;}
 .footer_top .f_menu>li {margin: 60px 40px 60px 0; float:left;}
 .footer_top .f_menu>li>a {color:#fff; font-weight:bold; font-size:.75em; position:relative;}
-.footer_top .f_menu>li:nth-last-child(1)>a {font-family:'Nanum Gothic','sans-serif'; display:block; width:90px; color:#333; padding:3px 22px 5px 18px; font-size:.8em;}
+.footer_top .f_menu>li:nth-last-child(1)>a {font-family:'Nanum Gothic','sans-serif'; display:block; width:90px; color:#333; padding:5px 22px 7px 18px; font-size:.8em;}
 .footer_top .f_menu>li a:after {content: ''; display: block; width:2px; height:10px; background:#fff;
   position:absolute; right:-22px; bottom:2px;}
 .footer_top .f_menu>li:nth-last-child(1) a::after {display:none;}

@@ -69,12 +69,12 @@
 .list_con_wrap li .modal_list {display:block; width:100%; overflow:hidden;}
 .list_con_wrap li .modal_list img {display:block; width:50%; border:0; float:left;}
 .list_con_wrap li .modal_list dl {font-family:'Nanum Gothic','Arial', sans-serif; 
-    display:block; width:46%; margin-left:4%; float:left; padding:10px 0;}
+    display:block; width:46%; margin-left:4%; float:left; padding:17px 0;}
 .list_con_wrap li .modal_list dl dt {font-size:20px; margin-bottom:10px; text-transform:capitalize; font-weight:700; color:#666;}
 .list_con_wrap li .modal_list dl dd span {display:inline-block; font-size:16px; margin-right:20px;}
 .list_con_wrap li .modal_list dl dd:nth-of-type(1) {margin-bottom:15px;}
 .list_con_wrap li .modal_list dl dd:nth-last-of-type(1) span {display:block; text-overflow:ellipsis; word-wrap:break-word; overflow:hidden;  
-    display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:3; line-height:1.8em; height:4.8em;}
+    display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:3; line-height:1.8em; height:5.2em;}
 
 .list_con_wrap .modal_open {position:fixed; width:600px; left:50%; top:50%; transform:translateX(-50%) translateY(-50%); 
     background:#fff; z-index:200; padding:20px 20px 0;}
@@ -90,7 +90,7 @@
 
 .admin_btn {position:absolute; right:15px; bottom:20px; overflow:hidden; z-index:10;}
 .admin_btn a {display:block; padding:10px 20px; background:rgba(218,41,28,.8); border-radius:10px; color:#fff; font-size:14px; margin-right:10px; float:left;}
-.admin_btn.adminmod_open {right:25px; bottom:20px; z-index:210;}
+.admin_btn.adminmod_open {right:25px; bottom:30px; z-index:210;}
 .list_con_wrap li .exit {display:none; width:40px; height:40px; background:rgba(218,41,28,.8); border-radius:5px; position:absolute; right:30px; top:30px;}
 .list_con_wrap li .exit::before {content:''; display:block; width:24px; height:3px; border-radius:20px; background:#fff; transform:rotate(45deg); 
     position:absolute; top:50%; left:50%; margin-left:-12px; margin-top:-2px;}

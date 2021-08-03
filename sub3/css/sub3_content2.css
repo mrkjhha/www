@@ -40,7 +40,7 @@
     left:50%; margin-left:-40px; bottom:-80px;}
 .content_area ul li>ul li::before {content:''; display:block; width:4px; height:14px; background:rgba(218,41,28,.6); position:absolute; left:0; top:12px;}
 .content_area>ul::before {content:''; display:block; width:300px; height:4px; border-top:3px dotted rgb(218,41,28);
-    position:absolute; left:-375px; top:445px;}
+    position:absolute; left:-375px; top:405px;}
 /* Before & After End */
 
 /* Hover Area Start */
