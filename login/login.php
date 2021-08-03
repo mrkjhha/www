@@ -96,8 +96,6 @@
 			    alert('로그인이 되었습니다.');
                 location.href = '../index.html';
               </script>
-              </head>
-              </html>
            ");
         }
    }

@@ -36,9 +36,7 @@
 	     window.alert('회원정보가 수정되었습니다.');
 	    location.href = '../index.html';
 	   </script>
-     </head>
-     </html>
 	";
 ?>
-
-   
+</head>
+</html>

@@ -59,8 +59,6 @@
 		  alert('회원가입이 정상적으로 처리되었습니다. 방가방가~');
 	    location.href = '../index.html';
 	   </script>
-     </head>
-     </html>
 	";
 ?>
 </head>

@@ -15,7 +15,7 @@
        <script>
           location.href = '../index.html'; 
          </script>
-         </head>
-         </html>
        ");
 ?>
+</head>
+</html>

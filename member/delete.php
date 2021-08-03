@@ -67,8 +67,6 @@
             alert('회원탈퇴가 정상적으로 처리되었습니다. 안녕히가세요~');
             location.href = '../index.html';
         </script>
-        </head>
-        </html>
         ";
     };
 ?>
