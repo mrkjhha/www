@@ -1,0 +1,151 @@
+/* Visual Area */
+.visualBox {width:100%; height:100%; overflow:hidden; position:fixed; z-index:-10;}
+#imgBG {width:auto; height:auto; min-width:100%; min-height:100%;
+    position:fixed; top:50%; left:50%; transform:translateX(-50%) translateY(-50%);}
+.visual_title {width:auto; position:relative;}
+.visual_title .scroll_down {display:block; text-indent:-99999px; overflow:hidden;}
+.title_wrap {width:100%; position:absolute; left:50%; top:50%; transform:translateX(-50%) translateY(-50%);}
+h2.title {padding-bottom:10px; font-family:'Nanum-Gothic', sans-serif; font-weight:700; font-size:62px; color:#fff; letter-spacing:12px; 
+    text-transform:uppercase; text-align:center; text-shadow:#666 0 0 10px;}
+/* Visual End */
+
+/* Content common */
+#contents {width:auto;}
+section {width:auto; padding-bottom:60px; position:relative; overflow:hidden; background:rgba(255,255,255,.7)}
+section h3 {font-family:'Arial', sans-serif; font-weight:700; font-size:42px; color:#333; letter-spacing:8px; 
+text-transform:uppercase; text-align:center; padding:60px 0 60px; margin-bottom:50px; background:rgba(255,255,255,1); text-shadow:#666 0 0 4px;}
+section dl {font-family:'Arial', sans-serif; color:#333;}
+section dl dt {font-family:'Nanum-Gothic', sans-serif; text-align:center; font-weight:700; color:#333; font-size:26px; margin:5px 0 40px;}
+section dl dd {font-size:20px; letter-spacing:1px; line-height:1.9em; text-align:justify;}
+/*Content common End */
+
+/* Main Episode Area */
+.main_episode .film_box {width:100%; padding:30px 0; background:rgba(0,0,0,.8); position:absolute;}
+.main_episode .film_box .episode_link {display:block; width:20%; position:absolute; text-indent:-99999px; overflow:hidden; color:#fff; box-shadow:rgba(255,255,255,.5) 0 0 2px 1px;}
+.main_episode .film_box span {display:block; position:absolute; background:#252525;}
+.main_episode .film_box .deco_white {width:12%; height:100%; background:#fff; top:0; left:0;}
+.main_episode .film_box .deco_black {width:7%; height:110%; top:-5%; left:7%; border-radius:10px;}
+.main_episode .film_box .deco_black::before {content:''; display:block; width:30%; height:60%; background:#252525; 
+    position:absolute; top:20%; left:30%; border-radius:10px;  box-shadow:rgba(255,255,255,.05) 0 0 5px 2px;}
+.main_episode .film_box .deco_black.light_on::before {content:''; display:block; width:30%; height:60%; background:#252525; 
+        position:absolute; top:20%; left:30%; border-radius:10px;  box-shadow:rgba(255,255,255,.8) 0 0 10px 2px; transition:all .5s ease-out;}
+.main_episode .film_box .deco_black2 {width:4%; height:90%; border-radius:10px; top:5%; left:11%; box-shadow:rgba(255,255,255,.2) 0 0 5px 2px;}
+.main_episode .film_box .deco_black3 {width:3%; height:90%; border-radius:0 10px 10px 0; top:5%; left:0; box-shadow:rgba(255,255,255,.2) 0 0 5px 2px;}
+.main_episode .film_box .deco_black4 {width:4%; height:80%; top:10%; left:3%;}
+.main_episode .film_box .projector {width:10%; height:100%; background:url(../images/projector.svg)center no-repeat; background-size:contain; 
+    left:4%; top:-80%; transform:rotate(-28deg);}
+.episode_wrap {width:auto; padding:50px 15%; background:#fff;}
+.episode_wrap .episode_box {width:auto; overflow:hidden; display:none;}
+.episode_wrap .episode_1 {display:block;}
+.episode_wrap .episode_box dl {width:99%; padding:0 1%; margin-bottom:10px;}
+.episode_wrap .episode_box img {width:45%; margin:10px 5% 10px 0; float:left; box-shadow:rgba(0,0,0,.2) 0 0 10px 5px;}
+/* Main Episode End */
+
+/* Mini Episode Area */
+.mini_episode {padding-bottom:120px;}
+.mini_wrap {width:auto; padding:60px 15%; background:#fff; overflow:hidden;}
+.mini_wrap .mini_box {padding:30px 0; border:1px solid #999;}
+.mini_wrap .mini_box dl dt {margin:5px 0 20px;}
+.mini_wrap .mini_1 {width:auto; margin-bottom:40px; border-radius:0 20px 0 0; overflow:hidden;}
+.mini_wrap .mini_1 img {display:block; width:40%; margin:10px 3% 0; float:left;}
+.mini_wrap .mini_1 dl {margin:0 3%;}
+.mini_wrap .mini_1 dl dt {text-align:left;}
+.mini_wrap .mini_2 {width:48.5%; float:left;}
+.mini_wrap .mini_3 {width:48.5%; float:right;}
+.mini_wrap .mini_2 img, .mini_wrap .mini_3 img {width:88%; margin:0 6% 20px;}
+.mini_wrap .mini_2 dl, .mini_wrap .mini_3 dl {width:auto; margin:0 6%;}
+/* Mini Episode Area */
+
+@media screen and (max-width:1280px) {
+
+    /* Content common */
+    section {padding-bottom:50px;}
+    section h3 {font-size:36px; letter-spacing:7px; padding:40px 0 40px; margin-bottom:30px;}
+    section dl dt {font-size:24px; margin:5px 0 30px;}
+    section dl dd {font-size:18px;}
+    /*Content common End */
+
+    /* Main Episode Area */
+    .main_episode .film_box {padding:20px 0;}
+    .main_episode .film_box .episode_link {width:30%;}
+    .main_episode .film_box .deco_white {width:9%;}
+    .main_episode .film_box .deco_black {left:4%;}
+    .main_episode .film_box .deco_black2 {left:7%;}
+    .main_episode .film_box .deco_black3 {display:none;}
+    .main_episode .film_box .deco_black4 {left:0;}
+    .main_episode .film_box .projector {width:12%; left:-1%; top:-75%;}
+    .episode_wrap {padding:40px 5%;}
+    /* Main Episode End */
+
+    /* Mini Episode Area */
+    .mini_episode {padding-bottom:80px;}
+    .mini_wrap {padding:40px 5%;}
+    .mini_wrap .mini_box {padding:20px 0;}
+    .mini_wrap .mini_1 {margin-bottom:30px; border-radius:0 15px 0 0;}
+    .mini_wrap .mini_1 img {display:block; width:35%;}
+    /* Mini Episode Area */
+}
+
+@media screen and (max-width:1024px) {
+
+    /* Content common */
+    section h3 {font-size:34px; padding:35px 0 35px; margin-bottom:35px;}
+    section dl dt {font-size:20px; margin:5px 0 25px;}
+    section dl dd {font-size:17px;}
+    /*Content common End */
+
+    /* Main Episode Area */
+    .main_episode .film_box {padding:20px 0;}
+    .main_episode .film_box .episode_link {width:40%;}
+    .main_episode .film_box .deco_white {width:5%;}
+    .main_episode .film_box .deco_black {width:5%; left:0; border-radius:0 10px 10px 0;}
+    .main_episode .film_box .deco_black2 {left:4%;}
+    .main_episode .film_box .deco_black4 {display:none;}
+    .main_episode .film_box .projector {width:15%; height:70%; left:-5%; top:-55%;  transform:none;}
+    .episode_wrap {padding:40px 5%;}
+    .episode_wrap .episode_box img {margin:10px 3% 3px 0; float:left; box-shadow:rgba(0,0,0,.2) 0 0 5px 5px;}
+    /* Main Episode End */
+
+}
+
+@media screen and (max-width:768px) {
+
+    h2.title {font-size:52px; color:#fff; letter-spacing:8px;}
+
+    /* Content common */
+    section h3 {font-size:28px; letter-spacing:6px; padding:30px 0; margin-bottom:30px;}
+    section dl dd {font-size:16px;}
+    /*Content common End */
+
+    /* Main Episode Area */
+    .main_episode .film_box {padding:15px 0; position:relative;}
+    .main_episode .film_box .episode_link {width:40%;}
+    .main_episode .film_box .deco_white {width:5%;}
+    .main_episode .film_box .deco_black {width:5%; left:0; border-radius:0 10px 10px 0;}
+    .main_episode .film_box .deco_black2 {left:4%;}
+    .main_episode .film_box .deco_black4 {display:none;}
+    .main_episode .film_box .projector {width:15%; height:70%; left:-2%; top:-55%;  transform:rotate(15deg);}
+    .episode_wrap {padding:30px 5% 40px;}
+    .episode_wrap .episode_box img {width:98%; margin:10px 1% 20px 1%; float:none;}
+    /* Main Episode End */
+
+    /* Mini Episode Area */
+    .mini_episode {padding-bottom:50px;}
+    .mini_wrap {padding:30px 5%;}
+    .mini_wrap .mini_box {padding:20px 0; border:0;}
+    .mini_wrap .mini_box dl dt {margin:5px 0 15px;}
+    .mini_wrap .mini_1 {margin-bottom:20px; border-radius:0;}
+    .mini_wrap .mini_1 img {width:100%; margin:0 0 20px; float:none;}
+    .mini_wrap .mini_1 dl {margin:0;}
+    .mini_wrap .mini_1 dl dt {text-align:center;}
+    .mini_wrap .mini_2 {width:auto; float:none; margin-bottom:20px;}
+    .mini_wrap .mini_3 {width:auto; float:none;}
+    .mini_wrap .mini_2 img, .mini_wrap .mini_3 img {width:100%; margin:0 0 20px;}
+    .mini_wrap .mini_2 dl, .mini_wrap .mini_3 dl {width:auto; margin:0;}
+    /* Mini Episode Area */
+}
+
+@media screen and (max-width:640px) {
+    
+    h2.title {font-size:48px; color:#fff; letter-spacing:7px;}
+}

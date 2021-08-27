@@ -1,0 +1,95 @@
+<? 
+	session_start();
+    @extract($_SESSION);
+?>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>롯데알미늄</title>
+
+    <link rel="apple-touch-icon-precomposed" href="../app_icon.png">
+    <link rel="apple-touch-startup-image" href="../startup.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/the_way.css">
+    
+    <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f52763a90c26ac43fef91ce13f70c7c4"></script>
+    <script src="../js/kakao_map.js"></script>
+    <script src="../js/prefixfree.min.js"></script>
+    <script>
+      // <![CDATA[
+      try {
+       window.addEventListener('load', function(){
+        setTimeout(scrollTo, 0, 0, 1); 
+       }, false);
+      } 
+      catch(e) {}
+      // ]]>
+     </script>
+     <!--[if lt IE 9]> 
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <!--[if lt IE 9]>
+        <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="wrap">
+        <!-- Header Area -->
+        <? include "../common/sub_header.html" ?>
+        <!-- Header Area End -->
+        <ul class="sub_nav">
+            <li>
+                <a href="./faq.html">FAQ</a>
+            </li>
+            <li class="current">
+                <a href="./the_way.html">오시는길</a>
+            </li>
+        </ul>
+        <article id="content">
+            <h2>오시는길</h2>
+            <section class="content_1">
+                <h3>카카오맵</h3>
+                <div class="content_inner">
+                    <div id="kakaoMap"></div>
+                    <div class="con_info">
+                        <h3>contact us</h3>
+                        <ul>
+                            <li>
+                                <dl>
+                                    <dt>info.</dt>
+                                    <dd>서울특별시 동작구 보라매로 5길 51</dd>
+                                    <dd>TEL. 02-801-8000   FAX. 02-6234-2055</dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>public trans.</dt>
+                                    <dd>from 2호선 신대방역 : 마을버스 동작 05-1 &#47; 6516, 6511, 5522A, 5524 번 버스
+                                    <dd>from 2호선 신림역 : 마을버스 03 &#47; 5525, 5522B, 5516, 6513 번 버스
+                                    <dd>from 7호선 신대방삼거리역 : 마을버스 05 &#47; 6516, 6514, 6513, 153 번 버스
+                                </dl>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </article>
+        <!-- Footer Area -->
+        <? include "../common/sub_footer.html" ?>
+        <!-- Footer Area End -->
+    </div>
+    <!-- JQuery -->
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="../js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="../js/sub_scroll_2.js"></script>
+    <script src="../js/set_map.js"></script>
+    <script src="../js/family.js"></script>
+</body>
+</html>

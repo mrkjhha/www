@@ -1,0 +1,24 @@
+.sub_nav {width:100%; overflow:hidden; margin-top:50px;}
+.sub_nav li {width:50%; height:fit-content; float:left; background:rgb(225,84,73);}
+.sub_nav li a {display:block; width:100%; text-align:center; font-size:1.22em; font-weight:700; color:#fff; padding:15px 0;}
+.sub_nav .current {background:#fff; position:relative;}
+.sub_nav .current a {color:rgb(225,84,73);}
+.sub_nav .current::before {content:''; display:block; width:100%; height:1px; background:rgb(225,84,73); position:absolute; left:0; bottom:0;}
+
+#content {width:100%; overflow:hidden;}
+#content .content_1 {margin-bottom:90px; width:100%; overflow:hidden; position:relative;}
+#content h2 {width:100%; font-family:'Nanum Gothic', sans-serif; font-weight:700; font-size:2.3em; color:#333; text-align:center; padding:20px 0; margin-bottom:25px; margin-top:25px;}
+
+.all {overflow:hidden;}
+.all a {display:block; width:76%; margin:0 5%; background:rgb(233,127,119); padding:15px 7%; font-size:1.1em; border-radius:13px 13px 0 0; text-align:right; font-weight:700; color:#fff;}
+.all a::before {content:''; display:block; width:50px; height:2px; background:#fff; position:absolute; left:0; top:28px;}
+.all .a_hide {background:rgb(225,84,73);}
+.content_1 ul {width:90%; margin:0 5%; text-transform:uppercase; font-weight:400;}
+.content_inner {background:#fff;}
+.content_1 ul li {border-bottom:2px solid #ccc; overflow:hidden;}
+.content_1 ul li:nth-last-child(1) {border-bottom:0;}
+.content_1 ul li .qes {background:#fff;}
+.content_1 ul li .ans {position:relative; background:#fafafa;}
+.content_1 ul li .qes span {font-size:1.3em; font-weight:normal; position:absolute; left:20px; top:21px; color:rgb(225,84,73);}
+.content_1 ul li .ans {padding:40px; line-height:1.95em; text-align:justify; font-size:1.13em; color:#666; display:none; border:2px solid #999;}
+.content_1 ul li .qes a {font-family:'Nanum Gothic', sans-serif; display:block; padding:20px 20px 20px 60px; font-size:1.13em; line-height:1.8em; color:#666; letter-spacing:3px; position:relative;}

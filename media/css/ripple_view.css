@@ -1,0 +1,50 @@
+/* Content common */
+#contents {position:relative; background:rgba(0,0,0,.8);}
+
+#wrap {background:url(../images/visual_img7.jpg);}
+#contents .ripple_wrap {width:40%; margin:0 auto; padding:20px 25px; position:fixed; left:50%; top:120px; transform:translateX(-50%);}
+#contents .ripple_wrap form {width:100%;}
+#contents .ripple_window {width:100%; margin-bottom:20px; box-shadow:#fff 0 0 20px 5px inset; overflow:auto; border:1px solid #fff;}
+#contents .ripple_showbox {position:relative; margin-top:5px; top:0; left:0;}
+#contents .ripple_showbox .ripples_wrap {overflow:hidden; font-family:'Nanum-Gothic', sans-serif; padding:20px 0; font-size:16px; margin-bottom:1px;}
+#contents .ripple_showbox .ripples_wrap:nth-of-type(even) {background:rgba(255,255,255,.8);}
+#contents .ripple_showbox .ripples_wrap:nth-of-type(odd) {background:rgba(255,255,255,.8);}
+#contents .ripple_title_wrap {float:left; margin-left:3%; width:20%;}
+.ripple_content {float:left; width:auto;}
+.ripples_wrap {position:relative;}
+#contents .ripple_delete_btn {display:block; position:absolute; font-size:14px; border-radius:10px; padding:10px 20px; 
+    background:rgba(0,0,0,.7); color:#fff; top:50%; transform:translateY(-50%); right:4%;}
+#contents .none {font-family:'Nanum-Gothic', sans-serif; padding:20px; font-size:24px; font-weight:700; text-align:center; background:#eee; border-radius:10px; margin-bottom:15px;}
+#contents .ripple_box {width:100%;}
+#contents #ripple_box1 {display:block; text-align:center;font-family:'Nanum-Gothic', sans-serif; font-weight:700; font-size:18px; width:30%; color:#fff;
+    padding:10px 0; background:rgba(218,41,28,.6); margin:0 auto; letter-spacing:2px; border-radius:10px 10px 0 0;}
+#contents #ripple_box2 textarea {padding:15px 3%; width:94%;}
+#contents #ripple_box3 {overflow:hidden;}
+#contents #ripple_box3 a {display:block; width:48%; text-align:center; font-weight:700; float:left; padding:12px 0; border-radius:10px; margin:10px auto;}
+#contents #ripple_box3 a.complete {margin-right:4%; background:rgba(218,41,28,.6); color:#fff;}
+#contents #ripple_box3 a.back_to_view {background:rgba(255,255,255,.9); color:#333;}
+#contents #ripple_content {width:100%;}
+
+@media screen and (max-width:1620px) {
+    #contents .ripple_wrap {width:50%;}
+}
+
+@media screen and (max-width:1280px) {
+
+    #contents .ripple_wrap {width:60%;}
+}
+
+@media screen and (max-width:1024px) {
+
+    #contents .ripple_wrap {width:80%;}
+}
+
+@media screen and (max-width:768px) {
+    
+    #contents .ripple_wrap {width:90%;}
+}
+
+@media screen and (max-width:640px) {
+
+    #contents .ripple_wrap {width:94%;}
+}

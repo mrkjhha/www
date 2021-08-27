@@ -1,0 +1,47 @@
+.sub_nav {width:100%; overflow:hidden; margin-top:50px;}
+.sub_nav li {width:33.33%; height:fit-content; float:left; background:rgb(225,84,73);}
+.sub_nav li a {display:block; width:100%; text-align:center; font-size:1.22em; font-weight:700; color:#fff; padding:15px 0;}
+.sub_nav .current {background:#fff; position:relative;}
+.sub_nav .current a {color:rgb(225,84,73);}
+.sub_nav .current::before {content:''; display:block; width:100%; height:1px; background:rgb(225,84,73); position:absolute; left:0; bottom:0;}
+
+#content {width:100%; overflow:hidden;}
+#content h3{width:100%; font-family:'Nanum Gothic', sans-serif; font-weight:700; font-size:2em; color:#333; text-align:center; padding:35px 0; margin-top:55px; position:relative;}
+#content h3::before {content:''; display:block; width:38px; height:12px; position:absolute; left:50%; margin-left:-19px; top:-28px;
+    background:url(../sub/images/point.svg) 0 0 no-repeat; background-size:contain; transform:rotate(90deg);}
+#content h2 {width:100%; font-family:'Nanum Gothic', sans-serif; font-weight:700; font-size:2.3em; color:#333; text-align:center; padding:20px 0; margin-top:25px;}
+.con_nav {width:80%; margin:25px 10%; overflow:hidden; border-radius:10px; border:1px solid rgb(225,84,73); position:relative; left:0; top:0; z-index:0;}
+.con_nav li {width:25%; float:left; background:rgb(225,84,73);}
+.con_nav li a {display:block; width:100%; padding:10px 0; text-align:center; color:#fff; font-weight:700;}
+.con_nav .con_current {background:#fff;}
+.con_nav .con_current a {color:rgb(225,84,73);}
+
+#content section {width:100%; overflow:hidden; margin-bottom:90px;}
+.flow_box {width:100%; margin-bottom:15px; font-family:'Nanum Gothic', sans-serif; font-size:1.5em; font-weight:700; color:#666; text-align:justify; line-height:1.9em; 
+    border-top:4px solid rgb(225,84,73); border-bottom:4px solid rgb(225,84,73); position:relative;}
+.flow_box .step_title {display:block; width:70px; padding:44px 0; text-align:center; font-family:'Arial', sans-serif; color:#fff; background:rgb(225,84,73); border-radius:0 15px 15px 0; 
+    position:absolute; left:0; top:-4px; z-index:1;}
+.step_title::before {content:''; display:block; width:40px; height:40px; background:rgb(225,84,73); border-radius:50%; position:absolute; right:-15px; top:45px; z-index:-1}
+.flow_box ol {width:100%; height:120px; position:relative; left:30%; top:0;}
+.flow_box ol li {width:33.33%; text-align:center; padding:40px 0; position:absolute; top:0;}
+.flow_box ol li:nth-of-type(1) {left:0;}
+.flow_box ol li:nth-of-type(2) {left:33.33%;}
+.flow_box ol li:nth-of-type(3) {left:66.66%;}
+.flow_box ol li:nth-of-type(4) {left:99.99%;}
+.flow_box ol li:nth-of-type(5) {left:133.32%;}
+.flow_box ol li:nth-of-type(6) {left:166.65%;}
+.flow_box .end {display:block; width:40px; height:105px; padding-top:17px; color:#fff; font-size:.9em; line-height:1.5em; border-radius:8px 0 0 8px; 
+    background:rgb(225,84,73); position:absolute; top:-1px; right:-50px;}
+.content_1 ol li:nth-of-type(4) {padding:21px 0;}
+.content_2 ol li:nth-of-type(3) {padding:21px 0;}
+.content_3 ol li:nth-of-type(3) {padding:21px 0;}
+.content_4 ol li:nth-of-type(3) {padding:21px 0;}
+.con_wrap li {position:relative;}
+.con_wrap li a {display:block; width:120px; padding:10px; margin:0 auto; text-align:center; border:1px solid #999; color:#666; 
+    position:absolute; bottom:33px; left:50%; margin-left:-72px;}
+.con_wrap dl {width:80%; padding:30px 0; margin:0 auto; font-family:'Nanum Gothic', sans-serif; text-align:center; border-bottom:2px solid rgb(225,84,73);}
+.con_wrap li:nth-of-type(1) dl, .con_wrap li:nth-of-type(2) dl {padding:40px 15px 80px;}
+#content dt {font-size:1.3em; font-weight:700; color:#333; padding:10px 0 15px; position:relative;}
+#content dt::before {content:''; display:block; width:8px; height:8px; background:rgb(225,84,73); transform:rotate(45deg); position:absolute; left:50%; margin-left:-65px; top:18px;}
+#content dt::after {content:''; display:block; width:8px; height:8px; background:rgb(225,84,73); transform:rotate(45deg); position:absolute; right:50%; margin-right:-65px; top:18px;}
+#content dd {font-size:1.13em; line-height:1.9em; padding:15px 20px; color:#666; background:#fff; border-radius:0 0 11px 11px;}

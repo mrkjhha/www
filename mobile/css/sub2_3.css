@@ -1,0 +1,59 @@
+.sub_nav {width:100%; overflow:hidden; margin-top:50px;}
+.sub_nav li {width:25%; height:fit-content; float:left; background:rgb(225,84,73);}
+.sub_nav li a {display:block; width:100%; text-align:center; font-size:1.22em; font-weight:700; color:#fff; padding:15px 0;}
+.sub_nav .current {background:#fff; position:relative;}
+.sub_nav .current a {color:rgb(225,84,73);}
+.sub_nav .current::before {content:''; display:block; width:100%; height:1px; background:rgb(225,84,73); position:absolute; left:0; bottom:0;}
+
+#content {width:100%; overflow:hidden;}
+#content section {margin-bottom:90px; width:100%; overflow:hidden;}
+#content h3 {width:100%; font-family:'Nanum Gothic', sans-serif; font-weight:700; font-size:2em; color:#333; text-align:center; padding:35px 0; margin-top:55px; position:relative;}
+#content h3::before {content:''; display:block; width:38px; height:12px; position:absolute; left:50%; margin-left:-19px; top:-28px;
+    background:url(../sub/images/point.svg) 0 0 no-repeat; background-size:contain; transform:rotate(90deg);}
+#content h2 {width:100%; font-family:'Nanum Gothic', sans-serif; font-weight:700; font-size:2.3em; color:#333; text-align:center; padding:20px 0; margin-top:25px;}
+#content p {width:90%; margin:0 5%; font-family:'Nanum Gothic', sans-serif; font-size:1.3em; color:#333; text-align:justify; padding-bottom:35px; line-height:1.9em; position:relative;}
+.con_nav {width:90%; margin:25px 5%; overflow:hidden; border-radius:10px; border:1px solid rgb(225,84,73); background:rgb(225,84,73); position:relative; left:0; top:0; z-index:0;}
+.con_nav li {width:33.33%; float:left; background:rgb(225,84,73);}
+.con_nav li:nth-last-of-type(1) {float:right;}
+.con_nav li a {display:block; width:100%; padding:10px 0; text-align:center; color:#fff; font-weight:700;}
+.con_nav .con_current {background:#fff;}
+.con_nav .con_current a {color:rgb(225,84,73);}
+
+.con1_box {width:100%; padding-bottom:5px;}
+.con1_box li {width:90%; margin:0 5%; box-shadow:#ccc 0 0 5px 0;}
+.con1_box li dl {width:90%; padding:10px 5% 30px;}
+.con1_box li dl dt {text-align:left; padding:0 10px; font-size:1.3em; font-weight:700; margin-bottom:15px;}
+.con1_box li dl dd {text-align:justify; padding:0 10px; font-size:1.13em; font-weight:400; line-height:1.9em;}
+.con1_box .con1_1 {width:90%; margin-bottom:30px; border-radius:20px 0 0 0;}
+.con1_box .con1_1 img {width:86%; margin:30px 7% 10px;}
+.con1_box .con1_2 {margin-bottom:0; position:relative;}
+.con1_box .con1_2 img {width:90%; margin:20px 5%;}
+.con1_box .con1_2 img:nth-of-type(2) {width:30%; border-radius:50%; position:absolute; left:-5%; top:-20px;}
+
+.con2_inner {width:100%; position:relative;}
+.con2_inner p {padding-bottom:30px;}
+.con2_box {width:90%; padding:0 5%;}
+.con2_box img {width:80%; margin:0 10% 20px; border-radius:50%; border:3px solid rgb(218,41,28);}
+.con2_box ul {width:100%; padding:5px 0;}
+.con2_box ul li {box-shadow:#ccc 0 0 5px 0; border-radius:20px 0 20px 0; margin-bottom:20px;}
+.con2_box ul li dl {padding:30px 20px; }
+.con2_box ul li:nth-last-of-type(1) {margin-bottom:0;}
+.con2_box ul li dl dt {text-align:left; font-size:1.3em; font-weight:700; margin-bottom:15px;}
+.con2_box ul li dl dd {text-align:justify; font-size:1.13em; line-height:1.9em;}
+
+.con3_top {width:90%; margin:0 5% 35px; padding:30px 0; overflow:hidden; box-shadow:#ccc 0 0 5px 0; border:2px solid rgb(218,41,28); border-radius:25px;}
+.con3_top img {width:80%; margin:0 10% 30px; border-radius:20px;}
+.con3_top ul {width:90%; margin:0 5%; text-align:center;}
+.con3_top ul li {width:100%; font-size:1.13em; font-weight:700; color:#999; margin-bottom:15px;}
+.con3_top ul li:nth-child(4) {margin-bottom:0;}
+.con3_table {font-family:'Nanum Gothic', sans-serif; color:#666; width:90%; margin:0 5%; text-align:center;}
+.con3_table caption {font-size:1.3em; color:#999; text-align:right; margin-bottom:20px;}
+.con3_table table {width:100%; border-top:2px solid #999; border-bottom:2px solid #999;}
+.con3_table .first th {background:#f9f9f9;}
+.con3_table tr {border-bottom:1px solid #ccc;}
+.con3_table th, .con3_table td {width:16%; padding:15px 0; border-right:1px solid #ccc; font-family:'Nanum Gothic', sans-serif; color:#666; text-align:center;}
+.con3_table td {font-size:1.1em; line-height:1.9em;}
+.con3_table tr td:nth-last-child(1) {border-right:0;}
+.con3_table tr:nth-last-child(1) td:nth-last-child(1) {border-right:1px solid #ccc;}
+.con3_table tr:nth-last-child(2) td:nth-last-child(1) {border-right:1px solid #ccc;}
+.con3_table tr th:nth-last-child(1) {width:20%; border-right:0;}

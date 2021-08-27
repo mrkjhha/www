@@ -1,0 +1,16 @@
+
+#content{font-family:'Nanum-Gothic',sans-serif; width:90%; margin:100px auto;}
+
+.allcheck_box {display:block; font-family:'Nanum-Gothic',sans-serif; text-align:center; color:#666; width:50%; margin:30px auto 10px; 
+    border:1px solid #666; border-radius:40px; padding:15px 15px 15px 11px;}
+
+label {font-size:14px;}
+
+.terms_inner .join {text-align: left}
+.terms_inner .join h4{font-family:'Nanum-Gothic',sans-serif; font-size:20px; margin:50px 0 20px; text-indent:5px;}
+.terms_inner .join .policy{width:auto; padding:10px 20px; overflow-y:scroll; font-size:16px; height:150px; margin:10px 0 20px; border:1px solid #ddd; line-height:1.9em;}
+.terms_inner .join .check {margin-left:5px;}
+.terms_inner .join .button{text-align:center; margin-top:70px; overflow:hidden;}
+.terms_inner .join .button .ok, .terms_inner .join .button button {display:block; width:40%; padding:15px 0; margin-left:2%;
+    border:none; background:rgba(218,41,28,.8); color:#fff; font-size:16px; cursor:pointer; border-radius:30px; float:left;}
+.terms_inner .join .button .cancel{display:block; width:40%; margin-right:2%; padding:15px 0; border:none; background:#999; color:#fff; font-size:16px; cursor:pointer; border-radius:30px; float:right;}

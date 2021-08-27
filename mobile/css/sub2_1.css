@@ -1,0 +1,56 @@
+.sub_nav {width:100%; overflow:hidden; margin-top:50px;}
+.sub_nav li {width:25%; height:fit-content; float:left; background:rgb(225,84,73);}
+.sub_nav li a {display:block; width:100%; text-align:center; font-size:1.22em; font-weight:700; color:#fff; padding:15px 0;}
+.sub_nav .current {background:#fff; position:relative;}
+.sub_nav .current a {color:rgb(225,84,73);}
+.sub_nav .current::before {content:''; display:block; width:100%; height:1px; background:rgb(225,84,73); position:absolute; left:0; bottom:0;}
+
+#content {width:100%; overflow:hidden;}
+#content section {margin-bottom:90px; width:100%; overflow:hidden;}
+#content h3 {width:100%; font-family:'Nanum Gothic', sans-serif; font-weight:700; font-size:2em; color:#333; text-align:center; padding:35px 0; margin-top:55px; position:relative;}
+#content h3::before {content:''; display:block; width:38px; height:12px; position:absolute; left:50%; margin-left:-19px; top:-28px;
+    background:url(../sub/images/point.svg) 0 0 no-repeat; background-size:contain; transform:rotate(90deg);}
+#content h2 {width:100%; font-family:'Nanum Gothic', sans-serif; font-weight:700; font-size:2.3em; color:#333; text-align:center; padding:20px 0; margin-top:25px;}
+#content p {width:90%; margin:0 5%; font-family:'Nanum Gothic', sans-serif; font-size:1.3em; color:#333; text-align:justify; padding-bottom:35px; line-height:1.9em; position:relative;}
+.con_nav {width:90%; margin:25px 5%; overflow:hidden; border-radius:10px; background:rgb(225,84,73); border:1px solid rgb(225,84,73); position:relative; left:0; top:0; z-index:0;}
+.con_nav li {width:25%; float:left; background:rgb(225,84,73);}
+.con_nav li:nth-last-of-type(1) {float:right;}
+.con_nav li a {display:block; width:100%; padding:10px 0; text-align:center; color:#fff; font-weight:700;}
+.con_nav .con_current {background:#fff;}
+.con_nav .con_current a {color:rgb(225,84,73);}
+
+.content_1 ul {width:100%; margin-top:30px; position:relative;}
+.content_1 li {width:100%; position:absolute; left:0; top:0;}
+.content_1 img {width:40%; position:relative; left:50%; top:0;}
+.content_1 dl {width:100%; padding-top:50px; font-family:'Nanum Gothic', sans-serif; position:relative;}
+.content_1 dl dt {font-weight:700; font-size:1.3em; color:#666; text-align:center; line-height:2em; padding-bottom:15px;}
+.content_1 dl::before {content:''; display:block; width:13px; height:13px; background:rgb(225,84,73); border-radius:50%; position:absolute; left:50%; margin-left:-6.5px; top:24px;}
+.content_1 dl::after {content:''; display:block; width:15px; height:15px; background:rgb(225,84,73); position:absolute; left:50%; margin-left:-7.5px; top:10px; transform:rotate(45deg);}
+.content_1 dl dt span {color:rgb(218,41,28);}
+.content_1 dl dd {width:90%; margin:0 5%; font-size:1.2em; color:#333; text-align:center; line-height:2em;}
+
+.content_2 dl {font-family:'Nanum Gothic', sans-serif; overflow:hidden;}
+.content_2>dl>dt {width:40%; margin:0 30% 35px; font-weight:700; font-size:1.3em; color:#fff; text-align:center; padding:10px 0; border-radius:30px; background:rgb(225,84,73);}
+.content_2>dl>dd {width:100%;}
+.content_2>dl>dd:nth-of-type(1) {margin-bottom:30px;}
+.content_2 dl dd dl dt {font-size:1.3em; color:#666; text-align:center; padding-bottom:15px;}
+.content_2 dl dd dl dd {font-size:1.13em; color:#666; text-align:justify; line-height:1.9em;}
+.content_2 img {width:80%; margin:0 10%; padding-bottom:15px;}
+
+.content_3 ul {width:90%; margin:0 5%;}
+.content_3 ul li {width:100%; margin-bottom:30px;}
+.content_3 ul li dl {font-family:'Nanum Gothic', sans-serif; background:rgb(225,84,73); border:4px solid rgb(225,84,73); border-radius:18px;}
+.content_3 dt {padding:15px 0; font-weight:700; font-size:1.3em; color:#fff; text-transform:capitalize; text-align:center;}
+.content_3 dd {width:86%; padding:0 7%; font-size:1.2em; color:#666; text-align:justify; line-height:2em; background:#fff;}
+.content_3 dd:nth-of-type(1) {padding-top:25px;}
+.content_3 dd:nth-last-of-type(1) {border-radius:0 0 16px 16px; padding-bottom:15px;}
+.content_3 img {width:80%; margin:0 10%; position:relative; bottom:0;}
+
+.con4_info {width:90%; margin:0 5%;}
+.con4_info table caption {font-family:'Nanum Gothic', sans-serif; color:#666; margin-bottom:30px; text-align:center;}
+.con4_info table {width:100%; border-top:2px solid #999; border-bottom:2px solid #999;}
+.con4_info .first th {background:#f9f9f9;}
+.con4_info tr {border-bottom:1px solid #ccc;}
+.con4_info tbody tr:nth-child(2) {border-bottom:0;}
+.con4_info th, .content_4 .con4_info td {width:37%; padding:20px; font-family:'Nanum Gothic', sans-serif; color:#666; text-align:center;}
+.con4_info tr th:nth-child(1) {width:26%;}

@@ -1,0 +1,122 @@
+<? 
+	session_start();
+    @extract($_SESSION);
+?>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>롯데알미늄</title>
+
+    <link rel="apple-touch-icon-precomposed" href="../app_icon.png">
+    <link rel="apple-touch-startup-image" href="../startup.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/sub1_2.css">
+    
+    <script src="../js/prefixfree.min.js"></script>
+    <script>
+      // <![CDATA[
+      try {
+       window.addEventListener('load', function(){
+        setTimeout(scrollTo, 0, 0, 1); 
+       }, false);
+      } 
+      catch(e) {}
+      // ]]>
+     </script>
+     <!--[if lt IE 9]> 
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <!--[if lt IE 9]>
+        <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="wrap">
+        <!-- Header Area -->
+        <? include "../common/sub_header.html" ?>
+        <!-- Header Area End -->
+        <ul class="sub_nav">
+            <li>
+                <a href="./sub1_1.html">기업개요</a>
+            </li>
+            <li class="current">
+                <a href="./sub1_2.html">비전</a>
+            </li>
+            <li>
+                <a href="./sub1_3.html">경영철학</a>
+            </li>
+        </ul>
+        <article id="content">
+            <h2>비전</h2>
+            <section class="content_1">
+                <h3 class="hidden">슬로건</h3>
+                <p class="slogan">
+                    <span>g</span>lobal leading<br>
+                    <span>m</span>aterial solution <span>c</span>reator
+                </p>
+            </section>
+            <section class="content_2">
+                <h3>핵심가치</h3>
+                <dl>
+                    <dt>originality</dt>
+                    <dd>변화에 민첩하게 대응하고, 혁신을 통해쉽게 모방할 수 없는 독창성을 만든다.</dd>
+                </dl>
+                <dl>
+                    <dt>challenge</dt>
+                    <dd>업무의 본질에 집중하며 끊임없는 도전을통해 목표를 달성해 나간다.</dd>
+                </dl>
+                <dl>
+                    <dt>respect</dt>
+                    <dd>다양한 의견을 존중하며, 원칙을 준수하며 신뢰받는 공동체를 지향한다.</dd>
+                </dl>
+            </section>
+            <section class="content_3">
+                <h3>경영방침</h3>
+                <dl>
+                    <dt>역량강화</dt>
+                    <dd>
+                        <span>가장 잘 할 수 있는 주력 사업 분야에 역량을 집중합니다.</span>
+                        <span>차별적 가치 제공 및 시너지 창출이 가능한 사업을 확장합니다.</span>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>현장경영</dt>
+                    <dd>
+                        <span>현장의 아이디어들을 신속하게 경영전략에 반영합니다.</span>
+                        <span>고객, 임직원, 협력업체와 직접적 접촉을통해 의견을 수렴합니다.</span>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>투명경영</dt>
+                    <dd>
+                        <span>투명한 기준에 따른 경영활동을 통해 신뢰를 제공합니다.</span>
+                        <span>공정하고 합리적인 인사제도로 임직원에게 동기를 부여합니다.</span>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>가치경영</dt>
+                    <dd>
+                        <span>차별적 제품/서비스 제공으로 본원적 브랜드가치를 제고합니다.</span>
+                        <span>글로벌 시장을 선도하는 대표 브랜드를 육성하고 시장을 리드합니다.</span>
+                    </dd>
+                </dl>
+            </section>
+        </article>
+        <!-- Footer Area -->
+        <? include "../common/sub_footer.html" ?>
+        <!-- Footer Area End -->
+    </div>
+    <!-- JQuery -->
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="../js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="../js/sub_scroll_2.js"></script>
+    <script src="../js/family.js"></script>
+</body>
+</html>

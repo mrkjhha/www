@@ -1,0 +1,388 @@
+@charset "utf-8";
+/* 모바일 코딩 필수 공통영역 */
+* {
+ margin:0;
+ padding:0;
+ -webkit-text-size-adjust:none; }
+body { color:#333; font-size:14px;}
+img, fieldset { border:0; vertical-align:top }
+table {border-collapse:collapse; }
+ul, ol, li, dl { list-style:none; }
+h1, h2, h3, h4, h5, h6 { font-size:100%; font-weight:normal; }
+hr { display:none; }
+a { color:inherit; }
+a, a:link { color:#333; text-decoration:none; }
+a:visited { color:#333; }
+a:hover, a:active { color:#333; text-decoration:none; }
+em, i, address { font-style:normal; font-weight:normal; }
+legend, caption { display:none; clear:both; }
+input, textarea, select, button, table {
+  vertical-align:middle;
+  font-size:inherit;
+  font-family:inherit;
+  line-height:inherit; }
+section, nav, article, aside, hgroup, header, footer { display:block }
+textarea, input { border-radius:1px;}
+textarea { resize:none; }
+label { cursor:pointer; }
+.blind,legend,hr,caption { display:block; overflow:hidden; position:absolute; top:0; left:-1000em; }
+.hidden {display: block; position: absolute; left:-1000%;top:0; width: 1px; height: 1px; overflow: hidden; color: #fff}
+#skipNav {position:relative; width:100%; overflow:hidden; z-index:300;}
+#skipNav a {display:block; height:1px; margin-bottom:-1px;
+           overflow:hidden; text-align:center; text-decoration:none; color:#333; font-size:16px;}
+#skipNav a:hover,#skipNav a:focus,#skipNav a:active {display:block; height:auto; padding:10px 0; background:#f2f2f2;}
+
+@media screen and (-webkit-device-pixel-ratio: 2) {
+    #headerArea .menu_btn {background:url(../images/nav_menu.svg) 0 0 no-repeat; background-size:contain;}
+}
+
+body {margin:0; padding:0; position:relative;}
+#wrap {width:100%; overflow:hidden;}
+        
+/* Header Area */
+#headerArea {width:100%; height:auto; overflow:hidden; position:fixed; right:0; top:0; z-index:10; background:rgba(0,0,0,.2); transition:all .5s ease-out;}
+#headerArea a.menu_btn {display:block; text-indent:-99999px; overflow:hidden; color:#fff; 
+    background:url(../images/nav_menu.svg) center no-repeat; background-size:contain; position:relative; display:none;}
+#gnb {width:auto; position:static; overflow:hidden; z-index:10;}
+#headerArea h1 a {display:block; text-indent:-99999px; overflow:hidden; width:241px; height:41px; margin:25px 0 auto 80px; float:left; background:url(../images/logo.png) center no-repeat;}
+.gnb_menu {width:auto; font-family:'Nanum Gothic', sans-serif; font-weight:400; float:right; margin-right:100px;}
+.gnb_menu li {float:left; margin:10px 50px;}
+.gnb_menu a {display:block; width:100%; font-family:'Nanum Gothic', sans-serif; font-size:26px; text-transform:uppercase; text-align:center; color:#fff; padding:20px 0;}
+.gnb_menu a:hover {text-shadow:rgb(255,255,255) 0 0 5px;}
+
+.entire_bg {width:100%; position:fixed; left:0; top:0; background:rgba(255,255,255,.8); display:none; z-index:10;}
+.close_btn {display:block; width:40px; height:40px; background:rgba(218,41,28,.8); border-radius:5px; position:absolute; right:30px; top:30px;}
+.close_btn::before {content:''; display:block; width:24px; height:3px; border-radius:20px; background:#fff; transform:rotate(45deg); 
+  position:absolute; top:50%; left:50%; margin-left:-12px; margin-top:-2px;}
+.close_btn::after {content:''; display:block; width:24px; height:3px; border-radius:20px; background:#fff; transform:rotate(-45deg); 
+  position:absolute; top:50%; left:50%; margin-left:-12px; margin-top:-2px;}
+/* login_join */
+.login_join {position:fixed; right:10%; top:120px; overflow:hidden; background:rgba(0,0,0,.2); border-radius:15px; padding:0 10px; transition:all .5s ease-out;}
+.login_join a{display:block; font-size:20px; float:left; color:#fff; text-transform:capitalize; padding:8px 10px 10px;}
+.login_join #login {margin-right:10px;}
+.login_join:hover {background:rgba(0,0,0,.7);}
+.login_form, .join_form, .information_form, .member_check_form, .delete_form {display:none; position:fixed; width:60%; padding:40px 5%; left:50%; top:50%; transform:translateX(-50%) translateY(-50%); 
+  background:rgba(0,0,0,.9); border-radius:20px; z-index:20; overflow:auto;}
+/* login form */
+.login_form div.logo {width:241px; height:41px; margin:0 auto 30px; background:url(../images/logo.png) center no-repeat; background-size:contain;}
+.login_form form {width:80%; margin:0 auto;}
+.id_box, .pass_box {width:35%; margin:0 auto; position:relative;}
+.id_box {margin-bottom:20px;}
+.login_form form div label {display:block; position:absolute; left:-60px; padding:10px 15px; text-align:right; color:#fff; font-size:18px;}
+.login_form form div input {display:block; width:85%; outline:0; margin:0 auto; padding:10px 15px;}
+
+.login_btn_wrap {width:500px; margin:40px auto 0; overflow:hidden;}
+.login_btn_wrap .login_cancel {background:#eee; border-radius:50px; overflow:hidden;}
+.login_btn_wrap .login_cancel a {display:block; font-family:'Nanum Gothic', sans-serif; color:#fff; letter-spacing:2px; padding:15px 30px; border-radius:20px; text-align:center;}
+.login_btn_wrap #login_button {width:220px; background:rgba(218,41,28,.8); float:left;}
+.login_btn_wrap #cancel_button {width:220px; background:rgb(101,100,96); float:right;}
+/* login form End */
+
+/* Member_Form */
+.join_form {width:40%; padding:40px 5%; margin:0 auto; overflow:auto;}
+.join_form form {padding:50px 15px; margin-top:50px; border:4px solid rgba(218,41,28,.7); border-radius:30px; background:rgba(255,255,255,.8);}
+.join_form form>span {display:block; width:100%; margin:0 auto 20px;}
+.join_form span {font-size:.9em; text-align:center; color:rgba(218,41,28,.8);}
+.join_form h2 {font-family:'Nanum Gothic', sans-serif; font-size:18px; text-align:center; color:#fff; font-weight:700; letter-spacing:2px;
+      border-radius:50px; width:180px; margin:0 auto 50px; padding:10px 40px; background:rgba(218,41,28,.8);}
+.join_form table{font-family:'Nanum Gothic', sans-serif; font-size:16px; width:90%; margin:0 5%; color:#666; letter-spacing:1px;}
+.join_form th, .join_form td{padding:13px;}
+.join_form th{width:30%}
+.join_form td{width:70%}
+.join_form tr:nth-of-type(1), .join_form tr:nth-of-type(5) {position:relative;}
+.join_form tr:nth-of-type(1) td, .join_form tr:nth-of-type(1) th, .join_form tr:nth-of-type(5) td, .join_form tr:nth-of-type(5) th  {padding-bottom:35px;}
+.join_form #loadtext,.join_form #loadtext2 {font-size:.8em; position:absolute; left:34%; bottom:5px;}
+.join_form input, .join_form select{width:90%; border-radius:10px; padding:10px 0 10px 5%; font-size:1em; border:0; background:#eee; outline:0;}
+.join_form #hp1 {width:20%; padding:10px 10px; text-align:center;}
+.join_form #hp2 {width:27%;}
+.join_form #hp3 {width:28%;}
+.join_form #email1 {width:38.5%;}
+.join_form #email2 {width:39%;}
+.join_form table tr:last-child td{text-align:center; padding:40px 0 0;}
+.join_form table tr:last-child td a {font-family:'Nanum Gothic', sans-serif; font-weight:700; color:#fff; background:#ccc; display:block; text-align:center; padding:15px 8%; border-radius:30px;}
+.join_form table tr:last-child td a:nth-of-type(1) {float:left; margin-left:50px; background:rgba(218,41,28,.8);}
+.join_form table tr:last-child td a:nth-of-type(2) {float:right; margin-right:50px; background:#999;}
+.join_form tr th label {position:relative;}
+.join_form tr th label span {color:rgba(218,41,28,.8);}
+/* member_form End */
+
+/* Modify_Form */
+.information_form {width:40%; padding:40px 5%; margin:0 auto; overflow:auto;}
+.information_form form {padding:50px 15px; margin-top:50px; border:4px solid rgba(218,41,28,.7); border-radius:30px; background:rgba(255,255,255,.8);}
+.information_form form>span {display:block; width:100%; margin:0 auto 20px;}
+.information_form span {font-size:.9em; text-align:center; color:rgba(218,41,28,.8);}
+.information_form h2 {font-family:'Nanum Gothic', sans-serif; font-size:18px; text-align:center; color:#fff; font-weight:700; letter-spacing:2px;
+      border-radius:50px; width:180px; margin:0 auto 50px; padding:10px 40px; background:rgba(218,41,28,.8);}
+.information_form table{font-family:'Nanum Gothic', sans-serif; font-size:16px; width:90%; margin:0 5%; color:#666; letter-spacing:1px;}
+.information_form th, .information_form td{padding:13px;}
+.information_form th{width:30%}
+.information_form td{width:70%}
+.information_form tr:nth-of-type(1), .information_form tr:nth-of-type(5) {position:relative;}
+.information_form tr:nth-of-type(1) td, .information_form tr:nth-of-type(1) th, .information_form tr:nth-of-type(5) td, .information_form tr:nth-of-type(5) th  {padding-bottom:35px;}
+.information_form #loadtext3 {font-size:.8em; position:absolute; left:34%; bottom:5px;}
+.information_form input, .information_form select{width:90%; border-radius:10px; padding:10px 0 10px 5%; font-size:1em; border:0; background:#eee; outline:0;}
+.information_form #modify_hp1 {width:20%; padding:10px 10px; text-align:center;}
+.information_form #modify_hp2 {width:27%;}
+.information_form #modify_hp3 {width:28%;}
+.information_form #modify_email1 {width:38.5%;}
+.information_form #modify_email2 {width:39%;}
+.information_form table tr:last-child td{text-align:center; padding:40px 0 0;}
+.information_form table tr:last-child td a {font-family:'Nanum Gothic', sans-serif; font-weight:700; color:#fff; background:#ccc; display:block; text-align:center; padding:15px 8%; border-radius:30px;}
+.information_form table tr:last-child td a:nth-of-type(1) {float:left; margin-left:50px; background:rgba(218,41,28,.8);}
+.information_form table tr:last-child td a:nth-of-type(2) {float:right; margin-right:50px; background:#999;}
+.information_form tr th label {position:relative;}
+.information_form tr th label span {color:rgba(218,41,28,.8);}
+/* Modify_Form End */
+
+/* Delete_Form */
+.delete_form .delete_title {font-family:'Nanum Gothic', sans-serif; font-size:20px; text-align:center; color:#fff; font-weight:700; letter-spacing:2px;
+    border-radius:50px; width:180px; margin:0 auto 50px; padding:15px 40px; background:rgba(218,41,28,.8);}
+.inform {display:block; font-family:'Nanum Gothic', sans-serif; font-size:20px; text-align:center; color:rgba(218,41,28,.8); line-height:1.9em; margin-bottom:30px;}
+#delete_id {font-size:20px; color:#fff;}
+.delete_form form {width:80%; margin:0 auto;}
+.delete_form .id_box, .pass_box {width:35%; margin:0 auto; position:relative;}
+.delete_form .id_box {margin-bottom:20px;}
+.delete_form form div label, .delete_form form .id_box .id_name {display:block; position:absolute; left:-60px; padding:10px 15px; text-align:right; color:#fff; font-size:18px;}
+.delete_form form div input, .delete_form form div #delete_id {display:block; width:85%; outline:0; margin:0 auto; padding:10px 15px;}
+.delete_form .login_btn_wrap, .delete_form .confirm {width:540px; margin:50px auto 0; overflow:hidden;}
+.delete_form .login_btn_wrap .login_cancel, .delete_form .confirm .login_cancel {background:#eee; border-radius:50px; overflow:hidden;}
+.delete_form .login_btn_wrap .login_cancel a, .delete_form .confirm .login_cancel a {display:block; font-family:'Nanum Gothic', sans-serif; color:#fff; letter-spacing:2px; padding:15px 30px; border-radius:20px; text-align:center;}
+.delete_form .login_btn_wrap #delete_button, .delete_form .confirm #delete_recheck_button {width:220px; background:rgba(218,41,28,.8); float:left;}
+.delete_form .login_btn_wrap #delete_cancel_button, .delete_form .confirm #delete_recancel_button {width:220px; background:rgb(101,100,96); float:right;}
+.delete_form .confirm {display:none; border:4px solid rgba(218,41,28,.8); background:#fff; 
+  position:absolute; top:50%; left:50%; padding:200px 200px; border-radius:20px; transform:translateX(-50%) translateY(-57%);}
+/* Delete form End */
+/* Header area End */
+
+/* Footer Area */
+#footerArea {width:auto; padding:62px 5%; background: rgb(0,0,0);}
+#footerArea p {font-family:'Nanum-Gothic', sans-serif; text-align:center; color:#fff; font-size:20px; margin-bottom:10px;}
+#footerArea .foot_title {font-size:28px; font-weight:700; position:relative; margin-bottom:20px;}
+#footerArea .foot_title:before {content:''; display:block; width:60px; height:18px; background:url('../images/point.svg')0 0 no-repeat; background-size:contain;
+        position:absolute; left:50%; top:50%; margin-top:-6px; margin-left:-170px;}
+#footerArea .foot_title:after {content:''; display:block; width:60px; height:18px; background:url('../images/point.svg')0 0 no-repeat; background-size:contain;
+        position:absolute; right:50%; top:50%; margin-top:-6px; margin-right:-170px; transform:rotate(-180deg)}
+#footerArea .topMove {display:none; width:82px; padding:24px 0; font-size:24px; background:rgba(255,255,255,.9); border-radius:20px; z-index:20;
+  position:fixed; right:100px; bottom:100px; font-family:'Arial','sans-serif'; font-weight:700; text-transform:capitalize; color:#000; text-align:center;}
+/* Footer area End */
+
+@media screen and (max-width:1280px) {
+    /* Gnb Area */
+    #headerArea h1 a {margin:25px 0 auto 40px;}
+    .gnb_menu {margin-right:0;}
+    .gnb_menu li {margin:10px 30px;}
+    .gnb_menu a {font-size:26px;}
+    /* Gnb area End */
+
+    .login_form, .join_form, .information_form, .member_check_form, .delete_form {display:none; position:fixed; width:60%; padding:40px 5%; left:50%; top:50%; transform:translateX(-50%) translateY(-50%); 
+      background:rgba(0,0,0,.9); border-radius:20px; z-index:20;}
+    /* login form */
+    .login_form div.logo {width:206px; height:35px;}
+    .id_box, .pass_box {width:55%;}
+    
+    .login_btn_wrap {width:80%; margin:30px auto 0;}
+    .login_btn_wrap #login_button {width:40%;}
+    .login_btn_wrap #cancel_button {width:40%;}
+    /* login form End */
+
+    /* Member_Form */
+    .join_form {width:70%;}
+    .join_form form {width:80%; margin:30px auto 0; padding:40px 15px; border-radius:20px;}
+    .join_form th, .join_form td{padding:10px;}   
+    .join_form table tr:last-child td a {padding:15px 10%;}
+    .join_form table tr:last-child td a:nth-of-type(1) {margin-left:6%;}
+    .join_form table tr:last-child td a:nth-of-type(2) {margin-right:6%;}
+    /* member_form End */
+
+    /* Modify_Form */
+    .information_form {width:70%;}
+    .information_form form {width:80%; margin:30px auto 0; padding:40px 15px; border-radius:20px;}
+    .information_form th, .information_form td{padding:10px;}
+    .information_form table tr:last-child td a {padding:15px 10%;}
+    .information_form table tr:last-child td a:nth-of-type(1) {margin-left:6%;}
+    .information_form table tr:last-child td a:nth-of-type(2) {margin-right:6%;}
+    /* Modify_Form End */
+
+    /* Delete_Form */
+    .inform {font-size:18px; color:rgba(218,41,28,.8); margin-bottom:20px;}
+    .delete_form .delete_title {font-size:22px; width:30%; margin:0 auto 20px; padding:15px 10px; background:none;}
+    .delete_form form {width:80%; margin:0 auto;}
+    .delete_form .id_box, .pass_box {width:30%;}
+    .delete_form form div input, .delete_form form div #delete_id {width:80%;}
+    .delete_form .login_btn_wrap, .delete_form .confirm {width:80%; margin:40px auto 0;}
+    .delete_form .login_btn_wrap #delete_button, .delete_form .confirm #delete_recheck_button {width:40%;}
+    .delete_form .login_btn_wrap #delete_cancel_button, .delete_form .confirm #delete_recancel_button {width:40%;}
+    .delete_form .confirm {padding:100px 100px;}
+    /* Delete form End */
+
+    /* Footer Area */
+    #footerArea p {font-size:18px;}
+    #footerArea .foot_title {font-size:26px;}
+    #footerArea .foot_title:before {width:60px; height:14px; margin-top:-4px; margin-left:-150px;}
+    #footerArea .foot_title:after {width:60px; height:14px; margin-top:-4px; margin-right:-150px;}
+    #footerArea .topMove {width:70px; padding:22px 0; font-size:22px; right:50px;}
+    /* Footer area End */
+}
+
+@media screen and (max-width:1024px) {
+    /* Header Area */
+    #headerArea a.menu_btn {display:block; width:28px; height:23px; padding:22px 0; margin:0 35px 0 auto;}
+    #gnb {width:100%; position:absolute; right:-100%; top:0; z-index:50;}
+    #headerArea h1 a {margin:15px 0 15px 40px;}
+    .gnb_menu {width:100%; padding-top:30px;}
+    .gnb_menu li {width:fit-content; float:none; padding:15px 0; margin:10px auto;}
+    .gnb_menu a {font-size:42px; padding:15px 0;}
+    /* Header area End */
+
+    .close_btn {width:30px; height:30px; right:25px; top:25px;}
+    /* login form */
+    .login_join {right:5%;}
+    .id_box, .pass_box {width:70%;}
+    
+    .login_btn_wrap {width:80%; margin:30px auto 0;}
+    .login_btn_wrap #login_button {width:40%;}
+    .login_btn_wrap #cancel_button {width:40%;}
+    /* login form End */
+
+    /* Member_Form */    
+    .join_form {width:70%;} 
+    .join_form th{display:none;}
+    .join_form td{width:70%; margin:0 auto;}
+    .join_form #loadtext,.join_form #loadtext2 {left:30%;}
+    .join_form input, .join_form select{width:95%;}
+    .join_form #hp1 {width:17%; padding:10px 10px;}
+    .join_form #hp2 {width:28%;}
+    .join_form #hp3 {width:28%;}
+    .join_form #email1 {width:37%;}
+    .join_form #email2 {width:39%;}
+    .join_form table tr:last-child td a {padding:15px 10%;}
+    .join_form table tr:last-child td a:nth-of-type(1) {margin-left:5%;}
+    .join_form table tr:last-child td a:nth-of-type(2) {margin-right:5%;}
+    /* member_form End */
+
+    /* Modify_Form */
+    .information_form {width:70%;}
+    .information_form form {margin:0 auto;}
+    .information_form th{display:none;}
+    .information_form th, .information_form td{padding:10px;}
+    .information_form td{width:70%; margin:0 auto;}
+    .information_form #loadtext3 {left:30%;}
+    .information_form input, .information_form select{width:95%;}
+    .information_form #modify_hp1 {width:17%; padding:10px 10px;}
+    .information_form #modify_hp2 {width:28%;}
+    .information_form #modify_hp3 {width:28%;}
+    .information_form #modify_email1 {width:37%;}
+    .information_form #modify_email2 {width:39%;}
+    .information_form table tr:last-child td a {padding:15px 10%;}
+    .information_form table tr:last-child td a:nth-of-type(1) {margin-left:5%;}
+    .information_form table tr:last-child td a:nth-of-type(2) {margin-right:5%;}
+    /* Modify_Form End */
+
+    /* Delete_Form */
+    .delete_form .id_box, .pass_box {width:30%;}
+    .delete_form .login_btn_wrap #delete_button, .delete_form .confirm #delete_recheck_button {width:50%;}
+    .delete_form .login_btn_wrap #delete_cancel_button, .delete_form .confirm #delete_recancel_button {width:50%;}
+    .delete_form .confirm {padding:100px 100px;}
+    /* Delete form End */
+
+    /* Delete_Form */
+    .delete_form h2 {font-size:20px;}
+    .inform {font-size:16px; margin-bottom:10px;}
+    #delete_id {font-size:18px; color:#fff;}
+    .delete_form .id_box, .pass_box {width:70%;}
+    .delete_form form div label, .delete_form form .id_box .id_name {font-size:16px;}
+    .delete_form form div input, .delete_form form div #delete_id {width:95%;}
+    .delete_form .login_btn_wrap, .delete_form .confirm {width:90%; margin:30px auto 0;}
+    .delete_form .login_btn_wrap .login_cancel a, .delete_form .confirm .login_cancel a {padding:15px 20px;}
+    .delete_form .login_btn_wrap #delete_button, .delete_form .confirm #delete_recheck_button {width:40%;}
+    .delete_form .login_btn_wrap #delete_cancel_button, .delete_form .confirm #delete_recancel_button {width:40%;}
+    .delete_form .confirm {padding:80px 20%;}
+    /* Delete form End */
+}
+
+@media screen and (max-width:640px) {
+  /* Header Area */
+  #headerArea a.menu_btn {width:24px; height:20px; padding:24px 0; margin:0 20px 0 auto;}
+  #headerArea h1 a {margin:15px 0 15px 20px;}
+  .gnb_menu a {font-size:34px; padding:10px 0;}
+  /* Header area End */
+
+  .login_form, .join_form, .information_form, .member_check_form, .delete_form {width:95%; margin:0 auto;}
+  .close_btn {width:30px; height:30px; right:25px; top:25px;}
+  .close_btn::before {width:20px; height:3px; margin-left:-10px; margin-top:-2px;}
+  .close_btn::after {width:20px; height:3px;  margin-left:-10px; margin-top:-2px;}
+
+  /* login form */
+  .login_join {right:5%; top:13%;}
+  .id_box, .pass_box {width:70%;}
+  .login_form div.logo {width:176px; height:25px;}
+  .login_form form {width:95%; margin:0 auto;}
+  .login_btn_wrap {width:95%; margin:30px auto 0;}
+  .login_btn_wrap #login_button {width:45%;}
+  .login_btn_wrap #cancel_button {width:45%;}
+  /* login form End */
+  
+  /* Member_Form */    
+  .join_form {width:100%;}
+  .join_form table {width:100%; margin:0 auto;}
+  .join_form td{width:98%; margin:0 auto;}
+  .join_form #loadtext,.join_form #loadtext2 {left:5%;}
+  .join_form input, .join_form select{width:95%;}
+  .join_form #hp1 {font-size:14px; width:19%;}
+  .join_form #hp2 {font-size:14px; width:24%;}
+  .join_form #hp3 {font-size:14px; width:24%;}
+  .join_form #email1 {width:35%;}
+  .join_form #email2 {width:36%;}
+  .join_form table tr:last-child td a {width:32%; padding:15px 5%;}
+  .join_form table tr:last-child td a:nth-of-type(1) {margin-left:5%;}
+  .join_form table tr:last-child td a:nth-of-type(2) {margin-right:5%;}
+  /* member_form End */
+
+  /* Modify_Form */
+  .information_form form>span {margin:0 auto 10px;}
+  .information_form {width:100%; padding:20px 0;}
+  .delete_form form {width:100%; margin:0 auto;}
+  .information_form tr:nth-of-type(1) td {padding-bottom:15px;}
+  .information_form tr:nth-of-type(5) td {padding-bottom:25px;}
+  .information_form td{width:100%; margin:0 auto;}
+  .information_form #loadtext3 {left:5%;}
+  .information_form input, .information_form select{width:95%;}
+  .information_form #modify_hp1 {font-size:14px; width:22%;}
+  .information_form #modify_hp2 {font-size:14px; width:24%;}
+  .information_form #modify_hp3 {font-size:14px; width:24%;}
+  .information_form #modify_email1 {width:35%;}
+  .information_form #modify_email2 {width:36%;}
+  .information_form table tr:last-child td{padding:20px 0 0;}
+  .information_form table tr:last-child td a {width:32%; padding:15px 5%;}
+  .information_form table tr:last-child td a:nth-of-type(1) {margin-left:5%;}
+  .information_form table tr:last-child td a:nth-of-type(2) {margin-right:5%;}
+  /* Modify_Form End */
+
+  /* Delete_Form */
+  .delete_form {width:95%}
+  .delete_form .delete_title {font-size:20px;}
+  .inform {font-size:16px; margin-bottom:10px;}
+  #delete_id {font-size:18px; color:#fff;}
+  .delete_form .id_box, .pass_box {width:70%;}
+  .delete_form form div label, .delete_form form .id_box .id_name {font-size:16px;}
+  .delete_form form div input, .delete_form form div #delete_id {width:95%;}
+  .delete_form .login_btn_wrap, .delete_form .confirm {width:95%; margin:30px auto 0;}
+  .delete_form .login_btn_wrap .login_cancel a, .delete_form .confirm .login_cancel a {padding:15px 20px;}
+  .delete_form .login_btn_wrap #delete_button, .delete_form .confirm #delete_recheck_button {width:40%;}
+  .delete_form .login_btn_wrap #delete_cancel_button, .delete_form .confirm #delete_recancel_button {width:40%;}
+  .delete_form .confirm {padding:80px 20%;}
+  /* Delete form End */
+
+  /* Footer Area */
+  #footerArea {width:auto; padding:62px 5%; background: rgb(0,0,0);}
+  #footerArea p {font-size:16px;}
+  #footerArea .foot_title {font-size:24px;}
+  #footerArea .foot_title:before {width:48px; height:12px; margin-left:-130px;}
+  #footerArea .foot_title:after {width:48px; height:12px; margin-right:-130px;}
+  #footerArea .topMove {width:60px; padding:20px 0; font-size:20px; right:30px;}
+  /* Footer area End */
+}
+/* 최소 사이즈 처리 */
+@media screen and (max-width:480px) {
+	#wrap { min-width:320px;}
+}

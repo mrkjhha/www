@@ -1,0 +1,44 @@
+.sub_nav {width:100%; overflow:hidden; margin-top:50px;}
+.sub_nav li {width:33.33%; height:fit-content; float:left; background:rgb(225,84,73);}
+.sub_nav li a {display:block; width:100%; text-align:center; font-size:1.22em; font-weight:700; color:#fff; padding:15px 0;}
+.sub_nav .current {background:#fff; position:relative;}
+.sub_nav .current a {color:rgb(225,84,73);}
+.sub_nav .current::before {content:''; display:block; width:100%; height:1px; background:rgb(225,84,73); position:absolute; left:0; bottom:0;}
+
+#content {width:100%; overflow:hidden;}
+#content h3 {width:85%; font-family:'Nanum Gothic', sans-serif; font-weight:700; font-size:2em; text-transform:capitalize; color:#333; 
+    text-align:center; padding:25px 0; margin:100px auto 0; position:relative; border-radius:20px; border:8px solid rgb(225,84,73);}
+#content .content_1 h3 {position:absolute; left:-300%;}
+#content h2 {width:100%; font-family:'Nanum Gothic', sans-serif; font-weight:700; font-size:2.3em; color:#333; text-align:center; padding:20px 0; margin-top:25px;}
+#content section {position:relative;}
+#content section::before {content:''; display:block; width:10px; height:10px; background:rgb(225,84,73); position:absolute; left:50%; margin-left:-5px; top:-58px; transform:rotate(45deg);}
+
+.content_1 {width:100%; overflow:hidden;}
+.content_1 .slogan {width:100%; font-family:'Nanum Gothic', sans-serif; font-weight:700; font-size:2em; line-height:1.6em; text-transform:capitalize; color:#333; 
+    text-align:center; padding-top:35px; margin-top:55px; position:relative;}
+.content_1 .slogan::before {content:''; display:block; width:38px; height:12px; position:absolute; left:50%; margin-left:-19px; top:-28px;
+    background:url(../sub/images/point.svg) 0 0 no-repeat; background-size:contain; transform:rotate(90deg);}
+.content_1 .slogan span:nth-of-type(1) {color:rgb(90,91,159);}
+.content_1 .slogan span:nth-of-type(2) {color:rgb(136,176,75);;}
+.content_1 .slogan span:nth-of-type(3) {color:rgb(225,84,73);}
+
+.content_2 span {display:block; width:160px; height:160px; border-radius:10px; background:rgb(225,84,73); transform:rotate(45deg); 
+    position:absolute; top:177px; left:50%; margin-left:-80px; z-index:-1;}
+.content_2 p {font-family:'Nanum Gothic', sans-serif; font-weight:700; font-size:1.5em; text-align:center; padding:140px 0; color:#fff; overflow:hidden; position:relative;}
+.content_2 p::before {content:''; display:block; width:200px; height:200px; border-radius:10px; border:3px dotted rgb(225,84,73); transform:rotate(45deg); 
+    position:absolute; top:-100px; left:50%; margin-left:-100px; z-index:-1;}
+.content_2 p::after {content:''; display:block; width:200px; height:200px; border-radius:10px; border:3px dotted rgb(225,84,73); transform:rotate(45deg); 
+    position:absolute; bottom:-100px; left:50%; margin-left:-100px; z-index:-1;}
+.content_2 dl {font-family:'Nanum Gothic', sans-serif; width:90%; margin:0 5%; background:rgb(225,84,73); padding-bottom:10px; border-radius:15px;}
+.content_2 dl dt {display:block; width:100%; text-align:center; font-size:1.5em; font-weight:700; color:#fff; padding:20px 0;}
+.content_2 dl dd {margin:0 10px; background:#fff; text-align:center; font-size:1.3em; font-weight:700; color:#666; line-height:1.9em; border-radius:15px; padding:25px; border-bottom:2px solid rgb(225,84,73);}
+.content_2 dl dd:nth-last-of-type(1) {padding:25px; border-bottom:0;}
+
+.content_3 {margin-bottom:90px;}
+#content .content_3 h3 {margin:100px auto 90px; background:#fff;}
+.content_3 h3::after {content:''; display:block; width:200px; height:200px; border-radius:10px; border:3px dotted rgb(225,84,73); transform:rotate(45deg); 
+    position:absolute; bottom:-80px; left:50%; margin-left:-103px; z-index:-1;}
+.content_3 dl {font-family:'Nanum Gothic', sans-serif; width:90%; margin:0 5% 20px; background:rgb(225,84,73); border-radius:15px; overflow:hidden;}
+.content_3 dl dt a {display:block; width:100%; text-align:center; font-size:1.5em; font-weight:700; color:#fff; padding:20px 0;}
+.content_3 dl dd {margin:0 10px; background:#fff; text-align:center; line-height:1.9em; font-size:1.2em; font-weight:700; color:#666; border-radius:15px; padding:25px; border-bottom:2px solid rgb(225,84,73);}
+.content_3 dl dd:nth-last-of-type(1) {border-bottom:0; margin-bottom:10px;}

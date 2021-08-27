@@ -1,0 +1,199 @@
+/* Visual Area */
+.visualBox {width:100%; height:100%; overflow:hidden; position:fixed; z-index:-10;}
+#imgBG {width:auto; height:auto; min-width:100%; min-height:100%;
+    position:fixed; top:50%; left:50%; transform:translateX(-50%) translateY(-50%);}
+.visual_title {width:auto; position:relative;}
+.visual_title .scroll_down {display:block; text-indent:-99999px; overflow:hidden;}
+.title_wrap {width:100%; position:absolute; left:50%; top:50%; transform:translateX(-50%) translateY(-50%);}
+h2.title {padding-bottom:10px; font-family:'Nanum-Gothic', sans-serif; font-weight:700; font-size:62px; color:#fff; letter-spacing:12px; 
+    text-transform:uppercase; text-align:center; text-shadow:#666 0 0 10px;}
+/* Visual End */
+
+/* Content common */
+#contents {width:auto;}
+section {width:auto; position:relative; overflow:hidden; background:rgba(0,0,0,.8);}
+section h3 {font-family:'Arial', sans-serif; font-weight:700; font-size:42px; color:#fff; letter-spacing:8px; 
+text-transform:uppercase; text-align:center; padding:60px 0 60px; background:rgba(0,0,0,.8); text-shadow:#fff 0 0 4px;}
+section dl {font-family:'Arial', sans-serif; color:#fff;}
+section dl dt {font-family:'Nanum-Gothic', sans-serif; text-align:center; font-weight:700; background:rgba(0,0,0,.6); box-shadow:rgba(255,255,255,.3) 0 0 10px 5px;
+    border-radius:15px; font-size:26px; letter-spacing:2px; padding:15px 0 20px; margin:0 13% 30px 13%;}
+section dl dt span {font-size:16px;}
+section dl dd {font-size:18px; letter-spacing:1px; line-height:1.9em; text-align:center;}
+/* Content common End */
+
+/* Albums Area */
+.right_box {width:30%; float:right; margin-right:15%; background:rgba(0,0,0,.8); position:relative;}
+.albums_wrap .album_box {display:none; width:100%; margin:110px 0; position:relative;}
+.albums_wrap .album_box dd {display:block; width:auto; padding:10px 15%; overflow:hidden; position:relative;}
+.albums_wrap .album_box dd p{display:none; position:relative; top:100%; left:0;}
+.albums_wrap .album_box dd p span {display:block; margin-bottom:20px;}
+.albums_wrap .album_box dd a {display:block; width:65%; border-radius:50%; overflow:hidden; box-shadow:rgba(255,255,255,.2) 0 0 10px 5px;
+    position:absolute; left:50%; top:5%; transform:translateX(-50%);}
+.albums_wrap .album_box dd a img {width:100%;}
+.albums_wrap .album_box dd a span {display:none; width:100%; background:rgba(0,0,0,.6); font-family:'Arial', sans-serif; padding:15px 0; font-size:28px; color:#fff; 
+    position:absolute; top:50%; left:50%; transform:translateX(-50%) translateY(-50%); text-transform:capitalize; letter-spacing:2px;}
+
+.btn_box {width:74%; margin:0 13%; overflow:hidden; position:absolute; top:15px; left:0;}
+.btn_box .nb_btn {display:block; padding:10px 10px; margin:5px; font-size:18px; color:#fff;}
+.btn_box .nb_btn.next_btn {float:right;}
+.btn_box .nb_btn.before_btn {float:left;}
+/* Albums End */
+
+/* LP player Area */
+.left_box {width:45%; margin-left:10%; float:left; position:relative;}
+.left_box span {display:block; text-align:center; text-transform:uppercase;}
+.left_box a {display:block; text-align:center; font-weight:bold;}
+.control_panel {height:80px; padding-right:10%; margin:0 0 0 auto; border-radius:0 0 0 30px; background:rgba(0,0,0,.8); overflow:hidden;}
+.control_panel .auto {width:20%; margin:14px 0 0 30px; padding:10px 0; font-size:20px; color:rgba(255,255,255,.6); text-shadow:rgba(255,255,255,.3) 0 0 5px; float:left;}
+.control_panel .switch {width:30%; margin:15px 0 0 40px; padding:5px 0; border-radius:30px; box-shadow:rgba(255,255,255,.3) 0 0 10px 2px inset; float:left;}
+.control_panel .switch .onoff_box {width:40px; padding:10px 0; background:rgba(255,255,255,.6); border-radius:50%; margin-left:5px;}
+.control_panel .onoff_box .on {display:none;}
+.control_panel .onoff_box .off {display:block;}
+.control_panel>span {position:absolute; transition:all .5s ease-out; z-index:1;}
+.control_panel .player1 {width:55px; height:55px; background:url(../images/lp_player1.png) center no-repeat; background-size:contain; right:10px; top:10px;}
+.control_panel .player2 {width:240px; height:206px; background:url(../images/lp_player2.png) center no-repeat; background-size:contain; right:40px; top:40px; transform:rotate(-45deg); transform-origin:right top;}
+.lp_plate {background:rgba(0,0,0,.8); border-radius:50%; margin:50px 10% 0 auto; background:url(../images/lp_plate.png)center no-repeat; background-size:contain;}
+
+/* Music_On Area */
+section dl dt.on {box-shadow:rgba(255,213,100,.6) 0 0 10px 2px; text-shadow:rgba(255,213,100,.7) 0 0 15px;}
+section dl dd p.on {
+    -webkit-animation: topslide 25s linear infinite;
+    animation: topslide 25s linear infinite;
+}
+.control_panel .auto.on {color:rgb(150,210,255); text-shadow:#fff 0 0 15px;}
+.control_panel .switch .onoff_box.on {background:rgba(255,213,100,1); color:#fff; text-shadow:#333 0 0 5px;}
+.control_panel .switch.on {box-shadow:rgba(255,213,100,1) 0 0 10px 2px inset;}
+.control_panel .player1.on {transform:rotate(30deg);}
+.control_panel .player2.on {transform:rotate(-25deg); transform-origin:right top;}
+.lp_plate.on {
+    -webkit-animation: lprotate 5s linear infinite; 
+    animation: lprotate 5s linear infinite;
+}
+/* LP player End */
+
+/* Hover Area */
+.btn_box .nb_btn:hover {text-shadow:#fff 0 0 15px;}
+.albums_wrap .album_box dd a:hover {box-shadow:rgba(255,255,255,.7) 0 0 10px 5px;}
+.albums_wrap .album_box dd a:hover span {display:block;}
+/* Hover End */
+
+@-webkit-keyframes lprotate {
+    0% {
+      transform:rotate(0);
+    }
+    100% {
+      transform:rotate(360deg);
+    }
+}
+
+@keyframes lprotate {
+    0% {
+      transform:rotate(0);
+    }
+    100% {
+      transform:rotate(360deg);
+    }
+}
+
+@-webkit-keyframes topslide {
+    0% {
+        top:100%;
+    }
+    100% {
+        top:-300%;
+    }
+}
+
+@keyframes topslide {
+    0% {
+        top:100%;
+    }
+    100% {
+        top:-300%;
+    }
+}
+
+@media screen and (max-width:1280px) {
+
+    /* Content common */
+    section h3 {font-size:36px; letter-spacing:7px; padding:40px 0;}
+    section dl dt {font-size:24px; margin:0 10% 30px 10%;}
+    /* Content common End */
+
+    /* Albums Area */
+    .right_box {width:40%; margin-right:5%;}
+    .albums_wrap .album_box {margin:100px 0;}
+    .albums_wrap .album_box dd {padding:10px 10%;}
+    .albums_wrap .album_box dd a {width:70%;}
+
+    .btn_box {width:80%; margin:0 10%;}
+    /* Albums End */
+
+    /* LP player Area */
+    .left_box {width:50%; margin-left:5%;}
+    .control_panel {width:90%; height:80px; padding-right:10%;}
+    .control_panel .auto {margin:14px 0 0 25px; }
+    .control_panel .switch {margin:15px 0 0 30px;}
+    /* LP player End */
+}
+
+@media screen and (max-width:1024px) {
+
+    /* Content common */
+    section h3 {font-size:34px; padding:35px 0;}
+    section dl dt {margin:0 10% 30px 10%;}
+    section dl dd {font-size:17px;}
+    /* Content common End */
+
+    /* Albums Area */
+    .right_box {width:60%; margin-right:0;}
+    .albums_wrap .album_box {margin:90px 0;}
+    .albums_wrap .album_box dd {padding:10px 13%;}
+    .albums_wrap .album_box dd a {width:75%;}
+    .albums_wrap .album_box dd a span {display:block; font-size:24px;}
+
+    .btn_box {width:80%; margin:0 10%; top:10px;}
+    .btn_box .nb_btn {font-size:17px;}
+    /* Albums End */
+
+    /* LP player Area */
+    .left_box {width:35%;}
+    .control_panel {border-radius:0 0 0 20px;}
+    .control_panel .auto {margin:8px 0 0 25px;}
+    .control_panel .switch {margin:12px 0 0 20px;}    
+    .control_panel .player1 {width:50px; height:50px; top:15px;}
+    .control_panel .player2 {width:220px; height:189px;top:45px;}
+    /* LP player End */
+}
+
+@media screen and (max-width:768px) {
+
+    h2.title {font-size:52px; color:#fff; letter-spacing:8px;}
+    
+    /* Content common */
+    section h3 {font-size:28px; letter-spacing:6px; padding:30px 0;}
+    section dl dt {margin:0 4% 80px;}
+    section dl dd {font-size:16px;}
+    /*Content common End */
+
+    /* Albums Area */
+    .right_box {width:100%; float:none;}
+    .albums_wrap .album_box {margin:0 0; padding:30px 0 60px;}
+    .btn_box {width:92%; margin:0 4%; top:140px;}
+    .btn_box .nb_btn {font-size:16px;}
+    .albums_wrap .album_box dd a span {font-size:22px;}
+    /* Albums End */
+
+    /* LP player Area */
+    .left_box {width:100%; margin-left:0; float:none;}
+    .control_panel {border-radius:0; padding-right:0;}
+    .control_panel .auto {width:18%; margin:15px 35px 0 0; font-size:18px; float:right;}
+    .control_panel .switch {width:30%; margin:15px 0 0 35px;}
+    .control_panel .player1 {display:none;}
+    .control_panel .player2 {display:none;}
+    .lp_plate {margin:0;}
+    /* LP player End */
+}
+@media screen and (max-width:640px) {
+    h2.title {font-size:48px; color:#fff; letter-spacing:7px;}
+}

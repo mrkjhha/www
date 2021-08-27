@@ -1,0 +1,75 @@
+.sub_nav {width:100%; overflow:hidden; margin-top:50px;}
+.sub_nav li {width:25%; height:fit-content; float:left; background:rgb(225,84,73);}
+.sub_nav li a {display:block; width:100%; text-align:center; font-size:1.22em; font-weight:700; color:#fff; padding:15px 0;}
+.sub_nav .current {background:#fff; position:relative;}
+.sub_nav .current a {color:rgb(225,84,73);}
+.sub_nav .current::before {content:''; display:block; width:100%; height:1px; background:rgb(225,84,73); position:absolute; left:0; bottom:0;}
+
+#content {width:100%; overflow:hidden;}
+#content section {margin-bottom:90px; width:100%; overflow:hidden;}
+#content h3 {width:100%; font-family:'Nanum Gothic', sans-serif; font-weight:700; font-size:2em; color:#333; text-align:center; padding:35px 0; margin-top:55px; position:relative;}
+#content h3::before {content:''; display:block; width:38px; height:12px; position:absolute; left:50%; margin-left:-19px; top:-28px;
+    background:url(../sub/images/point.svg) 0 0 no-repeat; background-size:contain; transform:rotate(90deg);}
+#content h2 {width:100%; font-family:'Nanum Gothic', sans-serif; font-weight:700; font-size:2.3em; color:#333; text-align:center; padding:20px 0; margin-top:25px;}
+#content p {width:90%; margin:0 5%; font-family:'Nanum Gothic', sans-serif; font-size:1.3em; color:#333; text-align:justify; padding-bottom:35px; line-height:1.9em; position:relative;}
+.con_nav {width:90%; margin:25px 5%; overflow:hidden; border-radius:10px; background:rgb(225,84,73); border:1px solid rgb(225,84,73); position:relative; left:0; top:0; z-index:0;}
+.con_nav li {width:25%; float:left; background:rgb(225,84,73);}
+.con_nab li:nth-last-of-type(1) {float:right;}
+.con_nav li a {display:block; width:100%; padding:10px 0; text-align:center; color:#fff; font-weight:700;}
+.con_nav .con_current {background:#fff;}
+.con_nav .con_current a {color:rgb(225,84,73);}
+
+.charactor {position:relative; margin-bottom:30px; overflow:hidden;}
+.charactor dt {display:block; width:20%; background:rgb(225,84,73); padding:10px 0; border-radius:0 50px 50px 0; font-size:1.1em; font-weight:700; color:#fff; text-align:center; position:relative; float:left;}
+.charactor dd {width:80%; float:left;}
+.charactor dd ul {width:100%; text-align:center; overflow:hidden; position:relative;}
+.charactor dd ul li {display:block; width:40%; padding:10px 0; margin-left:9%; border-radius:50px; background:#f3f3f3; float:left; color:#666; font-size:1.1em; font-weight:700; position:relative;}
+.content_2 .charactor dd ul li {width:23%; margin-left:1%;}
+
+.con1_main {overflow:hidden; margin-bottom:30px; position:relative;}
+.con1_main img {width:90%; margin:0 5%; border-radius:20px 0 20px 0; margin-bottom:30px;}
+.con1_main dl {width:90%; margin:0 5%; font-family:'Nanum Gothic', sans-serif;}
+.con1_main dl dt {font-weight:700; font-size:1.5em; padding-bottom:25px; position:relative;}
+.con1_main dl dd {color:#666; text-align:justify; font-size:1.2em; line-height:1.8em;}
+.con1_sub {position:relative;}
+.con1_sub table caption {font-family:'Nanum Gothic', sans-serif; color:#666; margin-bottom:30px; text-align:center; position:relative;}
+.con1_sub table {width:90%; margin:0 5%; border-top:2px solid #999; border-bottom:2px solid #999;}
+.con1_sub .first th {background:#f9f9f9;}
+.con1_sub tr {border-bottom:1px solid #ccc;}
+.con1_sub tbody tr:nth-child(2) {border-bottom:0;}
+.con1_sub th, .content_1 .con1_sub td {width:37%; padding:15px 0; font-family:'Nanum Gothic', sans-serif; font-size:1.13em; color:#666; text-align:center;}
+.con1_sub tr th:nth-child(1) {width:26%;}
+
+.con2_main {position:relative;}
+.con2_main .img_box {width:90%; margin:0 5%; position:relative; margin-bottom:30px;} 
+.con2_main .img_box img:nth-of-type(1) {width:80%; box-shadow:#ccc 2px 0 5px 0; margin-bottom:20px; border-radius:0 20px 0 20px;}
+.con2_main .img_box img:nth-last-child(1) {width:30%; border:4px solid #fff; border-radius:50%; position:absolute; right:0;}
+.con2_main>dl {font-family:'Nanum Gothic', sans-serif; width:90%; padding:0 5% 5px;}
+.con2_main>dl>dt {display:block; width:30%; margin:0 35% 30px; padding:8px 0; text-transform:uppercase; text-align:center; background:rgb(225,84,73); color:#fff;
+                    font-size:1.3em; font-weight:700; border-radius:20px;}
+.con2_main>dl>dd {width:100%;}
+.con2_main>dl>dd:nth-of-type(1) {margin-bottom:30px;}
+.con2_main dl dd dl {padding:30px 20px; box-shadow:#ccc 0 0 5px 0; border-radius:0 20px 0 20px;}
+.con2_main dl dd:nth-of-type(2) dl {border-radius:20px 0 20px 0;}
+.con2_main dl dd dl dt {font-weight:700; padding-bottom:20px; font-size:1.3em; text-align:center;}
+.con2_main dl dd dl dd {color:#666; padding:0 10px; font-size:1.13em; line-height:1.9em; text-align:justify;}
+
+.con3_main {width:90%; padding:0 5%; overflow:hidden;}
+.con3_main li {width:100%; text-align:center;}
+.con3_main li:nth-child(2) {margin-top:30px;}
+.con3_main li img {width:80%; margin:0 10% 20px; border-radius:50%; border:4px solid #ccc; box-sizing:border-box;}
+.con3_main li dl {font-family:'Nanum Gothic', sans-serif; padding:30px 20px; border:1px solid #ccc; background:#fff; box-shadow:#ccc 0 0 5px 0; border-radius:0 20px 20px 0; position:relative;}
+.con3_main li dl::before {content:''; display:block; width:220px; height:220px; border:2px solid #ccc; 
+    position:absolute; left:50%; margin-left:-111px; top:-111px; border-radius:50px; z-index:-1;}
+.con3_main li:nth-child(2) dl {border-radius:20px 0 0 20px;}
+.con3_main li dl dt {font-weight:700; padding-bottom:15px; font-size:1.3em;}
+.con3_main li dl dd {color:#666; padding: 0 10px; font-size:1.13em; line-height:1.9em; text-align:justify;}
+
+.con4_main {overflow:hidden; padding:5px 0;}
+.con4_main li {width:90%; margin:0 5% 30px; background:#fff; box-shadow:#ccc 0 0 5px 0; border-radius:0 20px 0 20px;}
+.con4_main li:nth-last-of-type(1) {margin-bottom:0;}
+.con4_main li dl {font-family:'Nanum Gothic', sans-serif; width:86%; padding:30px 7%;}
+.con4_main li dl dt {font-family:'Arial', sans-serif; text-align:center; font-size:1.4em; font-weight:700; text-transform:capitalize; margin-bottom:15px; position:relative;}
+.con4_main li dl dd {color:#666; font-size:1.13em; line-height:1.9em; text-align:center;}
+.con4_main li dl dd:nth-child(2) {text-align:justify; line-height:1.9em; padding-bottom:50px;}
+.con4_main li dl dd img {width:100%;}

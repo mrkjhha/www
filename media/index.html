@@ -1,0 +1,433 @@
+<? 
+	session_start();
+    @extract($_POST);
+    @extract($_GET);
+    @extract($_SESSION);
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Begin Again</title>
+
+    <link rel="shortcut icon"  type="image/x-icon"  href="favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="app_icon.png">
+    <link rel="apple-touch-startup-image" href="startup.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/scroll_down.css">
+
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="./js/prefixfree.min.js"></script>
+    <script src="https://kit.fontawesome.com/cd5818eb23.js" crossorigin="anonymous"></script>
+    <script>
+        function submit()
+        {   
+            document.login_form.submit(); 
+            // login.php 로 변수 전송
+        };
+
+        function login_reset_form()
+        {
+            document.login_form.id.value = "";
+            document.login_form.pass.value = "";
+            document.login_form.id.focus();
+            return;
+        };
+	</script>
+    <script>
+        // <![CDATA[
+        try {
+         window.addEventListener('load', function(){
+          setTimeout(scrollTo, 0, 0, 1);
+         }, false);
+        } 
+        catch(e) {}
+        // ]]>
+       </script>
+       <!--[if lt IE 9]> 
+          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <![endif]-->
+      
+      <!--[if lt IE 9]>
+          <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+      <![endif]-->
+</head>
+<body>
+    <div id="skipNav">
+        <a href="#contents">본문바로가기</a>
+        <a href="#gnb">네비게이션바로가기</a>
+    </div>
+    <div id="wrap">
+        <div class="videoBox">
+            <video autoplay loop muted id="videoBG">
+                <source src="./images/visual.mp4" type="video/mp4">
+            </video>
+            <img src="images/visual_img.jpg" id="imgBG" alt="비쥬얼대체이미지">
+        </div>
+        <header id="headerArea">
+            <h1><a href="./index.html">비긴어게인</a></h1>
+            <? include "./member/login_join_form.php" ?>
+            <a href="#" class="menu_btn">menu</a>
+            <nav id="gnb">
+                <h2 class="hidden">글로벌네비게이션영역</h2>
+                <ul class="gnb_menu">
+                    <li><h3><a href="./sub1.html">story</a></h3></li>
+                    <li><h3><a href="./sub2.html">actors</a></h3></li>
+                    <li><h3><a href="./sub3.html">albums</a></h3></li>
+                    <li><h3><a href="./sub4.php">gallery</a></h3></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="visual_title">
+            <div class="title_wrap">
+                <p class="title">begin again</p>
+                <p class="phrase">
+                    That’s what I love about music.<br>All these banalities suddenly turn into beautiful pearls.
+                </p>
+            </div>
+            <a class="scroll_down mouse" href="#"></a>
+            <p class="scroll_text">Scroll_down</p>
+        </div>
+        <article id="contents">
+            <h2 class="hidden">본문콘텐츠영역</h2>
+            <section class="story">
+                <h3>Story</h3>
+                <p class="con1_con">
+                    <span>
+                        Singer-songwriter Greta &#40;Keira Knightley&#41; 
+                        has a boyfriend of five years, Dave &#40;Adam Levine&#41;. 
+                        After signing with a major record label.
+                    </span>
+                    <span>
+                        and musical partner, we make songs together.
+                        And unlike Greta, who liked to sing with  her, Dave's heart as a star...
+                    </span>
+                </p>
+                <ul class="bottom_box">
+                    <li>
+                        <a href="./sub1.html" class="story_list">
+                            <dl>
+                                <dt>Episode_1</dt>
+                                <dd>first meeting</dd>
+                            </dl>
+                        </a>
+                        <span></span>
+                    </li>
+                    <li>
+                        <a href="./sub1.html" class="story_list">
+                            <dl>
+                                <dt>Episode_2</dt>
+                                <dd>chance &amp; conflict</dd>
+                            </dl>
+                        </a>
+                        <span></span>
+                    </li>
+                    <li>
+                        <a href="./sub1.html" class="story_list">
+                            <dl>
+                                <dt>Episode_3</dt>
+                                <dd>a fresh start</dd>
+                            </dl>
+                        </a>
+                        <span></span>
+                    </li>
+                    <li>
+                        <a href="./sub1.html" class="story_list">
+                            <dl>
+                                <dt>Episode_4</dt>
+                                <dd>the brand new idea</dd>
+                            </dl>
+                        </a>
+                        <span></span>
+                    </li>
+                    <li>
+                        <a href="./sub1.html" class="story_list">
+                            <dl>
+                                <dt>Episode_5</dt>
+                                <dd>for find assistants</dd>
+                            </dl>
+                        </a>
+                        <span></span>
+                    </li>
+                    <li>
+                        <a href="./sub1.html" class="story_list">
+                            <dl>
+                                <dt>Episode_6</dt>
+                                <dd>on the street</dd>
+                            </dl>
+                        </a>
+                        <span></span>
+                    </li>
+                </ul>
+            </section>
+            <section class="actors">
+                <h3>Actors</h3>
+                <div class="con_wrap">
+                    <div class="con_box">
+                        <dl class="show">
+                            <dt>Mark Ruffalo</dt>
+                            <dd>
+                                <span>The star record producer, but now fired Dan &#40;Mark Ruffalo&#41;,
+                                   with a desire to die from family problems family problems</span>, 
+                                <span>caught up in dreams and fantasies now caught up in dreams and fantasies 
+                                    nowfired Dan &#40;Mark Ruffalo&#41;up in dreams</span>
+                            </dd>
+                        </dl>
+                        <dl class="hide">
+                            <dt>Keira Knightley</dt>
+                            <dd>
+                                <span>inger-songwriter Greta &#40;Keira Knightley&#41; will move to New York after break
+                                will move to New York after break with boyfriend</span>
+                                <span>New York after break with boyfriend
+                                signed a contract with a major signed a contract with a majorrecord</span>
+                            </dd>
+                        </dl>
+                        <dl class="hide">
+                            <dt>Catherine Ann</dt>
+                            <dd>
+                                <span>The wife for the star record producer, but now have conflict with Dan &#40;Mark Ruffalo&#41;, 
+                                busy work and a desirebusy work and a desire</span>
+                                <span>busy work and a desirebut now have conflict busy and a desirebut now have
+                                and now fired Dan</span>
+                            </dd>
+                        </dl>
+                        <dl class="hide">
+                            <dt>Mos Def</dt>
+                            <dd>
+                                <span>perior to the co-builder of the producing company, he is a friends of star record producer Dan &#40;Mark Ruffalo&#41;</span>, 
+                                <span>But now he conflicting with him, and conflicting with him,now fired Dan But now he conflicting with him, and now fired Dan</span>
+                            </dd>
+                        </dl>
+                    </div>
+                    <ul class="img_box">
+                        <li class="act_on"><a class="act" href="#"><span>펼치기</span></a></li>
+                        <li class="act_off"><a class="act" href="#"><span>펼치기</span></a></li>
+                        <li class="act_off"><a class="act" href="#"><span>펼치기</span></a></li>
+                        <li class="act_off"><a class="act" href="#"><span>펼치기</span></a></li>
+                    </ul>
+                    <a href="./sub2.html" class="more_btn">
+                        <span></span><span></span>
+                    </a>
+                </div>
+                <span class=bg_deco></span>
+            </section>
+            <section class="albums">
+                <h3>Albums</h3>
+                <div class="albums_inner">
+                    <ul class="left_side">
+                        <li class="music_off">
+                            <a href="#" class="album_list"><span></span>
+                                <img src="./images/album_1.jpg" alt="앨범1 커버이미지">
+                            </a>
+                            <dl class="music_center music_show">
+                                <dt>
+                                    Lost Stars<br>
+                                    <span>&#40; Adam Levine &#41;</span>
+                                </dt>
+                                <dd>
+                                    <p>
+                                        <span class="cen_conwrap">
+                                            Please don't see just a boy caught up in dreams and fantasies<br><br>
+                                            Please see me reaching out for someone I can't see<br><br>
+                                            take my hand let's see where we  wake up tomorrow<br><br>
+                                            best laid plans sometimes are just a one night stand<br><br>
+                                            I'll be damned Cupid's demanding back his arrow<br><br>
+                                            So let's get drunk on our tears and
+                                        </span>
+                                        <a href="#" class="ud_btn up_btn"><span>노래가사 스크롤업</span></a>
+                                        <a href="#" class="ud_btn down_btn"><span>노래가사 스크롤다운</span></a>
+                                    </p>
+                                    <span>...</span>
+                                    <a href="./sub3.html" class="a_more">자세히 보러가기</a>
+                                </dd>
+                            </dl>
+                        </li>
+                        <li class="music_off">
+                            <a href="#" class="album_list"><span></span>
+                                <img src="./images/album_2.jpg" alt="앨범2 커버이미지">
+                            </a>
+                            <dl class="music_center music_hide">
+                                <dt>
+                                    No One Else..<br>
+                                    <span>&#40; Adam Levine &#41;</span>
+                                </dt>
+                                <dd>
+                                    <p>
+                                        <span class="cen_conwrap">
+                                            Is everything just right Don't want you thinking<br><br>
+                                            that I'm in a hurry I won't stay afraid I had this vision that<br><br>
+                                            has got me worried Cause everyone wants someone<br><br>
+                                            That's one cliche that's true The sad truth's I want no one<br><br>
+                                            Unless that someone's you It looks like you feels like you<br><br>
+                                            smiles like you I want someone just like you
+                                        </span>
+                                        <a href="#" class="ud_btn up_btn">노래가사 스크롤업</a>
+                                        <a href="#" class="ud_btn down_btn">노래가사 스크롤다운</a>
+                                    </p>
+                                    <span>...</span>
+                                    <a href="./sub3.html" class="a_more">자세히 보러가기</a>
+                                </dd>
+                            </dl>
+                        </li>
+                        <li class="music_off">
+                            <a href="#" class="album_list"><span></span>
+                                <img src="./images/album_3.jpg" alt="앨범3 커버이미지">
+                            </a>
+                            <dl class="music_center music_hide">
+                                <dt>
+                                    A Higher Place<br>
+                                    <span>&#40; Adam Levine &#41;</span>
+                                </dt>
+                                <dd>
+                                    <p>
+                                        <span class="cen_conwrap">
+                                            I don't know why I don't see happiness in this town<br><br>
+                                            Everyone I meet seems so uptight wearing their frown<br><br>
+                                            What good's living where dreams come true if nobody smiles<br><br>
+                                            Everyone's chasing the latest star the latest style You take me to<br><br>
+                                            another space in time You take me to a higher place<br><br>
+                                            so I'm about to get out of the race I don't mind You ought to know that
+                                        </span>
+                                        <a href="#" class="ud_btn up_btn"><span>노래가사 스크롤업</span></a>
+                                        <a href="#" class="ud_btn down_btn"><span>노래가사 스크롤다운</span></a>
+                                    </p>
+                                    <span>...</span>
+                                    <a href="./sub3.html" class="a_more">자세히 보러가기</a>
+                                </dd>
+                            </dl>
+                        </li>
+                    </ul>
+                    <ul class="right_side">
+                        <li class="music_off">
+                            <a href="#" class="album_list"><span></span>
+                                <img src="./images/album_4.jpg" alt="앨범4 커버이미지">
+                            </a>
+                            <dl class="music_center music_hide">
+                                <dt>
+                                    Tell Me If'u.<br>
+                                    <span>&#40; Keira Knightley &#41;</span>
+                                </dt>
+                                <dd>
+                                    <p>
+                                        <span class="cen_conwrap">
+                                            Maybe You don't have to smile so sad Laugh when you're feeling bad<br><br>
+                                            I promise I won't Chase you You don't have to dance so blue<br><br>
+                                            You don't have to say I do When baby you don't Just tell me<br><br>
+                                            The one thing you never told me Then let go of me Hell just throw me<br><br>
+                                            Maybe if you wanna go home tell me if I'm back on my own<br><br>
+                                            Giving back a heart that's on loan Just tell me if you wanna go home<br><br>
+                                        </span>
+                                        <a href="#" class="ud_btn up_btn"><span>노래가사 스크롤업</span></a>
+                                        <a href="#" class="ud_btn down_btn"><span>노래가사 스크롤다운</span></a>
+                                    </p>
+                                    <span>...</span>
+                                    <a href="./sub3.html" class="a_more">자세히 보러가기</a>
+                                </dd>
+                            </dl>
+                        </li>
+                        <li class="music_off">
+                            <a href="#" class="album_list"><span></span>
+                                <img src="./images/album_5.jpg" alt="앨범5 커버이미지">
+                            </a>
+                            <dl class="music_center music_hide">
+                                <dt>
+                                    Like A Fool<br>
+                                    <span>&#40; Keira Knightley &#41;</span>
+                                </dt>
+                                <dd>
+                                    <p>
+                                        <span class="cen_conwrap">
+                                            We take a chance from time to time And put our necks out on the line<br><br>
+                                            And you have broken every promise that we made And I have loved you anyway<br><br>
+                                            Took a fine time to leave me hangin' out to dry Understand now I'm grievin'<br><br>
+                                            So don't you waste my time Cause you have taken All the wind out from my sails<br><br>
+                                            And I have loved you just the same We finally find this then you're gone
+                                        </span>
+                                        <a href="#" class="ud_btn up_btn"><span>노래가사 스크롤업</span></a>
+                                        <a href="#" class="ud_btn down_btn"><span>노래가사 스크롤다운</span></a>
+                                    </p>
+                                    <span>...</span>
+                                    <a href="./sub3.html" class="a_more">자세히 보러가기</a>
+                                </dd>
+                            </dl>
+                        </li>
+                        <li class="music_off">
+                            <a href="#" class="album_list"><span></span>
+                                <img src="./images/album_6.jpg" alt="앨범6 커버이미지">
+                            </a>
+                            <dl class="music_center music_hide">
+                                <dt>
+                                    You Can't.<br>
+                                    <span>&#40; Keira Knightley &#41;</span>
+                                </dt>
+                                <dd>
+                                    <p>
+                                        <span class="cen_conwrap">
+                                            So you find yourself at this subway with your world in a bag by your side<br><br>
+                                            and all at once what seemed like a good way you realize is the end of the line<br><br>
+                                            For what its worth... here comes the train upon the track there goes the pain<br><br>
+                                            it cuts to black are you ready for the last act to take a step you cant take back<br><br>
+                                            taken all the punches you could take took them all right on the chin<br><br>
+                                            and though the camels back is breaking again again for what its worth
+                                        </span>
+                                        <a href="#" class="ud_btn up_btn"><span>노래가사 스크롤업</span></a>
+                                        <a href="#" class="ud_btn down_btn"><span>노래가사 스크롤다운</span></a>
+                                    </p>
+                                    <span>...</span>
+                                    <a href="./sub3.html" class="a_more">자세히 보러가기</a>
+                                </dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="gallery">
+                <h3>Gallery</h3>
+                <p class="gallery_intro">
+                    <span>
+                        Singer-songwriter Greta &#40;Keira Knightley&#41; has a boyfriend of five years, 
+                        Dave &#40;Adam Levine&#41;. After signing with a major record label
+                    </span>
+                    <span>
+                        he moved to New York together. But for a while, as a long-time lover
+                    </span>
+                </p>
+                <div class="con_wrap">
+                    <ul class="img_wrap">
+                        <li><img src="./images/gallery_1.jpg" alt="갤러리이미지1"></li>
+                        <li><img src="./images/gallery_2.jpg" alt="갤러리이미지2"></li>
+                        <li><img src="./images/gallery_3.jpg" alt="갤러리이미지3"></li>
+                        <li><img src="./images/gallery_4.jpg" alt="갤러리이미지4"></li>
+                        <li><img src="./images/gallery_5.jpg" alt="갤러리이미지5"></li>
+                        <li><img src="./images/gallery_6.jpg" alt="갤러리이미지6"></li>
+                        <li><img src="./images/gallery_3.jpg" alt="갤러리이미지7"></li>
+                        <li><img src="./images/gallery_4.jpg" alt="갤러리이미지8"></li>
+                        <li><img src="./images/gallery_5.jpg" alt="갤러리이미지9"></li>
+                        <li><img src="./images/gallery_6.jpg" alt="갤러리이미지10"></li>
+                    </ul>
+                </div>
+                <div class="bar_wrap">
+                    <span class="bar"></span><span class="drag_btn"></span>
+                </div>
+            </section>
+        </article>
+        <footer id="footerArea">
+            <p class="foot_title">Begin Again</p>
+            <p>Made by John Carney, in 2013</p>
+            <p>Main actors : Mark Ruffalo, Keira Knightley, Adam Levine</p>
+            <a href="#" class="topMove">top</a>
+        </footer>
+    </div>    
+    <script src="./js/index_scroll.js"></script>
+    <script src="./js/init_set.js"></script>
+    <script src="./js/click_func.js"></script>
+    <script src="./js/slide.js"></script>
+</body>
+</html>

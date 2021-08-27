@@ -1,0 +1,558 @@
+<? 
+	session_start();
+    @extract($_POST);
+    @extract($_GET);
+    @extract($_SESSION);
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Begin Again</title>
+
+    <link rel="shortcut icon"  type="image/x-icon"  href="favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="app_icon.png">
+    <link rel="apple-touch-startup-image" href="startup.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/sub3.css">
+    <link rel="stylesheet" href="./css/scroll_down.css">
+
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="./js/prefixfree.min.js"></script>
+    <script src="https://kit.fontawesome.com/cd5818eb23.js" crossorigin="anonymous"></script>
+    <script>
+        function submit()
+        {   
+            document.login_form.submit(); 
+            // login.php 로 변수 전송
+        };
+
+        function login_reset_form()
+        {
+            document.login_form.id.value = "";
+            document.login_form.pass.value = "";
+            document.login_form.id.focus();
+            return;
+        };
+	</script>
+    <script>
+        // <![CDATA[
+        try {
+         window.addEventListener('load', function(){
+          setTimeout(scrollTo, 0, 0, 1);
+         }, false);
+        } 
+        catch(e) {}
+        // ]]>
+       </script>
+       <!--[if lt IE 9]> 
+          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <![endif]-->
+      
+      <!--[if lt IE 9]>
+          <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+      <![endif]-->
+</head>
+<body>
+    <div id="skipNav">
+        <a href="#contents">본문바로가기</a>
+        <a href="#gnb">네비게이션바로가기</a>
+    </div>
+    <div id="wrap">
+        <div class="visualBox">
+            <img src="./images/visual_img6.jpg" id="imgBG" alt="비쥬얼이미지">
+        </div>
+        <header id="headerArea">
+            <h1><a href="./index.html">비긴어게인</a></h1>
+            <? include "./member/login_join_form.php" ?>
+            <a href="#" class="menu_btn">menu</a>
+            <nav id="gnb">
+                <h2 class="hidden">글로벌네비게이션영역</h2>
+                <ul class="gnb_menu">
+                    <li><h3><a href="./sub1.html">story</a></h3></li>
+                    <li><h3><a href="./sub2.html">actors</a></h3></li>
+                    <li><h3><a href="./sub3.html">albums</a></h3></li>
+                    <li><h3><a href="./sub4.php">gallery</a></h3></li>
+                </ul>
+            </nav>
+        </header>
+        <article id="contents">
+            <div class="visual_title">
+                <div class="title_wrap">
+                    <h2 class="title">Albums</h2>
+                </div>
+                <a class="scroll_down mouse" href="#"></a>
+                <p class="scroll_text">Scroll_down</p>
+            </div>
+            <section class="albums">
+                <h3>albums</h3>
+                <div class="left_box lp_box">
+                    <span class="control_panel">
+                        <a href="#" class="switch">
+                            <span class="onoff_box">
+                                <span class="on">on</span><span class="off">off</span>
+                            </span>
+                        </a>
+                        <a href="#" class="auto">auto</a>
+                        <span class="player2"></span>
+                        <span class="player1"></span>
+                    </span>
+                    <span class="lp_plate"></span>
+                </div>
+                <div class="right_box">
+                    <div class="albums_wrap">
+                        <dl class="album_box album_1">
+                            <dt>Lost Stars<br><span> - Adam Levine - </span></dt>
+                            <dd>
+                                <p>
+                                    <span>Lost Stars</span>
+                                    <span>
+                                        Please, don't see
+                                        Just a boy caught up in dreams and fantasies
+                                        Please, see me
+                                        Reaching out for someone I can't see
+                                    </span>
+                                    <span>
+                                        Take my hand
+                                        Let's see where we wake up tomorrow
+                                        Best laid plans
+                                        Sometimes are just a one night stand
+                                        I'll be damned
+                                    </span>
+                                    <span>
+                                        Cupid's demanding back his arrow
+                                        So let's get drunk on our tears
+                                        And, God, tell us the reason
+                                        Youth is wasted on the young
+                                        It's hunting season and the lambs are on the run
+                                    </span>
+                                    <span>
+                                        Searching for meaning
+                                        But are we all lost stars
+                                        Trying to light up the dark?
+                                        Who are we?
+                                        Just a speck of dust within the galaxy
+                                        Woe is me
+                                    </span>
+                                    <span>
+                                        If we're not careful turns into reality
+                                        Don't you dare let our best memories bring you sorrow
+                                        Yesterday I saw a lion kiss a deer
+                                        Turn the page
+                                        Maybe we'll find a brand new ending
+                                    </span>
+                                    <span>
+                                        Where we're dancing in our tears
+                                        And, God, tell us the reason
+                                        Youth is wasted on the young
+                                        It's hunting season
+                                        And the lambs are on the run
+                                    </span>
+                                    <span>
+                                        Searching for meaning
+                                        But are we all lost stars
+                                        Trying to light up the dark?
+                                    </span>
+                                    <span>
+                                        And I thought I saw you out there crying
+                                        And I thought I heard you call my name
+                                        And I thought I heard you out there crying
+                                    </span>
+                                    <span>
+                                        Just the same
+                                        Oh yeah, yeah yeah yeah yeah
+                                        God, give us the reason
+                                        Youth is wasted on the young
+                                        It's hunting season and this lamb is on the run
+                                    </span>
+                                    <span>
+                                        Searching for meaning
+                                        But are we all lost stars
+                                        Trying to light up the dark?
+                                    </span>
+                                    <span>
+                                        And I thought I saw you out there crying
+                                        And I thought I heard you call my name
+                                        And I thought I heard you out there crying
+                                    </span>
+                                    <span>
+                                        But are we all lost stars
+                                        Trying to light up the dark?
+                                        But are we all lost stars
+                                        Trying to light up the dark?
+                                    </span>
+                                </p>
+                                <a href="#" class="music_cover">
+                                    <img src="./images/album_1.jpg" alt="앨범1커버이미지">
+                                    <span class="click">click</span>
+                                    <audio id="audioplay1" loop autoplay>
+                                        <source src="images/audio_1.mp3" type="audio/mp3">
+                                    </audio>
+                                </a>
+                            </dd>
+                        </dl>
+                        <dl class="album_box album_2">
+                            <dt>No One Else..<br><span> - Adam Levine - </span></dt>
+                            <dd>
+                                <p>
+                                    <span>no one else like you</span>
+                                    <span>
+                                        Is everything just right
+                                        Don't want you thinking that I'm in a hurry
+                                        I won't stay afraid
+                                    </span>
+                                    <span>
+                                        I have this vision and it's got me worried
+                                        'Cause everyone wants someone
+                                        That's one cliché that's true
+                                    </span>
+                                    <span>
+                                        The sad truth's I want no one
+                                        Unless that someone's you
+                                    </span>
+                                    <span>
+                                        It looks like you
+                                        Feels like you
+                                        Smiles like you
+                                        I want someone just like you
+                                        Through and through
+                                        I'm forever blue
+                                    </span>
+                                    <span>
+                                        'Cause there's no one else like
+                                        I hope that you're not mad
+                                        You always said you want a man of action
+                                        I'm not the hottest lad, no
+                                    </span>
+                                    <span>
+                                        There's more to life than physical attraction
+                                        You got your special someone
+                                        But between me and him, guess who
+                                    </span>
+                                    <span>
+                                        Will spend their whole life waiting
+                                        For someone just like you
+                                        That looks like you
+                                        That feels like you
+                                        That smiles like you
+                                        I need someone just like you
+                                    </span>
+                                    <span>
+                                        Love me true
+                                        I'm forever blue
+                                        'Cause there's no one else like
+                                        Woo, woah, woo-hoo
+                                    </span>
+                                    <span>
+                                        I want you in my arms
+                                        I see you in my dreams
+                                        I'm gonna make you mine
+                                        As crazy as it seems
+                                        Girl, you, yes you
+                                    </span>
+                                    <span>
+                                        I need someone just like you
+                                        Love me true
+                                        I'm forever blue
+                                        Because there's no one else
+                                    </span>
+                                    <span>
+                                        There's no one else
+                                        There's no one else
+                                        There's no one else
+                                        There's no one else
+                                        There's no one else
+                                    </span>
+                                    <span>
+                                        There's no one else I need
+                                        'Cause you're so fine
+                                        You're so fine
+                                        'Cause you're so fine
+                                        You're so fine
+                                        Cause you're so fine
+                                        You're so fine
+                                        'Cause you're so fine
+                                        You're so fine
+                                        'Cause you're so fine
+                                        You're so fine
+                                    </span>
+                                </p>
+                                <a href="#" class="music_cover">
+                                    <img src="./images/album_2.jpg" alt="앨범1커버이미지">
+                                    <span class="click">click</span>
+                                    <audio id="audioplay2" loop autoplay>
+                                        <source src="images/audio_2.mp3" type="audio/mp3">
+                                    </audio>
+                                </a>
+                            </dd>
+                        </dl>
+                        <dl class="album_box album_3">
+                            <dt>A Higher Place<br><span> - Adam Levine - </span></dt>
+                            <dd>
+                                <p>
+                                    <span>A Higher Place</span>
+                                    <span>
+                                        I don't know why I don't see happiness in this town
+                                        Everyone I meet seems so uptight wearing their frown
+                                        What good's living where dreams come true if nobody smiles?
+                                        Everyone's chasing the latest star, the latest style
+                                    </span>
+                                    <span>
+                                        You take me to another space in time
+                                        You take me to a higher place
+                                        So I'm, I'm about to get out of the race
+                                        I don't mind
+                                        You ought to know that everything's nothing if I don't have you
+                                    </span>
+                                    <span>
+                                        I don't know if I'm the fool who's getting this all wrong
+                                        That's the dream to sing, the perfect girl, the perfect song
+                                        All I know is I can't keep on wearing this disguise
+                                        When you're the only one that sees what's real in my eyes
+                                    </span>
+                                    <span>
+                                        You take me to another space in time
+                                        You take me to a higher place
+                                        So I'm, I'm about to get out of the race
+                                        I don't mind
+                                        You ought to know that everything's nothing if I don't have you
+                                    </span>
+                                    <span>
+                                        You take me to another place
+                                        You take me to another place
+                                        You take me to a higher place
+                                        Oh, yeah
+                                    </span>
+                                    <span>
+                                        You take me to another space in time
+                                        You take me to a higher place
+                                        So I'm, I'm about to get out of the race
+                                        I don't mind
+                                        You ought to know that everything's nothing if I don't have you
+                                    </span>
+                                    <span>
+                                        So I'm about to get out of the race
+                                        I don't mind
+                                        You ought to know that everything's nothing if I don't have you
+                                    </span>
+                                </p>
+                                <a href="#" class="music_cover">
+                                    <img src="./images/album_3.jpg" alt="앨범1커버이미지">
+                                    <span class="click">click</span>
+                                    <audio id="audioplay3" loop autoplay>
+                                        <source src="images/audio_3.mp3" type="audio/mp3">
+                                    </audio>
+                                </a>
+                            </dd>
+                        </dl>
+                        <dl class="album_box album_4">
+                            <dt>Tell Me If'u.<br><span> - Keira Knightley - </span></dt>
+                            <dd>
+                                <p>
+                                    <span>tell me if you wanna go home</span>
+                                    <span>
+                                        Oh maybe
+                                        You don't have to kill so kind
+                                        Pretend to ease my mind
+                                        When baby you won't
+                                    </span>
+                                    <span>
+                                        Oh sugar
+                                        You don't have to be so sweet
+                                        I know who you're going to meet
+                                        Don't say that I don't
+                                    </span>
+                                    <span>
+                                        So maybe
+                                        I won't let your memory haunt me
+                                        I'll be sleepwalking
+                                        With the lonely
+                                    </span>
+                                    <span>
+                                        If you're taking me home
+                                        Tell me if I'm back on my own
+                                        Giving back a heart that's on loan
+                                        Just tell me if you wanna go home
+                                    </span>
+                                    <span>
+                                        Tell me if you wanna go home ('cause I'm just not sure)
+                                        Tell me if I'm back on my own (how to get back there)
+                                        Giving back a heart that's on loan (and I just can't bear)
+                                        Tell me if you wanna go home (if you're not there)
+                                    </span>
+                                    <span>
+                                        Oh, oh, oh, oh, baby
+                                    </span>
+                                    <span>
+                                        If you're taking me home
+                                        Tell me if I'm back on my own
+                                        Giving back a heart that's on loan
+                                        Tell me if you wanna go
+                                        Wanna go, wanna go, wanna go, wanna
+                                    </span>
+                                    <span>
+                                        'Cause I'm just not sure
+                                        How to get back there
+                                        And I just can't bear
+                                        If you're not there
+                                    </span>
+                                    <span>
+                                        If you're taking me home('cause I'm just not sure)
+                                        Tell me if I'm back on my own (how to get back there)
+                                        Giving back a heart that's on loan (and I just can't bear)
+                                        Just tell me if you wanna go home
+                                    </span>
+                                </p>
+                                <a href="#" class="music_cover">
+                                    <img src="./images/album_4.jpg" alt="앨범1커버이미지">
+                                    <span class="click">click</span>
+                                    <audio id="audioplay4" loop autoplay>
+                                        <source src="./images/audio_4.mp3" type="audio/mp3">
+                                    </audio>
+                                </a>
+                            </dd>
+                        </dl>
+                        <dl class="album_box album_5">
+                            <dt>Like A Fool<br><span> - Keira Knightley - </span></dt>
+                            <dd>
+                                <p>
+                                    <span>Like A Fool</span>
+                                    <span>
+                                        We take a chance from time to time
+                                        And put our necks out on the line
+                                        And you have broken every promise that we made
+                                        And I have loved you anyway
+                                    </span>
+                                    <span>
+                                        Took a fine time to leave me hangin' out to dry
+                                        Understand now I'm greivin' so don't you waste my time
+                                        'Cause you have taken all the wind out from my sails
+                                        And I have loved you just the same
+                                    </span>
+                                    <span>
+                                        We finally find this then you're gone
+                                        Been chasin' rainbows all along
+                                        And you have cursed me when there's no one left to blame
+                                        And I have loved you just the same
+                                    </span>
+                                    <span>
+                                        And you have broken every single fuckin' rule
+                                        And I have loved you like a fool
+                                    </span>
+                                    <span>
+                                        We take a chance from time to time
+                                        And put our necks out on the line
+                                        And you have broken every promise that we made
+                                        And I have loved you anyway
+                                    </span>
+                                    <span>
+                                        Took a fine time to leave me hangin' out to dry
+                                        Understand now I'm greivin' so don't you waste my time
+                                        'Cause you have taken all the wind out from my sails
+                                        And I have loved you just the same
+                                    </span>
+                                    <span>
+                                        We finally find this then you're gone
+                                        Been chasin' rainbows all along
+                                        And you have cursed me when there's no one left to blame
+                                        And I have loved you just the same
+                                    </span>
+                                    <span>
+                                        And you have broken every single fuckin' rule
+                                        And I have loved you like a fool
+                                    </span>
+                                </p>
+                                <a href="#" class="music_cover">
+                                    <img src="./images/album_5.jpg" alt="앨범1커버이미지">
+                                    <span class="click">click</span>
+                                    <audio id="audioplay5" loop autoplay>
+                                        <source src="./images/audio_5.mp3" type="audio/mp3">
+                                    </audio>
+                                </a>
+                            </dd>
+                        </dl>
+                        <dl class="album_box album_6">
+                            <dt>You Can't.<br><span> - Keira Knightley - </span></dt>
+                            <dd>
+                                <p>
+                                    <span>You Can't Take Back</span>
+                                    <span>
+                                        So you find yourself at this subway
+                                        When your world in a bag by your side
+                                        And all at once it seemed like a good way
+                                        You realized its the end of your life
+                                        For what it's worth
+                                    </span>
+                                    <span>
+                                        Here comes the train upon the track
+                                        And there goes the pain it cuts to black
+                                        Are you ready for the last act?
+                                        To take a step you can't take back
+                                    </span>
+                                    <span>
+                                        Take in all the punches you could take
+                                        Took 'em all right on your chest
+                                        Now the countless back is breaking
+                                        Again, again
+                                        For what it's worth
+                                    </span>
+                                    <span>
+                                        Here comes the train upon the track
+                                        And there goes the pain it cuts to black
+                                        Are you ready for the last act?
+                                        To take a step you can't take back
+                                    </span>
+                                    <span>
+                                        Did she love you?
+                                        Did she take you down?
+                                        Was she on her knees when she kissed your crown?
+                                        Tell me what you found
+                                    </span>
+                                    <span>
+                                        Here comes the rain, so hold your hat
+                                        And don't pray to God, cause He won't talk back
+                                        Are you ready for the last act?
+                                        To take a step you can't take back
+                                        Back, back, back
+                                        You can't take back
+                                        Back, back, back
+                                    </span>
+                                    <span>
+                                        So you find yourself at this subway
+                                        When your world in a bag by your side
+                                    </span>
+                                </p>
+                                <a href="#" class="music_cover">
+                                    <img src="./images/album_6.jpg" alt="앨범1커버이미지">
+                                    <span class="click">click</span>
+                                    <audio id="audioplay6" loop autoplay>
+                                        <source src="./images/audio_6.mp3" type="audio/mp3">
+                                    </audio>
+                                </a>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="btn_box">
+                        <a href="#" class="nb_btn next_btn">다음앨범</a>
+                        <a href="#" class="nb_btn before_btn">이전앨범</a>
+                    </div>
+                </div>
+            </section>
+        </article>
+        <footer id="footerArea">
+            <p class="foot_title">Begin Again</p>
+            <p>Made by John Carney, in 2013</p>
+            <p>Main actors : Mark Ruffalo, Keira Knightley, Adam Levine</p>
+            <a href="#" class="topMove">top</a>
+        </footer>
+    </div>
+    <script src="./js/sub3_set.js"></script>
+    <script src="./js/index_scroll.js"></script>
+</body>
+</html>

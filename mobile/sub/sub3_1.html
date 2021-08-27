@@ -1,0 +1,101 @@
+<? 
+	session_start();
+    @extract($_SESSION);
+?>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>롯데알미늄</title>
+
+    <link rel="apple-touch-icon-precomposed" href="../app_icon.png">
+    <link rel="apple-touch-startup-image" href="../startup.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/sub3_1.css">
+    
+    <script src="../js/prefixfree.min.js"></script>
+    <script>
+      // <![CDATA[
+      try {
+       window.addEventListener('load', function(){
+        setTimeout(scrollTo, 0, 0, 1); 
+       }, false);
+      } 
+      catch(e) {}
+      // ]]>
+     </script>
+     <!--[if lt IE 9]> 
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <!--[if lt IE 9]>
+        <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="wrap">
+        <!-- Header Area -->
+        <? include "../common/sub_header.html" ?>
+        <!-- Header Area End -->
+        <ul class="sub_nav">
+            <li class="current">
+                <a href="./sub3_1.html">인재상</a>
+            </li>
+            <li>
+                <a href="./sub3_2.html">채용절차</a>
+            </li>
+            <li>
+                <a href="./sub3_3.html">복리후생</a>
+            </li>
+        </ul>
+        <article id="content">
+            <h2>인재상</h2>
+            <section class="content_1">
+                <h3 class="hidden">슬로건</h3>
+                <p class="slogan">
+                    세계속에 우뚝 선 아름다운<br>
+                    <span>롯데의 꿈에 동참할 젊은이</span>를<br>
+                    초대합니다.
+                </p>
+            </section>
+            <section class="content_2">
+                <h3>도전<br><span>challenge</span></h3>
+                <dl>
+                    <dt>실패를 두려워않는 젊은이</dt>
+                    <dd>실패를 두려워하지 않고, 성공을 위해 도전하는 패기와 투지를 가진 젊은이를 초대합니다.</dd>
+                    <dd>창조적 실패는 젊음의 특권입니다. 실패가 두려워 도전하지 않는 안정보다는 실패에서도 성공의 가능성을 찾을 수 있는 능동적이고 적극적인 도전 정신을 보다 가치 있게 여기고 있습니다.</dd>
+                </dl>
+            </section>
+            <section class="content_3">
+                <h3>열정<br><span>passion</span></h3>
+                <dl>
+                    <dt>끊임없이 노력하는 젊은이</dt>
+                    <dd>젊음의 무모함이 아닌 진정한 실력으로 성공을 쟁취하기 위해 지식과 능력을 단련시키는 젊은이를 초대합니다.</dd>
+                    <dd>끊임없이 노력하고 준비하는 사람에게 이길 수 있는 이는 없습니다. 언제나 자신의 발전과 조직의 발전을 위해 끊임없이 노력하는 젊은이를 기다립니다.</dd>
+                </dl>
+            </section>
+            <section class="content_4">
+                <h3>대화<br><span>communication</span></h3>
+                <dl>
+                    <dt>협력과 생성을 아는 젊은이</dt>
+                    <dd>진정한 실력자는 협력하고 양보하는 미덕을 가지며 사회를 따뜻하게 변화시킵니다.</dd>
+                    <dd>함께 사는 사람들과 사회에 대한 감사한 마음이 모여 이 사회를 따뜻하게 만들고, 각자의 능력과 실력을 키우는 일뿐만 아니라 사회적 존재로서 자신의 역할을 이해하는 젊은이를 기다립니다.</dd>
+                </dl>
+            </section>
+        </article>
+        <!-- Footer Area -->
+        <? include "../common/sub_footer.html" ?>
+        <!-- Footer Area End -->
+    </div>
+    <!-- JQuery -->
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="../js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="../js/sub_scroll_2.js"></script>
+    <script src="../js/family.js"></script>
+</body>
+</html>

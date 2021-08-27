@@ -1,0 +1,33 @@
+.sub_nav {width:100%; overflow:hidden; margin-top:50px;}
+.sub_nav li {width:33.33%; height:fit-content; float:left; background:rgb(225,84,73);}
+.sub_nav li a {display:block; width:100%; text-align:center; font-size:1.22em; font-weight:700; color:#fff; padding:15px 0;}
+.sub_nav .current {background:#fff; position:relative;}
+.sub_nav .current a {color:rgb(225,84,73);}
+.sub_nav .current::before {content:''; display:block; width:100%; height:1px; background:rgb(225,84,73); position:absolute; left:0; bottom:0;}
+
+#content {width:100%; overflow:hidden;}
+#content h3 {width:85%; font-family:'Nanum Gothic', sans-serif; font-weight:700; font-size:2em; text-transform:capitalize; color:#333; 
+    text-align:center; padding:25px 0; margin:100px auto 0; position:relative; border-radius:100px; border:8px solid rgb(225,84,73); overflow:hidden;}
+#content .content_1 h3 {position:absolute; left:-300%;}
+#content h2 {width:100%; font-family:'Nanum Gothic', sans-serif; font-weight:700; font-size:2.3em; color:#333; text-align:center; padding:20px 0; margin-top:25px;}
+#content section {position:relative;}
+#content section::before {content:''; display:block; width:10px; height:10px; background:rgb(225,84,73); position:absolute; left:50%; margin-left:-5px; top:-58px; transform:rotate(45deg);}
+#content h3 span {font-weight:400; font-size:.7em; color:#999; text-transform:uppercase; box-sizing:border-box;}
+#content h3 span::before {content:''; display:block; width:50px; height:50px; border-radius:50%; background:rgb(225,84,73); position:absolute; left:-35px; top:35px;}
+#content h3 span::after {content:''; display:block; width:50px; height:50px; border-radius:50%; background:rgb(225,84,73); position:absolute; right:-35px; top:35px;}
+
+.content_1 {width:100%; overflow:hidden; position:relative;}
+.content_1 .slogan {width:100%; font-family:'Nanum Gothic', sans-serif; font-weight:700; font-size:2em; line-height:1.6em; text-transform:capitalize; color:#333; 
+    text-align:center; padding-top:35px; margin-top:55px; position:relative;}
+.content_1 .slogan::before {content:''; display:block; width:38px; height:12px; position:absolute; left:50%; margin-left:-19px; top:-28px;
+    background:url(../sub/images/point.svg) 0 0 no-repeat; background-size:contain; transform:rotate(90deg);}
+.content_1 .slogan span {color:rgb(225,84,73);}
+
+#content {width:100%; overflow:hidden;}
+#content dl {font-family:'Nanum Gothic', sans-serif; width:90%; margin:35px 5% 0; background:rgb(225,84,73); padding-bottom:10px; border-radius:15px;}
+#content dl dt {display:block; width:100%; text-align:center; font-size:1.5em; font-weight:700; color:#fff; padding:15px 0;}
+#content dl dd {margin:0 10px; background:#fff;  font-size:1.3em; line-height:1.9em; border-radius:15px;}
+#content dl dd:nth-of-type(1) {padding:25px 25px 15px 25px; border-bottom:2px solid rgb(225,84,73); }
+#content dl dd:nth-of-type(2) {padding:15px 25px 25px 25px;}
+
+.content_4 {margin-bottom:90px;}

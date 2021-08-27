@@ -1,0 +1,161 @@
+/* Visual Area */
+.visualBox {width:100%; height:100%; overflow:hidden; position:fixed; z-index:-10;}
+#imgBG {width:auto; height:auto; min-width:100%; min-height:100%;
+    position:fixed; top:50%; left:50%; transform:translateX(-50%) translateY(-50%);}
+.visual_title {width:auto; position:relative;}
+.visual_title .scroll_down {display:block; text-indent:-99999px; overflow:hidden;}
+.title_wrap {width:100%; position:absolute; left:50%; top:50%; transform:translateX(-50%) translateY(-50%);}
+h2.title {padding-bottom:10px; font-family:'Nanum-Gothic', sans-serif; font-weight:700; font-size:62px; color:#fff; letter-spacing:12px; 
+    text-transform:uppercase; text-align:center; text-shadow:#666 0 0 10px;}
+/* Visual End */
+
+/* Content common */
+#contents {width:auto;}
+section {width:auto; padding-bottom:60px; position:relative; overflow:hidden; background:rgba(255,255,255,.7)}
+section h3 {font-family:'Arial', sans-serif; font-weight:700; font-size:42px; color:#333; letter-spacing:8px; 
+text-transform:uppercase; text-align:center; padding:60px 0 60px; background:rgba(255,255,255,1); text-shadow:#666 0 0 4px;}
+section dl {font-family:'Arial', sans-serif; color:#333;}
+section dl dt {font-family:'Nanum-Gothic', sans-serif; text-align:center; font-weight:700; color:#333; font-size:26px; margin:5px 0 20px;}
+section dl dd {font-size:20px; letter-spacing:1px; line-height:1.9em; text-align:justify;}
+/* Content common End */
+
+/* Main Actors Area */
+.actors_wrap {width:auto; margin:0 15%; overflow:hidden;}
+.actors_wrap .actor_box {width:48%; padding:20px 0 50px; background:#fff; border-radius:0 0 40px 40px; position:relative; transition:all .3s ease-out;}
+.actors_wrap .actor_box span {display:block; width:80px; height:50px; background:#fff; border-radius:15px; position:absolute; left:50%; bottom:-25px; margin-left:-40px;}
+.actors_wrap .actor_box span::before {content:''; display:block; width:18px; height:18px; background:#333; transform:rotate(45deg); position:absolute; left:50%; margin-left:-9px; top:50%; margin-top:-10px;}
+.actors_wrap .actor_box span::after {content:''; display:block; width:50px; height:30px; background:#fff; position:absolute; left:50%; margin-left:-25px; top:50%; margin-top:-30px;}
+.actors_wrap .actor_1 {float:left;}
+.actors_wrap .actor_2 {float:right;}
+.actors_wrap .actor_box img {display:block; width:86%; margin:0 auto; border-radius:30px;}
+.actors_wrap .actor_box dl {width:auto; padding:0 7%; margin-bottom:30px;}
+/* Main Actors End */
+
+/* Other Actors Area */
+.others h3 {margin-bottom:50px;}
+.others_wrap {width:auto; margin:0 15% 80px; overflow:hidden;}
+.others_wrap .other_box {width:30%; margin-right:5%; padding:40px 0; background:#fff; border-radius:40px; float:left; position:relative; overflow:hidden;}
+.others_wrap .other_box:nth-of-type(1), .others_wrap .other_box:nth-of-type(2), .others_wrap .other_box:nth-of-type(3) {margin-bottom:30px;}
+.others_wrap .other_box:nth-of-type(3n) {margin-right:0; float:right;}
+.others_wrap .other_box span {display:none;} 
+.others_wrap .other_box .click {display:block; padding:20px 30px 10px 20px; font-size:18px; font-weight:700; background:#fff; border-radius:0 0 15px 15px;
+    position:absolute; right:0; top:10px; z-index:2;}
+.others_wrap .other_box div {width:100%; height:100%; background:rgba(255,255,255,.7); border-radius:40px; overflow:hidden;
+    position:absolute; left:50%; top:50%; transform:translateX(-50%) translateY(200%); z-index:1;}
+.others_wrap .other_box img {display:block; width:90%; margin:0 auto; border-radius:30px; position:relative;}
+.others_wrap .other_box dl {width:90%; padding:0 5%; position:absolute; left:50%; top:50%; transform:translateX(-50%) translateY(-50%);}
+.others_wrap .other_box dl dt {margin-bottom:10px;}
+.others_wrap .other_box dl dd {padding:0 5%;}
+/* Other Actors End */
+
+@media screen and (max-width:1280px) {
+
+    /* Content common */
+    section {padding-bottom:50px;}
+    section h3 {font-size:36px; letter-spacing:7px; padding:40px 0;}
+    section dl dt {font-size:24px;}
+    section dl dd {font-size:18px;}
+    /*Content common End */
+
+    /* Main Actors Area */
+    .actors_wrap {margin:0 5%;}
+    .actors_wrap .actor_box {padding:15px 0 40px; border-radius:0 0 30px 30px;}
+    .actors_wrap .actor_box img {border-radius:20px;}
+    .actors_wrap .actor_box dl {margin-bottom:20px;}
+    .actors_wrap .actor_box span {width:120px; height:50px; border-radius:15px; bottom:-25px; margin-left:-60px;}
+    .actors_wrap .actor_box span::before {width:18px; height:18px; margin-left:-9px; margin-top:-10px;}
+    .actors_wrap .actor_box span::after {width:50px; height:30px; margin-left:-25px; margin-top:-30px;}
+    
+    /* Main Actors End */
+
+    /* Other Actors Area */
+    .others h3 {margin-bottom:40px;}
+    .others_wrap {margin:0 5% 60px;}
+    .others_wrap .other_box {width:30%; margin-right:5%; padding:30px 0; border-radius:30px;}
+    .others_wrap .other_box div {border-radius:30px;}
+    .others_wrap .other_box img {border-radius:20px;}
+    /* Other Actors End */
+
+}
+    
+@media screen and (max-width:1024px) {
+    
+    /* Content common */
+    section h3 {font-size:34px; padding:35px 0;}
+    section dl dt {font-size:20px;}
+    section dl dd {font-size:17px;}
+    /*Content common End */
+
+    /* Main Actors Area */
+    .actors_wrap .actor_box {padding:15px 0 30px; border-radius:0 0 25px 25px;}
+    .actors_wrap .actor_box img {border-radius:15px;}
+    .actors_wrap .actor_box span {width:120px; height:40px; bottom:-20px; margin-left:-60px;}
+    .actors_wrap .actor_box span::before {width:16px; height:16px; margin-left:-8px; margin-top:-10px;}
+    .actors_wrap .actor_box span::after {width:50px; height:20px; margin-left:-25px; margin-top:-20px;}
+    /* Main Actors End */
+   
+    /* Other Actors Area */
+    .others_wrap {margin:0 5% 50px;}
+    .others_wrap .other_box {width:48%; padding:30px 0; border-radius:25px;}
+    .others_wrap .other_box:nth-of-type(1), .others_wrap .other_box:nth-of-type(2), .others_wrap .other_box:nth-of-type(3) {margin-bottom:20px;}
+    .others_wrap .other_box:nth-of-type(4) {margin-bottom:20px;}
+    .others_wrap .other_box:nth-of-type(2n+1) {margin-right:4%; float:left;}
+    .others_wrap .other_box:nth-of-type(2n) {margin-right:0; float:right;}
+    /* Other Actors End */
+}
+    
+@media screen and (max-width:768px) {
+    
+    h2.title {font-size:52px; color:#fff; letter-spacing:8px;}
+
+    /* Content common */
+    section h3 {font-size:28px; letter-spacing:6px; padding:30px 0;}
+    section dl dd {font-size:16px;}
+    /*Content common End */
+
+    /* Main Actors Area */
+    .actors_wrap {margin:0 4%;}
+    .actors_wrap .actor_box {border-radius:0 0 20px 20px;}
+    .actors_wrap .actor_box img {border-radius:10px;}
+    .actors_wrap .actor_box span {width:120px; height:35px; bottom:-15px; margin-left:-60px;}
+    .actors_wrap .actor_box span::before {width:16px; height:16px; margin-left:-8px; margin-top:-10px;}
+    .actors_wrap .actor_box span::after {width:50px; height:20px; margin-left:-25px; margin-top:-20px;}
+    /* Main Actors End */
+   
+    /* Other Actors Area */
+    .others_wrap {margin:0 4% 40px;}
+    .others_wrap .other_box {padding:25px 0; border-radius:20px;}
+    .others_wrap .other_box:nth-of-type(2n+1) {margin-right:4%; float:left;}
+    .others_wrap .other_box img {border-radius:15px;}
+    /* Other Actors End */
+}
+
+@media screen and (max-width:640px) {
+    
+    h2.title {font-size:48px; color:#fff; letter-spacing:7px;}
+    
+    /* Content common */
+    section h3 {font-size:28px; letter-spacing:6px; padding:30px 0;}
+    section dl dd {font-size:16px;}
+    /*Content common End */
+
+    /* Main Actors Area */
+    .actors_wrap .actor_box {width:100%; padding:30px 0 25px; border-radius:20px; transition:none;}
+    .actors_wrap .actor_1 {float:none; margin:30px 0;}
+    .actors_wrap .actor_2 {float:none;}
+    .actors_wrap .actor_box dl {width:auto; padding:0 8%; margin-bottom:30px;}
+    .actors_wrap .actor_box span {display:none;}
+    .actors_wrap .actor_box img {width:92%;}
+    /* Main Actors End */
+   
+    /* Other Actors Area */
+    .others_wrap {margin:0 4% 40px;}
+    .others_wrap .other_box {width:100%; padding:25px 0;}
+    .others_wrap .other_box:nth-of-type(5) {margin-bottom:20px;}
+    .others_wrap .other_box:nth-of-type(2n+1) {margin-right:0; float:none;}
+    .others_wrap .other_box:nth-of-type(2n) {float:none;}
+    .others_wrap .other_box img {width:92%;}
+    .others_wrap .other_box div {background:rgba(255,255,255,1); position:relative; left:0; top:0;}
+    .others_wrap .other_box div dl {margin-top:20px; position:relative; left:0; top:0; transform:none;}
+    /* Other Actors End */
+}

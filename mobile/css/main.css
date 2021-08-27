@@ -1,0 +1,113 @@
+/*   Visual Start   */
+.visual {width:100%; position:relative; margin-bottom:90px;}
+.visual_img {width:300%; overflow:hidden; position:relative; top:0; left:0;}
+.visual_img li {width:33.33%; float:left; position:relative; top:0; transition:all .5s ease-out;}
+.visual_img li:nth-of-type(1) {left:0; opacity:1}
+.visual_img li:nth-of-type(2) {left:0; opacity:0;}
+.visual_img li:nth-of-type(3) {left:-66.66%; opacity:0;}
+.visual_img li img {width:100%;}
+.visual_text {width:100%; position:absolute; top:50%; margin-top:-140px; left:0; padding:40px 0 90px; background:rgba(0,0,0,.3);}
+.visual_text li {display:none;}
+.visual_text li:nth-child(1) {display:block;}
+.visual_text dl {font-family:'Nanum Gothic', 'Arial', sans-serif; text-transform: capitalize; text-align:center; color:#fff;}
+.visual_text dl dt {font-weight:700; font-size:2.5em; margin-bottom:30px; letter-spacing:.15em; text-shadow:#333 1px 1px 3px; position:relative;}
+.visual_text dl dt::after {content:''; display:block; width:20%; height:1px; background:#fff; position:absolute; left:40%; bottom:-15px;}
+.visual_text dl dd {font-weight:400; font-size:1.3em; line-height:1.8em; letter-spacing:.05em;}
+.visual_dock {position:absolute; left:50%; margin-left:-66px; top:50%; margin-top:100px; background:rgba(0,0,0,.3); padding:10px 20px; border-radius:10px; overflow:hidden;}
+.visual_dock span {display:block; width:14px; height:14px; float:left; background:#fff; margin-left:25px; border-radius:50%;}
+.visual_dock .dock_1 {background:rgb(225,84,73); margin-left:0;}
+/*   Visual End   */
+
+/*   Content Start   */
+#content h3 {font-family:'Nanum Gothic', 'Arial', sans-serif; font-size:2em; font-weight:700; text-transform:uppercase;}
+
+/*   Business Area   */
+.business {width:100%; margin:0 auto; font-family:'Nanum Gothic', 'Arial', sans-serif; color:#333; font-weight:normal; margin-bottom:90px; position:relative;}
+.business h3 {text-align:center; margin-bottom:35px;}
+.bizcon_wrap {width:400%; height:240px; overflow:hidden; position:relative; left:0;}
+.bizcon_wrap li {width:15%; height:100%; margin:0 1%; float:left; position:absolute; border-radius:0 0 15px 0;}
+.bizcon_wrap li:nth-of-type(1) {background:url(../images/business_01.jpg)center no-repeat; background-size:cover; left:4%;}
+.bizcon_wrap li:nth-of-type(2) {background:url(../images/business_02.jpg)center no-repeat; background-size:cover; left:23%;}
+.bizcon_wrap li:nth-of-type(3) {background:url(../images/business_03.jpg)center no-repeat; background-size:cover; left:42%;}
+.bizcon_wrap li:nth-of-type(4) {background:url(../images/business_04.jpg)center no-repeat; background-size:cover; left:-15%;}
+.bizcon_wrap li div {width:70%; background:rgba(0,0,0,.3); margin:10px; padding:15px; border-radius:0 10px 10px 0;}
+.bizcon_wrap li div h4 {font-size:1.5em; font-weight:700; color:#fff; margin-bottom:6px;}
+.bizcon_wrap li div p {font-size:.9em; font-weight:400; color:#fff; margin-bottom:8px;}
+.bizcon_wrap li div span {display:block; width:100px; height:95px; background:url(../images/bcon_arrow.svg) 55px 20px no-repeat;}
+.bizcon_wrap li div a {display:block; width:120px; padding:10px 10px; text-align:center; color:#fff; border:1px solid #fff; background:rgba(0,0,0,.3);}
+.business>a {display:block; width:40px; height:60px; background:rgba(0,0,0,.3); position:absolute; bottom:90px; text-indent:-9999px; overflow:hidden; z-index:10;}
+.business>a span {display:block; width:40px; height:60px; background:url(../images/b_arrow.svg) 15px center no-repeat;}
+.business .b_before span {transform:scale(-1);}
+.business .b_next {right:0; border-radius:10px 0 0 10px;}
+.business .b_before {left:0; border-radius:0 10px 10px 0;}
+/*   Business Area End   */
+
+/*   Management Area   */
+.management {width:100%; font-family:'Nanum Gothic', sans-serif; color:#fff; margin-bottom:90px; position:relative;}
+.management>a {display:block; width:60px; height:210px; background:rgba(0,0,0,.3); border-radius:10px 0 0 10px; position:absolute; right:0; bottom:15px;}
+.management>a::before {content:''; display:block; width:19px; height:17px; background:url(../images/m_arrow.svg) 0 0 no-repeat; position:absolute; top:95px; right:20px;}
+.management>p {width:95%; margin-left:5%; font-weight:700; font-size:1.6em; color:#666; margin-bottom:8px;}
+.management>p:nth-of-type(2) {width:90%; padding-left:15px; margin-bottom:25px;}
+.management p span {color: rgb(218,41,28);}
+.con_wrap {width:100%; height:240px; overflow:hidden; position:relative; left:0;}
+.con_box {width:100%; height:100%; float:left; position:absolute; top:0;}
+.con_box:nth-of-type(1) {background:url(../images/manag_01.jpg)center no-repeat; background-size:cover; left:0;}
+.con_box:nth-of-type(2) {background:url(../images/manag_02.jpg)center no-repeat; background-size:cover; left:100%;}
+.con_box:nth-of-type(3) {background:url(../images/manag_03.jpg)center no-repeat; background-size:cover; left:-100%;}
+.con_box div {width:82%; height:210px; padding-left:25px; margin:15px 3% 15px 3%; background:rgba(0,0,0,.3); border-radius:0 10px 10px 0;}
+.con_box div h4 {font-size:1.5em; font-weight:700; padding:25px 0 10px;}
+.con_box div p {font-size:1.2em; line-height:1.8em; margin-bottom:25px;}
+.con_box a {display:block; width:120px; padding:10px 10px; text-align:center; color:#fff; border:1px solid #fff; background:rgba(0,0,0,.3); position:absolute; left:7.5%; bottom:35px;}
+/*   Management Area End   */
+
+/*   Careers Area   */
+.careers {width:100%; font-family:'Nanum Gothic', sans-serif; margin-bottom:90px;}
+.careers h3 {text-align:center; position:relative; color: rgb(218,41,28); margin-bottom:35px;}
+.career_box {width:100%;}
+.career_box .career_con {width:90%; height:120px; margin:0 5% 10px 5%; position:relative;}
+.career_box li:nth-of-type(1) {background:url(../images/careers_01.jpg)center no-repeat; background-size:cover;}
+.career_box li:nth-of-type(2) {background:url(../images/careers_02.jpg)center no-repeat; background-size:cover;}
+.career_box li:nth-of-type(3) {background:url(../images/careers_03.jpg)center no-repeat; background-size:cover;}
+.career_box .career_con a {display:block; width:104%; height:100px; font-weight:700; font-size:1.5em; color:#fff; background:rgba(0,0,0,.3); position:absolute; top:10px;}
+.career_box .career_con:nth-of-type(1) a, .career_box .career_con:nth-of-type(3) a {right:-7%; border-radius:10px 0 0 10px;}
+.career_box .career_con:nth-of-type(2) a {left:-7%; text-align:right; border-radius:0 10px 10px 0;}
+.career_box .career_con a::before {content:''; display:block; width:161px; height:30px; background:url(../images/c_arrow.svg) 0 0 no-repeat; position:absolute; top:34px;}
+.career_box .career_con:nth-of-type(1) a::before, .career_box .career_con:nth-of-type(3) a::before {right:0;}
+.career_box .career_con:nth-of-type(2) a::before {left:0; transform:scale(-1);}
+.career_box .career_con a span {display:block; padding-top:35px; margin-left:30px;}
+.career_box .career_con:nth-of-type(2) a span {margin-right:30px; margin-left:0;}
+/*   Careers Area End   */
+
+/*   Design Area   */
+.design {width:100%; margin:0 0 90px 0; font-family:'Nanum Gothic', 'Arial', sans-serif; position:relative;}
+.design a {display:block; width:60px; padding:10px 10px; text-align:center; color:#fff; border:1px solid #fff; border-radius:0 8px 8px 0; background:rgb(225,84,73);
+    position:absolute; top:-5px; left:0;}
+.design a::before {content:''; display:block; width:29px; height:17px; background:url(../images/d_arrow.svg) 0 0 no-repeat; position:absolute; right:-45px; top:10px;}
+.design .design_head {width:100%;}
+.design .design_head h3 {text-align:right; color:rgb(90,91,159); margin:0 5% 15px 0; position:relative;}
+.design .design_head h3::before {content: ''; display: block; width:6px; height:18px; background:rgb(90,91,159); position:absolute; right:-3%; bottom:8px;}
+.design .design_head p {font-size:1.2em; text-align:right; font-weight:400; color:#666; text-indent:2px; line-height:1.7em; margin:0 3% 30px 0;}
+.design .design_head p span {font-weight:700; text-transform: capitalize; color:rgb(218,41,28);}
+.design .design_con {width:500%; overflow:hidden; position:relative; left:0;}
+.design .design_con li {width:20%; float:left; position:relative; top:0;}
+.design .design_con li:nth-of-type(1) {left:0;}
+.design .design_con li:nth-of-type(2) {left:0;}
+.design .design_con li:nth-of-type(3) {left:0;}
+.design .design_con li:nth-of-type(4) {left:-100%;}
+.design .design_con li:nth-of-type(5) {left:-100%;}
+.design .design_con li img {width:70%; padding:3%; border:1px solid #ccc; margin-left:5%;}
+/* img doc */
+.design .m_doc {position:absolute; right:8%; top:48%;}
+.design .m_doc span {display:block; width:8px; height:8px; border-radius:50%; border:2px solid rgba(218,41,28,.8); margin-bottom:12px; 
+    text-indent:-999px; overflow:hidden; color:#fff; transition:all .2s ease-out;}
+.design .m_doc .on {background:rgb(218,41,28);}
+/*   Design End   */
+
+/*   Others Area   */
+.others {font-family:'Nanum Gothic', 'sans-serif'; width:100%; background:#f8f8f8; padding:20px 0; position:relative;}
+.others::after {content:''; display:block; width:20px; height:4px; background:#fff; position:absolute; left:50%; margin-left:-10px; top:50%; margin-top:-2px;}
+.others ul {overflow:hidden;}
+.others .faq {width:47%; float:left; background:rgb(225,84,73); margin-left:3%; border-radius:14px 0 0 14px;}
+.others .way {width:47%; float:right; background:rgb(92,106,186); margin-right:3%; border-radius:0 14px 14px 0;}
+.others a {display:block; width:100%; height:33px; font-family:'Nanum Gothic', sans-serif; text-align:center; color:#fff; padding:23px 0 20px; font-weight:700; font-size:1.8em;}
+/*   Others End   */

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ko-kr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Grid를 이용한 샘플 </title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <style> 
+/*
+      @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+      header{ height: 100px; background-color: rgba(125, 211, 242,0.5); border-radius: 15px; padding: 10px; margin:10px 0;font-family: 'Nanum Gothic', sans-serif;  text-align: center;}
+      footer {font-family: 'Nanum Gothic', sans-serif;  text-align: center;}
+      ul.nav { background-color:rgba(201, 201, 201,.5); padding: 10px; border-radius: 10px; }
+*/
+        .box1{height: 50px; background: #111; color: #fff;}
+        .box2{height: 50px; background: #222; color: #fff;}
+        .box3{height: 50px; background: #333; color: #fff;}
+        .box4{height: 120px; background: #444; color: #fff;}
+        .box5{background: #555; color: #fff;}
+        .box6{height: 50px; background: #666; color: #fff;}
+        .box7{height: 50px; background: #777; color: #fff;}
+        .box8{height: 50px; background: #888; color: #fff;}
+        .box9{height: 50px; background: #999; color: #fff;}
+        .box10{height: 50px; background: #aaa; color: #fff;}
+        .box11{height: 50px; background: #bbb; color: #fff;}
+    </style>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+<body>
+  <div class="container">
+    <header class="row">
+      <div class="box1 col-sm-2">1</div>
+      <div class="box2 col-sm-10">2</div>
+    </header>
+    <div class="box3 hidden=-xs">3</div>
+    <article class="row">
+      <div class="box4 col-sm-2">4</div>
+      <div class="box5 col-sm-10">5
+        <div class="row">
+          <div class="box6 col-md-4 col-sm-6">6</div>
+          <div class="box7 col-md-4 col-sm-6">7</div>
+          <div class="box8 col-md-4 col-sm-12 hidden-xs">8</div>
+        </div>
+        <div class="row">
+          <div class="box9 col-md-6 col-sm-12">9</div>
+          <div class="box10 col-md-6 col-sm-12">10</div>
+        </div>
+      </div>
+
+    </article>
+
+
+    <footer class="box11 row">11</footer>
+  
+
+  </div>
+</body>
+</html>

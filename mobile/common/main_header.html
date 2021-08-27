@@ -1,0 +1,77 @@
+<div id="skipNav">
+    <a href="#content">본문바로가기</a>
+    <a href="#gnb">네비게이션바로가기</a>
+</div>
+<!-- Header Start -->
+<header id="headerArea">              
+    <!-- logo Start -->
+    <h1 class="logo">
+        <a href="./index.html">롯데알미늄</a>
+    </h1>
+    <!-- logo End -->
+    <a href="#" class="menu_btn menu_off">메뉴버튼</a>
+</header>
+<!-- Header End -->
+<!-- Navi Start -->
+<span class="gnb_left"></span>
+<nav id="gnb">
+    <h2 class="hidden">글로벌네비게이션영역</h2>
+    <div class="gnb_top">
+        <?
+            if(!$userid)
+            {
+        ?>
+            <a href="./login/login_form.php" class="login">로그인</a>
+            <a href="./member/member_check.html" class="join">회원가입</a>
+        <?
+            }
+            else
+            {
+        ?>
+            <a href="#" class="wellcome"><?=$usernick?><span>님 환영합니다.</span></a>
+            <a href="./login/logout.php" class="logout">로그아웃</a>
+            <a href="./login/member_form_modify.php" class="change_info">정보수정</a>
+        <?
+            }
+        ?>
+    </div>
+    <ul class="gnb_menu">
+        <li class="dropmenu_1 menu">
+            <h3><a href="#">company</a></h3>
+            <ul class="depth_menu">
+                <li><a href="./sub/sub1_1.html">기업개요</a></li>
+                <li><a href="./sub/sub1_2.html">비전</a></li>
+                <li><a href="./sub/sub1_3.html">경영철학</a></li>
+            </ul>
+        </li>
+        <li class="dropmenu_2 menu">
+            <h3><a href="#">business</a></h3>
+            <ul class="depth_menu">
+                <li><a href="./sub/sub2_1.html">인쇄&#47;포장</a></li>
+                <li><a href="./sub/sub2_2.html">전기&#47;전자</a></li>
+                <li><a href="./sub/sub2_3.html">산업자재</a></li>
+                <li><a href="./sub/sub2_4.html">판지소재</a></li>
+            </ul>
+        </li>
+        <li class="dropmenu_3 menu">
+            <h3><a href="#">careers</a></h3>
+            <ul class="depth_menu">
+                <li><a href="./sub/sub3_1.html">인재상</a></li>
+                <li><a href="./sub/sub3_2.html">채용절차</a></li>
+                <li><a href="./sub/sub3_3.html">복리후생</a></li>
+            </ul>
+        </li>
+        <li class="dropmenu_4 menu">
+            <h3><a href="#">promotional</a></h3>
+            <ul class="depth_menu">
+                <li><a href="./sub/sub4_1.html">롯데SNS</a></li>
+                <li><a href="./sub/sub4_2.html">공모전</a></li>
+            </ul>
+        </li>
+    </ul>
+    <div class="gnb_bottom">
+        <a href="./sub/faq.html" class="g_faq"><span>F A Q</span></a>
+        <a href="./sub/the_way.html" class="g_way"><span>오시는길</span></a>
+    </div>
+</nav>
+<!-- Navi End -->

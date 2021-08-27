@@ -1,0 +1,572 @@
+<? 
+	session_start();
+    @extract($_POST);
+    @extract($_GET);
+    @extract($_SESSION);
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Begin Again</title>
+
+    <link rel="shortcut icon"  type="image/x-icon"  href="favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="app_icon.png">
+    <link rel="apple-touch-startup-image" href="startup.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/sub4.css">
+    <link rel="stylesheet" href="./css/scroll_down.css">
+
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="./js/prefixfree.min.js"></script>
+    <script src="https://kit.fontawesome.com/cd5818eb23.js" crossorigin="anonymous"></script>
+    <script>
+        function submit()
+        {   
+            document.login_form.submit(); 
+            // login.php 로 변수 전송
+        };
+
+        function login_reset_form()
+        {
+            document.login_form.id.value = "";
+            document.login_form.pass.value = "";
+            document.login_form.id.focus();
+            return;
+        };
+	</script>
+    <script>
+        // <![CDATA[
+        try {
+         window.addEventListener('load', function(){
+          setTimeout(scrollTo, 0, 0, 1);
+         }, false);
+        } 
+        catch(e) {}
+        // ]]>
+    </script>
+    <!--[if lt IE 9]> 
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]--> 
+    <!--[if lt IE 9]>
+        <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div id="skipNav">
+        <a href="#contents">본문바로가기</a>
+        <a href="#gnb">네비게이션바로가기</a>
+    </div>
+    <div id="wrap">
+        <div class="visualBox">
+            <img src="./images/visual_img4.jpg" id="imgBG" alt="비쥬얼이미지">
+        </div>
+        <header id="headerArea">
+            <? include "./member/login_join_form.php" ?>
+            <h1><a href="./index.html">비긴어게인</a></h1>
+            <a href="#" class="menu_btn">menu</a>
+            <nav id="gnb">
+                <h2 class="hidden">글로벌네비게이션영역</h2>
+                <ul class="gnb_menu">
+                    <li><h3><a href="./sub1.html">story</a></h3></li>
+                    <li><h3><a href="./sub2.html">actors</a></h3></li>
+                    <li><h3><a href="./sub3.html">albums</a></h3></li>
+                    <li><h3><a href="./sub4.html">gallery</a></h3></li>
+                </ul>
+            </nav>
+        </header>
+        <article id="contents">
+            <div class="visual_title">
+                <div class="title_wrap">
+                    <h2 class="title">Gallery</h2>
+                </div>
+                <a class="scroll_down mouse" href="#"></a>
+                <p class="scroll_text">Scroll_down</p>
+            </div>
+            <section class="gallery">
+                <h3>gallery</h3>
+                <div class="gallery_wrap">
+                    <div class="gallery_box">
+                        <div class="g_box box1">
+                            <div class="g_box_top">
+                                <img src="./images/gallery_con_1.jpg" alt="갤러리이미지1">
+                                <dl>
+                                    <dt>scene 01<a class="more_btn" href="#">내용보기</a></dt>
+                                    <dd class="gal_content">싱어송라이터인 '그레타'(키이라 나이틀리)는 남자친구 '데이브'(애덤 리바인)가 메이저 음반회사와 계약을 하게 되면서 뉴욕으로 오게 된다.</dd>
+                                    <dd>#car</dd>
+                                    <dd>#debate</dd>
+                                    <dd>#talk</dd>
+                                    <dd>#talk</dd>
+                                    <dd>#talk</dd>
+                                    <dd>#talk</dd>
+                                </dl>
+                            </div>
+                            <div class="sns_box">
+                                <span>
+                                    <a href="#">좋아요</a>
+                                    <span class="like_cnt">0</span>
+                                </span>
+                                <span>
+                                    <a href="#">인스타그램</a>
+                                </span>
+                                <span>
+                                    <a href="#">블로그</a>
+                                </span>
+                                <span>
+                                    <a href="#">덧글<br>[0]</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="g_box box2">
+                            <div class="g_box_top">
+                                <img src="./images/gallery_con_2.jpg" alt="갤러리이미지1">
+                                <dl>
+                                    <dt>scene 02<a class="more_btn" href="#">내용보기</a></dt>
+                                    <dd class="gal_content">싱어송라이터인 '그레타'(키이라 나이틀리)는 남자친구 '데이브'(애덤 리바인)가 메이저 음반회사와 계약을 하게 되면서 뉴욕으로 오게 된다.</dd>
+                                    <dd>#car</dd>
+                                    <dd>#debate</dd>
+                                    <dd>#talk</dd>
+                                </dl>
+                            </div>
+                            <div class="sns_box">
+                                <span>
+                                    <a href="#">좋아요</a>
+                                    <span class="like_cnt">0</span>
+                                </span>
+                                <span>
+                                    <a href="#">인스타그램</a>
+                                </span>
+                                <span>
+                                    <a href="#">블로그</a>
+                                </span>
+                                <span>
+                                    <a href="#">덧글<br>[0]</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="g_box box3">
+                            <div class="g_box_top">
+                                <img src="./images/gallery_con_3.jpg" alt="갤러리이미지1">
+                                <dl>
+                                    <dt>scene 03<a class="more_btn" href="#">내용보기</a></dt>
+                                    <dd class="gal_content">싱어송라이터인 '그레타'(키이라 나이틀리)는 남자친구 '데이브'(애덤 리바인)가 메이저 음반회사와 계약을 하게 되면서 뉴욕으로 오게 된다.</dd>
+                                    <dd>#car</dd>
+                                    <dd>#debate</dd>
+                                    <dd>#talk</dd>
+                                </dl>
+                            </div>
+                            <div class="sns_box">
+                                <span>
+                                    <a href="#">좋아요</a>
+                                    <span class="like_cnt">0</span>
+                                </span>
+                                <span>
+                                    <a href="#">인스타그램</a>
+                                </span>
+                                <span>
+                                    <a href="#">블로그</a>
+                                </span>
+                                <span>
+                                    <a href="#">덧글<br>[0]</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="g_box box4">
+                            <div class="g_box_top">
+                                <img src="./images/gallery_con_4.jpg" alt="갤러리이미지1">
+                                <dl>
+                                    <dt>scene 04<a class="more_btn" href="#">내용보기</a></dt>
+                                    <dd class="gal_content">싱어송라이터인 '그레타'(키이라 나이틀리)는 남자친구 '데이브'(애덤 리바인)가 메이저 음반회사와 계약을 하게 되면서 뉴욕으로 오게 된다.</dd>
+                                    <dd>#car</dd>
+                                    <dd>#debate</dd>
+                                    <dd>#talk</dd>
+                                </dl>
+                            </div>
+                            <div class="sns_box">
+                                <span>
+                                    <a href="#">좋아요</a>
+                                    <span class="like_cnt">0</span>
+                                </span>
+                                <span>
+                                    <a href="#">인스타그램</a>
+                                </span>
+                                <span>
+                                    <a href="#">블로그</a>
+                                </span>
+                                <span>
+                                    <a href="#">덧글<br>[0]</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="g_box box5">
+                            <div class="g_box_top">
+                                <img src="./images/gallery_con_5.jpg" alt="갤러리이미지1">
+                                <dl>
+                                    <dt>scene 05<a class="more_btn" href="#">내용보기</a></dt>
+                                    <dd class="gal_content">싱어송라이터인 '그레타'(키이라 나이틀리)는 남자친구 '데이브'(애덤 리바인)가 메이저 음반회사와 계약을 하게 되면서 뉴욕으로 오게 된다.</dd>
+                                    <dd>#car</dd>
+                                    <dd>#debate</dd>
+                                    <dd>#talk</dd>
+                                </dl>
+                            </div>
+                            <div class="sns_box">
+                                <span>
+                                    <a href="#">좋아요</a>
+                                    <span class="like_cnt">0</span>
+                                </span>
+                                <span>
+                                    <a href="#">인스타그램</a>
+                                </span>
+                                <span>
+                                    <a href="#">블로그</a>
+                                </span>
+                                <span>
+                                    <a href="#">덧글<br>[0]</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="g_box box6">
+                            <div class="g_box_top">
+                                <img src="./images/gallery_con_6.jpg" alt="갤러리이미지1">
+                                <dl>
+                                    <dt>scene 06<a class="more_btn" href="#">내용보기</a></dt>
+                                    <dd class="gal_content">싱어송라이터인 '그레타'(키이라 나이틀리)는 남자친구 '데이브'(애덤 리바인)가 메이저 음반회사와 계약을 하게 되면서 뉴욕으로 오게 된다.</dd>
+                                    <dd>#car</dd>
+                                    <dd>#debate</dd>
+                                    <dd>#talk</dd>
+                                </dl>
+                            </div>
+                            <div class="sns_box">
+                                <span>
+                                    <a href="#">좋아요</a>
+                                    <span class="like_cnt">0</span>
+                                </span>
+                                <span>
+                                    <a href="#">인스타그램</a>
+                                </span>
+                                <span>
+                                    <a href="#">블로그</a>
+                                </span>
+                                <span>
+                                    <a href="#">덧글<br>[0]</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="g_box box7">
+                            <div class="g_box_top">
+                                <img src="./images/gallery_con_7.jpg" alt="갤러리이미지1">
+                                <dl>
+                                    <dt>scene 07<a class="more_btn" href="#">내용보기</a></dt>
+                                    <dd class="gal_content">싱어송라이터인 '그레타'(키이라 나이틀리)는 남자친구 '데이브'(애덤 리바인)가 메이저 음반회사와 계약을 하게 되면서 뉴욕으로 오게 된다.</dd>
+                                    <dd>#car</dd>
+                                    <dd>#debate</dd>
+                                    <dd>#talk</dd>
+                                </dl>
+                            </div>
+                            <div class="sns_box">
+                                <span>
+                                    <a href="#">좋아요</a>
+                                    <span class="like_cnt">0</span>
+                                </span>
+                                <span>
+                                    <a href="#">인스타그램</a>
+                                </span>
+                                <span>
+                                    <a href="#">블로그</a>
+                                </span>
+                                <span>
+                                    <a href="#">덧글<br>[0]</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="g_box box8">
+                            <div class="g_box_top">
+                                <img src="./images/gallery_con_8.jpg" alt="갤러리이미지1">
+                                <dl>
+                                    <dt>scene 08<a class="more_btn" href="#">내용보기</a></dt>
+                                    <dd class="gal_content">싱어송라이터인 '그레타'(키이라 나이틀리)는 남자친구 '데이브'(애덤 리바인)가 메이저 음반회사와 계약을 하게 되면서 뉴욕으로 오게 된다.</dd>
+                                    <dd>#car</dd>
+                                    <dd>#debate</dd>
+                                    <dd>#talk</dd>
+                                </dl>
+                            </div>
+                            <div class="sns_box">
+                                <span>
+                                    <a href="#">좋아요</a>
+                                    <span class="like_cnt">0</span>
+                                </span>
+                                <span>
+                                    <a href="#">인스타그램</a>
+                                </span>
+                                <span>
+                                    <a href="#">블로그</a>
+                                </span>
+                                <span>
+                                    <a href="#">덧글<br>[0]</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="g_box box9">
+                            <div class="g_box_top">
+                                <img src="./images/gallery_con_9.jpg" alt="갤러리이미지1">
+                                <dl>
+                                    <dt>scene 09<a class="more_btn" href="#">내용보기</a></dt>
+                                    <dd class="gal_content">싱어송라이터인 '그레타'(키이라 나이틀리)는 남자친구 '데이브'(애덤 리바인)가 메이저 음반회사와 계약을 하게 되면서 뉴욕으로 오게 된다.</dd>
+                                    <dd>#car</dd>
+                                    <dd>#debate</dd>
+                                    <dd>#talk</dd>
+                                </dl>
+                            </div>
+                            <div class="sns_box">
+                                <span>
+                                    <a href="#">좋아요</a>
+                                    <span class="like_cnt">0</span>
+                                </span>
+                                <span>
+                                    <a href="#">인스타그램</a>
+                                </span>
+                                <span>
+                                    <a href="#">블로그</a>
+                                </span>
+                                <span>
+                                    <a href="#">덧글<br>[0]</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="g_box box10">
+                            <div class="g_box_top">
+                                <img src="./images/gallery_con_10.jpg" alt="갤러리이미지1">
+                                <dl>
+                                    <dt>scene 10<a class="more_btn" href="#">내용보기</a></dt>
+                                    <dd class="gal_content">싱어송라이터인 '그레타'(키이라 나이틀리)는 남자친구 '데이브'(애덤 리바인)가 메이저 음반회사와 계약을 하게 되면서 뉴욕으로 오게 된다.</dd>
+                                    <dd>#car</dd>
+                                    <dd>#debate</dd>
+                                    <dd>#talk</dd>
+                                </dl>
+                            </div>
+                            <div class="sns_box">
+                                <span>
+                                    <a href="#">좋아요</a>
+                                    <span class="like_cnt">0</span>
+                                </span>
+                                <span>
+                                    <a href="#">인스타그램</a>
+                                </span>
+                                <span>
+                                    <a href="#">블로그</a>
+                                </span>
+                                <span>
+                                    <a href="#">덧글<br>[0]</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="g_box box11">
+                            <div class="g_box_top">
+                                <img src="./images/gallery_con_11.jpg" alt="갤러리이미지1">
+                                <dl>
+                                    <dt>scene 11<a class="more_btn" href="#">내용보기</a></dt>
+                                    <dd class="gal_content">싱어송라이터인 '그레타'(키이라 나이틀리)는 남자친구 '데이브'(애덤 리바인)가 메이저 음반회사와 계약을 하게 되면서 뉴욕으로 오게 된다.</dd>
+                                    <dd>#car</dd>
+                                    <dd>#debate</dd>
+                                    <dd>#talk</dd>
+                                </dl>
+                            </div>
+                            <div class="sns_box">
+                                <span>
+                                    <a href="#">좋아요</a>
+                                    <span class="like_cnt">0</span>
+                                </span>
+                                <span>
+                                    <a href="#">인스타그램</a>
+                                </span>
+                                <span>
+                                    <a href="#">블로그</a>
+                                </span>
+                                <span>
+                                    <a href="#">덧글<br>[0]</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="g_box box12">
+                            <div class="g_box_top">
+                                <img src="./images/gallery_con_12.jpg" alt="갤러리이미지1">
+                                <dl>
+                                    <dt>scene 12<a class="more_btn" href="#">내용보기</a></dt>
+                                    <dd class="gal_content">싱어송라이터인 '그레타'(키이라 나이틀리)는 남자친구 '데이브'(애덤 리바인)가 메이저 음반회사와 계약을 하게 되면서 뉴욕으로 오게 된다.</dd>
+                                    <dd>#car</dd>
+                                    <dd>#debate</dd>
+                                    <dd>#talk</dd>
+                                </dl>
+                            </div>
+                            <div class="sns_box">
+                                <span>
+                                    <a href="#">좋아요</a>
+                                    <span class="like_cnt">0</span>
+                                </span>
+                                <span>
+                                    <a href="#">인스타그램</a>
+                                </span>
+                                <span>
+                                    <a href="#">블로그</a>
+                                </span>
+                                <span>
+                                    <a href="#">덧글<br>[0]</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="g_box box13">
+                            <div class="g_box_top">
+                                <img src="./images/gallery_con_13.jpg" alt="갤러리이미지1">
+                                <dl>
+                                    <dt>scene 13<a class="more_btn" href="#">내용보기</a></dt>
+                                    <dd class="gal_content">싱어송라이터인 '그레타'(키이라 나이틀리)는 남자친구 '데이브'(애덤 리바인)가 메이저 음반회사와 계약을 하게 되면서 뉴욕으로 오게 된다.</dd>
+                                    <dd>#car</dd>
+                                    <dd>#debate</dd>
+                                    <dd>#talk</dd>
+                                </dl>
+                            </div>
+                            <div class="sns_box">
+                                <span>
+                                    <a href="#">좋아요</a>
+                                    <span class="like_cnt">0</span>
+                                </span>
+                                <span>
+                                    <a href="#">인스타그램</a>
+                                </span>
+                                <span>
+                                    <a href="#">블로그</a>
+                                </span>
+                                <span>
+                                    <a href="#">덧글<br>[0]</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="g_box box14">
+                            <div class="g_box_top">
+                                <img src="./images/gallery_con_14.jpg" alt="갤러리이미지1">
+                                <dl>
+                                    <dt>scene 14<a class="more_btn" href="#">내용보기</a></dt>
+                                    <dd class="gal_content">싱어송라이터인 '그레타'(키이라 나이틀리)는 남자친구 '데이브'(애덤 리바인)가 메이저 음반회사와 계약을 하게 되면서 뉴욕으로 오게 된다.</dd>
+                                    <dd>#car</dd>
+                                    <dd>#debate</dd>
+                                    <dd>#talk</dd>
+                                </dl>
+                            </div>
+                            <div class="sns_box">
+                                <span>
+                                    <a href="#">좋아요</a>
+                                    <span class="like_cnt">0</span>
+                                </span>
+                                <span>
+                                    <a href="#">인스타그램</a>
+                                </span>
+                                <span>
+                                    <a href="#">블로그</a>
+                                </span>
+                                <span>
+                                    <a href="#">덧글<br>[0]</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="g_box box15">
+                            <div class="g_box_top">
+                                <img src="./images/gallery_con_15.jpg" alt="갤러리이미지1">
+                                <dl>
+                                    <dt>scene 15<a class="more_btn" href="#">내용보기</a></dt>
+                                    <dd class="gal_content">싱어송라이터인 '그레타'(키이라 나이틀리)는 남자친구 '데이브'(애덤 리바인)가 메이저 음반회사와 계약을 하게 되면서 뉴욕으로 오게 된다.</dd>
+                                    <dd>#car</dd>
+                                    <dd>#debate</dd>
+                                    <dd>#talk</dd>
+                                </dl>
+                            </div>
+                            <div class="sns_box">
+                                <span>
+                                    <a href="#">좋아요</a>
+                                    <span class="like_cnt">0</span>
+                                </span>
+                                <span>
+                                    <a href="#">인스타그램</a>
+                                </span>
+                                <span>
+                                    <a href="#">블로그</a>
+                                </span>
+                                <span>
+                                    <a href="#">덧글<br>[0]</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="g_box box16">
+                            <div class="g_box_top">
+                                <img src="./images/gallery_con_16.jpg" alt="갤러리이미지1">
+                                <dl>
+                                    <dt>scene 16<a class="more_btn" href="#">내용보기</a></dt>
+                                    <dd class="gal_content">싱어송라이터인 '그레타'(키이라 나이틀리)는 남자친구 '데이브'(애덤 리바인)가 메이저 음반회사와 계약을 하게 되면서 뉴욕으로 오게 된다.</dd>
+                                    <dd>#car</dd>
+                                    <dd>#debate</dd>
+                                    <dd>#talk</dd>
+                                </dl>
+                            </div>
+                            <div class="sns_box">
+                                <span>
+                                    <a href="#">좋아요</a>
+                                    <span class="like_cnt">0</span>
+                                </span>
+                                <span>
+                                    <a href="#">인스타그램</a>
+                                </span>
+                                <span>
+                                    <a href="#">블로그</a>
+                                </span>
+                                <span>
+                                    <a href="#">덧글<br>[0]</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="g_box box17">
+                            <div class="g_box_top">
+                                <img src="./images/gallery_con_1.jpg" alt="갤러리이미지1">
+                                <dl>
+                                    <dt>scene 17<a class="more_btn" href="#">내용보기</a></dt>
+                                    <dd class="gal_content">싱어송라이터인 '그레타'(키이라 나이틀리)는 남자친구 '데이브'(애덤 리바인)가 메이저 음반회사와 계약을 하게 되면서 뉴욕으로 오게 된다.</dd>
+                                    <dd>#car</dd>
+                                    <dd>#debate</dd>
+                                    <dd>#talk</dd>
+                                </dl>
+                            </div>
+                            <div class="sns_box">
+                                <span>
+                                    <a href="#">좋아요</a>
+                                    <span class="like_cnt">0</span>
+                                </span>
+                                <span>
+                                    <a href="#">인스타그램</a>
+                                </span>
+                                <span>
+                                    <a href="#">블로그</a>
+                                </span>
+                                <span>
+                                    <a href="#">덧글<br>[0]</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+        <footer id="footerArea">
+            <p class="foot_title">Begin Again</p>
+            <p>Made by John Carney, in 2013</p>
+            <p>Main actors : Mark Ruffalo, Keira Knightley, Adam Levine</p>
+            <a href="#" class="topMove">top</a>
+        </footer>
+    </div>    
+    <script src="./js/sub4_set.js"></script>
+    <script src="./js/index_scroll.js"></script>
+</body>
+</html>

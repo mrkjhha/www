@@ -1,0 +1,263 @@
+<? 
+	session_start();
+    @extract($_SESSION);
+?>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>롯데알미늄</title>
+
+    <link rel="apple-touch-icon-precomposed" href="app_icon.png">
+    <link rel="apple-touch-startup-image" href="startup.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/prefixfree.min.js"></script>
+    <script src="https://kit.fontawesome.com/cd5818eb23.js" crossorigin="anonymous"></script>
+    <script>
+        // <![CDATA[
+        try {
+         window.addEventListener('load', function(){
+          setTimeout(scrollTo, 0, 0, 1);
+         }, false);
+        } 
+        catch(e) {}
+        // ]]>
+       </script>
+       <!--[if lt IE 9]> 
+          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <![endif]-->
+      
+      <!--[if lt IE 9]>
+          <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+      <![endif]-->
+</head>
+<body>
+    <div class="wrap">
+        <!-- Header Area -->
+        <? include "./common/main_header.html" ?>
+        <!-- Header Area End -->
+        <!-- Visual Start -->
+        <div class="visual">
+            <ul class="visual_img">
+                <li>
+                    <img src="images/main1.jpg" alt="비쥬얼이미지1">
+                </li>
+                <li>
+                    <img src="images/main2.jpg" alt="비쥬얼이미지2">
+                </li>
+                <li>
+                    <img src="images/main3.jpg" alt="비쥬얼이미지3">
+                </li>
+            </ul>
+            <ul class="visual_text">
+                <li>
+                    <dl>
+                        <dt>
+                            be the<br>champion
+                        </dt>
+                        <dd>
+                            아시아를 선도하는 기업<br>롯데 알미늄이 도전합니다.
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>
+                            green<br>company
+                        </dt>
+                        <dd>
+                            롯데 알미늄은 사람과 환경을 존중하고<br>지속가능경영을 실천합니다.
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>
+                            beyond<br>expectation
+                        </dt>
+                        <dd>
+                            롯데 알미늄은 언제나<br>더 높은 목표를 향해 달려갑니다.
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+            <div class="visual_dock">
+                <span class="dock_init dock_1"></span>
+                <span class="dock_init dock_2"></span>
+                <span class="dock_init dock_3"></span>
+            </div>
+        </div>
+        <!-- Visual End -->
+
+        <!-- Content Start -->
+        <article id="content">
+            <h3 class="hidden">본문콘텐츠영역</h3>
+            <section class="business">
+                <h3>business</h3>
+                <ul class="bizcon_wrap">
+                    <li class="bcon_box">
+                        <div class="bizcon_1">
+                            <h4>인쇄&#47;포장</h4>
+                            <p>printing &amp;packaging</p>
+                            <span></span>
+                            <a href="./sub/sub2_1.html" class="more">자세히보러가기</a>
+                        </div>
+                    </li>
+                    <li class="bcon_box">
+                        <div class="bizcon_2">
+                            <h4>전기&#47;전자</h4>
+                            <p>electrical materials</p>
+                            <span></span>
+                            <a href="./sub/sub2_2.html" class="more">자세히보러가기</a>
+                        </div>
+                    </li>
+                    <li class="bcon_box">
+                        <div class="bizcon_3">
+                            <h4>산업소재</h4>
+                            <p>industrial materials</p>
+                            <span></span>
+                            <a href="./sub/sub2_3.html" class="more">자세히보러가기</a>
+                        </div>
+                    </li>
+                    <li class="bcon_box">
+                        <div class="bizcon_4">
+                            <h4>판지소재</h4>
+                            <p>corrugated cardboard</p>
+                            <span></span>
+                            <a href="./sub/sub2_4.html" class="more">자세히보러가기</a>
+                        </div>
+                    </li>
+                </ul>
+                <a href="#" class="b_next"><span></span>다음페이지</a>
+                <a href="#" class="b_before"><span></span>이전페이지</a>
+            </section>
+            <!-- Business End -->
+            <!-- Management Start -->
+            <section class="management">
+                <h3 class="hidden">지속가능경영</h3>
+                <p>: 사람과 환경을 존중하는 롯데 알미늄은</p>
+                <p><span>지속가능경영</span>을 실천합니다</p>
+                <ul class="con_wrap">
+                    <li class="con_box">
+                        <div class="con_1">
+                            <h4>01. 환경경영</h4>
+                            <p>
+                                롯데알미늄은 녹색비전을 수립하여<br>
+                                환경보전에 최선을 다합니다.
+                            </p>
+                        </div>
+                        <a href="./sub/sub1_3.html" class="more">자세히보러가기</a>
+                    </li>
+                    <li class="con_box">
+                        <div class="con_1">
+                            <h4>02. 품질경영</h4>
+                            <p>
+                                롯데알미늄은 품질시스템을 개선하여<br>
+                                제품의 안정성을 확보합니다.
+                            </p>
+                        </div>
+                        <a href="./sub/sub1_3.html" class="more">자세히보러가기</a>
+                    </li>
+                    <li class="con_box">
+                        <div class="con_1">
+                            <h4>03. 안전보건</h4>
+                            <p>
+                                안전보건경영시스템을 유지, 관리하여<br>
+                                안전과 건강을 보호하고 증진시킵니다.
+                            </p>
+                        </div>
+                        <a href="./sub/sub1_3.html" class="more">자세히보러가기</a>
+                    </li>
+                </ul>
+                <a href="#" class="m_next"><span class="hidden">다음페이지</span></a>
+            </section>
+            <!-- Management End -->
+            <!-- Careers Start -->
+            <section class="careers">
+                <h3>careers</h3>
+                <ul class="career_box">
+                    <li class="career_con">
+                        <a href="./sub/sub3_1.html" class="more">
+                            <span>인재상</span>
+                        </a>
+                    </li>
+                    <li class="career_con">
+                        <a href="./sub/sub3_2.html" class="more">
+                            <span>채용절차</span>
+                        </a>
+                    </li>
+                    <li class="career_con">
+                        <a href="./sub/sub3_3.html" class="more">
+                            <span>복리후생</span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <!-- Careers End-->
+            <!-- Design Start -->
+            <section class="design">
+                <div class="design_head">
+                    <h3>design story</h3>
+                    <p>
+                        : LOTTE 제품들만의 이야기들을 패키지에 그려내는<br>
+                        <span>story designer</span> 에 도전하세요.
+                    </p>
+                </div>
+                <ul class="design_con">
+                    <li>
+                        <img src="images/design_1.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="images/design_2.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="./images/design_3.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="images/design_4.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="images/design_5.jpg" alt="">
+                    </li>
+                </ul>
+                <a href="./sub/sub4_2.html" class="more">더 보기</a>
+                <div class="m_doc">
+                    <span class="on"></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </section>
+            <!-- Design End -->
+            <!-- Others Start-->
+            <div class="others">
+                <ul>
+                    <li class="faq"><a href="./sub/faq.html">F A Q</a></li>
+                    <li class="way"><a href="./sub/the_way.html">오시는길</a></li>
+                </ul>
+            </div>
+            <!-- Others End -->
+        </article>
+        <!-- Footer Area -->
+        <? include "./common/main_footer.html" ?>
+        <!-- Footer Area End -->
+    </div>
+
+    <!-- JQuery -->
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="./js/index_scroll.js"></script>
+    <script src="./js/visual_slide.js"></script>
+    <script src="./js/business_slide.js"></script>
+    <script src="./js/manag_slide.js"></script>
+    <script src="./js/design_slide.js"></script>
+    <script src="./js/family.js"></script>
+</body>
+</html>

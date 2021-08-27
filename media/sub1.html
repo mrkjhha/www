@@ -1,0 +1,221 @@
+<? 
+	session_start();
+    @extract($_POST);
+    @extract($_GET);
+    @extract($_SESSION);
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Begin Again</title>
+
+    <link rel="shortcut icon"  type="image/x-icon"  href="favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="app_icon.png">
+    <link rel="apple-touch-startup-image" href="startup.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/sub1.css">
+    <link rel="stylesheet" href="./css/scroll_down.css">
+
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="./js/prefixfree.min.js"></script>
+    <script src="https://kit.fontawesome.com/cd5818eb23.js" crossorigin="anonymous"></script>
+    <script>
+        function submit()
+        {   
+            document.login_form.submit(); 
+            // login.php 로 변수 전송
+        };
+
+        function login_reset_form()
+        {
+            document.login_form.id.value = "";
+            document.login_form.pass.value = "";
+            document.login_form.id.focus();
+            return;
+        };
+	</script>
+    <script>
+        // <![CDATA[
+        try {
+         window.addEventListener('load', function(){
+          setTimeout(scrollTo, 0, 0, 1);
+         }, false);
+        } 
+        catch(e) {}
+        // ]]>
+       </script>
+       <!--[if lt IE 9]> 
+          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <![endif]-->
+      
+      <!--[if lt IE 9]>
+          <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+      <![endif]-->
+</head>
+<body>
+    <div id="skipNav">
+        <a href="#contents">본문바로가기</a>
+        <a href="#gnb">네비게이션바로가기</a>
+    </div>
+    <div id="wrap">
+        <div class="visualBox">
+            <img src="./images/visual_img2.jpg" id="imgBG" alt="비쥬얼이미지">
+        </div>
+        <header id="headerArea">
+            <h1><a href="./index.html">비긴어게인</a></h1>
+            <? include "./member/login_join_form.php" ?>
+            <a href="#" class="menu_btn">menu</a>
+            <nav id="gnb">
+                <h2 class="hidden">글로벌네비게이션영역</h2>
+                <ul class="gnb_menu">
+                    <li><h3><a href="./sub1.html">story</a></h3></li>
+                    <li><h3><a href="./sub2.html">actors</a></h3></li>
+                    <li><h3><a href="./sub3.html">albums</a></h3></li>
+                    <li><h3><a href="./sub4.php">gallery</a></h3></li>
+                </ul>
+            </nav>
+        </header>
+        <article id="contents">
+            <div class="visual_title">
+                <div class="title_wrap">
+                    <h2 class="title">Story</h2>
+                </div>
+                <a class="scroll_down mouse" href="#"></a>
+                <p class="scroll_text">Scroll_down</p>
+            </div>
+            <section class="main_episode">
+                <h3>main story</h3>
+                <div class="film_box">
+                    <a class="episode_link" href="#">에피소드1링크</a>
+                    <a class="episode_link" href="#">에피소드2링크</a>
+                    <a class="episode_link" href="#">에피소드3링크</a>
+                    <a class="episode_link" href="#">에피소드4링크</a>
+                    <a class="episode_link" href="#">에피소드5링크</a>
+                    <a class="episode_link" href="#">에피소드6링크</a>
+                    <span class="deco_white"></span>
+                    <span class="projector"></span>
+                    <span class="deco_black4"></span><span class="deco_black2"></span>
+                    <span class="deco_black"></span><span class="deco_black3"></span>
+                </div>
+                <ul class="episode_wrap">
+                    <li class="episode_box episode_1">                        
+                        <dl>
+                            <dt>Episode.01 - Past Memory</dt>
+                            <dd>
+                                <img src="./images/sub_story_1.jpg" alt="에피소드1대표이미지">
+                                <span>Singer-songwriter Greta (Keira Knightley) has a boyfriend of five years, Dave (Adam Levine). After signing with a major record label, he moved to New York together.  After signing with a major record label, he moved to New York together But for a while, as a long-time lover and musical partner, we make songs together.</span>
+                                <span>And unlike Greta, who liked to sing with her, Dave's heart as a star... Before you know tion. The star record producer, but now fired Dan (Mark Ruffalo), I stopped by the music bar with a desire to die from family problems, children's problems, company.</span>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="episode_box episode_2">
+                        <dl>
+                            <dt>Episode.02 - Past Memory</dt>
+                            <dd>
+                                <img src="./images/sub_story_2.jpg" alt="에피소드2대표이미지">
+                                <span>Singer-songwriter Greta (Keira Knightley) has a boyfriend of five years, Dave (Adam Levine). After signing with a major record label, he moved to New York together. But for a while, as a long-time lover and musical partner, we make songs together.</span>
+                                <span>And unlike Greta, who liked to sing with her, Dave's heart as a star... Before you know tion. The star record producer, but now fired Dan (Mark Ruffalo), I stopped by the music bar with a desire to die from family problems, children's problems, company.</span>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="episode_box episode_3">
+                        <dl>
+                            <dt>Episode.03 - Past Memory</dt>
+                            <dd>
+                                <img src="./images/sub_story_3.jpg" alt="에피소드3대표이미지">
+                                <span>Singer-songwriter Greta (Keira Knightley) has a boyfriend of five years, Dave (Adam Levine). After signing with a major record label, he moved to New York together. But for a while, as a long-time lover and musical partner, we make songs together.</span>
+                                <span>And unlike Greta, who liked to sing with her, Dave's heart as a star... Before you know tion. The star record producer, but now fired Dan (Mark Ruffalo), I stopped by the music bar with a desire to die from family problems, children's problems, company.</span>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="episode_box episode_4">
+                        <dl>
+                            <dt>Episode.04 - Past Memory</dt>
+                            <dd>
+                                <img src="./images/sub_story_4.jpg" alt="에피소드4대표이미지">
+                                <span>Singer-songwriter Greta (Keira Knightley) has a boyfriend of five years, Dave (Adam Levine). After signing with a major record label, he moved to New York together. But for a while, as a long-time lover and musical partner, we make songs together.</span>
+                                <span>And unlike Greta, who liked to sing with her, Dave's heart as a star... Before you know tion. The star record producer, but now fired Dan (Mark Ruffalo), I stopped by the music bar with a desire to die from family problems, children's problems, company.</span>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="episode_box episode_5">
+                        <dl>
+                            <dt>Episode.05 - Past Memory</dt>
+                            <dd>
+                                <img src="./images/sub_story_5.jpg" alt="에피소드5대표이미지">
+                                <span>Singer-songwriter Greta (Keira Knightley) has a boyfriend of five years, Dave (Adam Levine). After signing with a major record label, he moved to New York together. But for a while, as a long-time lover and musical partner, we make songs together.</span>
+                                <span>And unlike Greta, who liked to sing with her, Dave's heart as a star... Before you know tion. The star record producer, but now fired Dan (Mark Ruffalo), I stopped by the music bar with a desire to die from family problems, children's problems, company.</span>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="episode_box episode_6">
+                        <dl>
+                            <dt>Episode.06 - Past Memory</dt>
+                            <dd>
+                                <img src="./images/sub_story_6.jpg" alt="에피소드6대표이미지">
+                                <span>Singer-songwriter Greta (Keira Knightley) has a boyfriend of five years, Dave (Adam Levine). After signing with a major record label, he moved to New York together. But for a while, as a long-time lover and musical partner, we make songs together.</span>
+                                <span>And unlike Greta, who liked to sing with her, Dave's heart as a star... Before you know tion. The star record producer, but now fired Dan (Mark Ruffalo), I stopped by the music bar with a desire to die from family problems, children's problems, company.</span>
+                            </dd>
+                        </dl>
+                    </li>
+                </ul>
+            </section>
+            <section class="mini_episode">
+                <h3>sub story</h3>
+                <ul class="mini_wrap">
+                    <li class="mini_box mini_1">
+                        <img src="./images/mini_1.jpg" alt="미니에피소드1대표이미지">
+                        <dl>
+                            <dt>
+                                Mini Ep.01 
+                                - Past Memory</dt>
+                            <dd>
+                                Singer-songwriter Greta (Keira Knight-ley) has a boyfriend of five years, Dave (Adam Levine). After signing with a major record label, he moved to New York together.  After signing with a major record label, he moved to New York together But for a while, as a long-time lover and musical partner, we make songs together.
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="mini_box mini_2">
+                        <img src="./images/mini_2.jpg" alt="미니에피소드2대표이미지">
+                        <dl>
+                            <dt>
+                                Mini Ep.02 
+                                - Past Memory</dt>
+                            <dd>
+                                And unlike Greta, who liked to sing with her, Dave's heart as a star... Before you know tion. The star record producer, but now fired Dan (Mark Ruffalo), I stopped by the music bar with a desire to die from family problems, children's pro-blems, company.
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="mini_box mini_3">
+                        <img src="./images/mini_3.jpg" alt="미니에피소드2대표이미지">
+                        <dl>
+                            <dt>
+                                Mini Ep.03 
+                                - Past Memory
+                            </dt>
+                            <dd>
+                                And unlike Greta, who liked to sing with her, Dave's heart as a star... Before you know tion. The star record producer, but now fired Dan (Mark Ruffalo), I stopped by the music bar with a desire to die from family problems, children's pro-blems, company.
+                            </dd>
+                        </dl>
+                    </li>
+                </ul>
+            </section>
+        </article>
+        <footer id="footerArea">
+            <p class="foot_title">Begin Again</p>
+            <p>Made by John Carney, in 2013</p>
+            <p>Main actors : Mark Ruffalo, Keira Knightley, Adam Levine</p>
+            <a href="#" class="topMove">top</a>
+        </footer>
+    </div>
+    <script src="./js/sub1_set.js"></script>
+    <script src="./js/index_scroll.js"></script>
+    <script src="./js/sub1_slide.js"></script>
+</body>
+</html>

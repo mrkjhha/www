@@ -1,0 +1,100 @@
+<? 
+	session_start();
+    @extract($_SESSION);
+?>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>롯데알미늄</title>
+
+    <link rel="apple-touch-icon-precomposed" href="../app_icon.png">
+    <link rel="apple-touch-startup-image" href="../startup.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/sub4_1.css">
+    
+    <script src="../js/prefixfree.min.js"></script>
+    <script>
+      // <![CDATA[
+      try {
+       window.addEventListener('load', function(){
+        setTimeout(scrollTo, 0, 0, 1); 
+       }, false);
+      } 
+      catch(e) {}
+      // ]]>
+     </script>
+     <!--[if lt IE 9]> 
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <!--[if lt IE 9]>
+        <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="wrap">
+        <!-- Header Area -->
+        <? include "../common/sub_header.html" ?>
+        <!-- Header Area End -->
+        <ul class="sub_nav">
+            <li class="current">
+                <a href="./sub4_1.html">롯데 sns</a>
+            </li>
+            <li>
+                <a href="./sub4_2.html">공모전</a>
+            </li>
+        </ul>
+        <article id="content">
+            <h2>롯데SNS</h2>
+            <section class="content_1">
+                <div class="con_wrap">
+                    <h3>facebook</h3>
+                    <p class="sub_title"><span>설레는 봄에도</span><br>함께 가는 친구, 롯데</p>
+                    <p class="sub_con">롯데만의 새로운 소식과 다양한 이벤트가 기다리고 있는 페이스북 페이지로 여러분을 초대합니다. 
+                        이벤트의 참여는 페이스북 페이지내에서 댓글로 정답을 남기시면 참여가 가능합니다.</p>                
+                    <div class="facebook_wrap">
+                        <div class="facebook">
+                            <div id="fb-root"></div>
+                            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v10.0" nonce="hpg2pMra"></script>
+                            <div class="fb-page" data-href="https://www.facebook.com/lotte" data-tabs="timeline" data-width="500" data-height="700" data-small-header="false" 
+                                            data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                                <blockquote cite="https://www.facebook.com/lotte" class="fb-xfbml-parse-ignore">
+                                    <a href="https://www.facebook.com/lotte" class="lotte_facebook">롯데 (LOTTE)</a>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="content_2">
+                <div class="con_wrap">
+                    <h3>twitter</h3>
+                    <p class="sub_title">가장 <span>hot</span> 한 문화생활</p>
+                    <p class="sub_con">롯데만의 새로운 소식과 다양한 이벤트가 기다리고 있는 페이스북 페이지로 여러분을 초대합니다. 
+                            이벤트의 참여는 페이스북 페이지내에서 댓글로 정답을 남기시면 참여가 가능합니다.</p>
+                    <div class="twitter">
+                        <div class="snsContent">
+                            <a class="twitter-timeline" data-lang="ko" data-theme="light" href="https://twitter.com/lotte_ent">Tweets by LOTTE_ent</a>
+                            <script async src="https://platform.twitter.com/widgets.js"></script>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+        <!-- Footer Area -->
+        <? include "../common/sub_footer.html" ?>
+        <!-- Footer Area End -->
+    </div>
+    <!-- JQuery -->
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="../js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="../js/sub_scroll_2.js"></script>
+    <script src="../js/family.js"></script>
+</body>
+</html>

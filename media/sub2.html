@@ -1,0 +1,218 @@
+<? 
+	session_start();
+    @extract($_POST);
+    @extract($_GET);
+    @extract($_SESSION);
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Begin Again</title>
+
+    <link rel="shortcut icon"  type="image/x-icon"  href="favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="app_icon.png">
+    <link rel="apple-touch-startup-image" href="startup.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/sub2.css">
+    <link rel="stylesheet" href="./css/scroll_down.css">
+
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="./js/prefixfree.min.js"></script>
+    <script src="https://kit.fontawesome.com/cd5818eb23.js" crossorigin="anonymous"></script>
+    <script>
+        function submit()
+        {   
+            document.login_form.submit(); 
+            // login.php 로 변수 전송
+        };
+
+        function login_reset_form()
+        {
+            document.login_form.id.value = "";
+            document.login_form.pass.value = "";
+            document.login_form.id.focus();
+            return;
+        };
+	</script>
+    <script>
+        // <![CDATA[
+        try {
+         window.addEventListener('load', function(){
+          setTimeout(scrollTo, 0, 0, 1);
+         }, false);
+        } 
+        catch(e) {}
+        // ]]>
+       </script>
+       <!--[if lt IE 9]> 
+          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <![endif]-->
+      
+      <!--[if lt IE 9]>
+          <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+      <![endif]-->
+</head>
+<body>
+    <div id="skipNav">
+        <a href="#contents">본문바로가기</a>
+        <a href="#gnb">네비게이션바로가기</a>
+    </div>
+    <div id="wrap">
+        <div class="visualBox">
+            <img src="./images/visual_img4.jpg" id="imgBG" alt="비쥬얼이미지">
+        </div>
+        <header id="headerArea">
+            <h1><a href="./index.html">비긴어게인</a></h1>
+            <? include "./member/login_join_form.php" ?>
+            <a href="#" class="menu_btn">menu</a>
+            <nav id="gnb">
+                <h2 class="hidden">글로벌네비게이션영역</h2>
+                <ul class="gnb_menu">
+                    <li><h3><a href="./sub1.html">story</a></h3></li>
+                    <li><h3><a href="./sub2.html">actors</a></h3></li>
+                    <li><h3><a href="./sub3.html">albums</a></h3></li>
+                    <li><h3><a href="./sub4.php">gallery</a></h3></li>
+                </ul>
+            </nav>
+        </header>
+        <article id="contents">
+            <div class="visual_title">
+                <div class="title_wrap">
+                    <h2 class="title">Actors</h2>
+                </div>
+                <a class="scroll_down mouse" href="#"></a>
+                <p class="scroll_text">Scroll_down</p>
+            </div>
+            <section class="main_actors">
+                <h3>main actors</h3>
+                <ul class="actors_wrap">
+                    <li class="actor_box actor_1">
+                        <dl>
+                            <dt>Keira Knightley &#40;Greta&#41;</dt>
+                            <dd>
+                                Singer-songwriter Greta has a boyfriend of five years, Dave. After signing with a major record label, he moved to New York together.
+                            </dd>
+                        </dl>
+                        <img src="./images/sub_actor_1.jpg" alt="에피소드1대표이미지">
+                        <span></span>
+                    </li>
+                    <li class="actor_box actor_2">
+                        <dl>
+                            <dt>Mark Ruffalo &#40;Dan&#41;</dt>
+                            <dd>
+                                And unlike Greta, who liked to sing with her, Dave's heart as a star... Before you know tion. The star record producer, but now fired Dan.
+                            </dd>
+                        </dl>
+                        <img src="./images/sub_actor_2.jpg" alt="에피소드2대표이미지">
+                        <span></span>
+                    </li>
+                </ul>
+            </section>
+            <section class="others">
+                <h3>others</h3>
+                <ul class="others_wrap">
+                    <li class="other_box other_1">
+                        <span>Click</span>
+                        <img src="./images/sub_other_1.jpg" alt="미니에피소드1대표이미지">
+                        <div>
+                            <dl>
+                                <dt>
+                                    Adam Levine
+                                </dt>
+                                <dd>
+                                    Dave is a Greta's x-boyfriend and musitian. he was cheating on her.
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="other_box other_2">
+                        <span>Click</span>
+                        <img src="./images/sub_other_2.jpg" alt="미니에피소드2대표이미지">
+                        <div>
+                            <dl>
+                                <dt>
+                                    Catherine Ann
+                                </dt>
+                                <dd>
+                                    Miriam is Dan's wife. she is have a some conflict with Dan.
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="other_box other_3">
+                        <span>Click</span>
+                        <img src="./images/sub_other_3.jpg" alt="미니에피소드2대표이미지">
+                        <div>
+                            <dl>
+                                <dt>
+                                    Mos Def
+                                </dt>
+                                <dd>
+                                    Soul is a co-builder of the producing company and Dan's friends.
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="other_box other_4">
+                        <span>Click</span>
+                        <img src="./images/sub_other_4.jpg" alt="미니에피소드1대표이미지">
+                        <div>
+                            <dl>
+                                <dt>
+                                    Hailee Steinfeld
+                                </dt>
+                                <dd>
+                                    Dan's daughter, she is play guitar.
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="other_box other_5">
+                        <span>Click</span>
+                        <img src="./images/sub_other_5.jpg" alt="미니에피소드2대표이미지">
+                        <div>
+                            <dl>
+                                <dt>
+                                    James Koden
+                                </dt>
+                                <dd>
+                                    Steve is a firends of Greta.
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="other_box other_6">
+                        <span>Click</span>
+                        <img src="./images/sub_other_6.jpg" alt="미니에피소드2대표이미지">
+                        <div>
+                            <dl>
+                                <dt>
+                                    Cee Lo Green
+                                </dt>
+                                <dd>
+                                    Troble Gum is a musian and invest on Dan's new music.
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </article>
+        <footer id="footerArea">
+            <p class="foot_title">Begin Again</p>
+            <p>Made by John Carney, in 2013</p>
+            <p>Main actors : Mark Ruffalo, Keira Knightley, Adam Levine</p>
+            <a href="#" class="topMove">top</a>
+        </footer>
+    </div>
+    <script src="./js/sub2_set.js"></script>
+    <script src="./js/index_scroll.js"></script>
+</body>
+</html>

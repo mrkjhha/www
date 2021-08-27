@@ -1,0 +1,28 @@
+.sub_nav {width:100%; overflow:hidden; margin-top:50px;}
+.sub_nav li {width:50%; height:fit-content; float:left; background:rgb(225,84,73);}
+.sub_nav li a {display:block; width:100%; text-align:center; font-size:1.22em; font-weight:700; color:#fff; padding:15px 0;}
+.sub_nav .current {background:#fff; position:relative;}
+.sub_nav .current a {color:rgb(225,84,73);}
+.sub_nav .current::before {content:''; display:block; width:100%; height:1px; background:rgb(225,84,73); position:absolute; left:0; bottom:0;}
+
+#content {width:100%; overflow:hidden;}
+#content h3 {width:85%; font-family:'Nanum Gothic', sans-serif; font-weight:700; font-size:2em; text-transform:capitalize; color:#fff; 
+    text-align:center; padding:25px 0; margin:30px auto; position:relative; border-radius:100px; overflow:hidden;}
+#content h2 {width:100%; font-family:'Nanum Gothic', sans-serif; font-weight:700; font-size:2.3em; color:#333; text-align:center; padding:20px 0; margin-top:25px;}
+#content section {position:relative; margin-top:90px;}
+#content section p {font-family:'Nanum Gothic', sans-serif;}
+.con_wrap {width:90%; margin:50px 5% 30px; border:2px solid #f0f0f0; border-radius:25px;}
+.sub_title {font-weight:700; font-size:2em; text-align:center; line-height:1.8em; margin-top:30px; position:relative;}
+.sub_con {font-size:1.13em; text-align:justify; line-height:1.7em; padding:30px; color:#666; position:relative;}
+
+#content .content_1::before {content:''; display:block; width:38px; height:12px; position:absolute; left:50%; margin-left:-19px; top:-63px;
+    background:url(../sub/images/point.svg) 0 0 no-repeat; background-size:contain; transform:rotate(90deg);}
+.content_1 h3 {background:#49659f; color:#fff;}
+.content_1 .sub_title span {color:rgb(252, 220, 125);}
+.content_1 .facebook_wrap {width:90%; margin:0 5%; margin:0 auto;}
+.content_1 .facebook_wrap .facebook {width:90%; height:700px; margin:0 5%;}
+
+.content_2 {margin-bottom:90px;}
+.content_2 h3 {background:#1da1f2; color:#fff;}
+.content_2 .sub_title span {color:rgba(218,41,28,.8); text-transform:uppercase;}
+.content_2 .twitter {width:90%; margin:0 5%; height:400px; padding-top:40px; margin:0 auto; overflow:auto; border:2px solid #f0f0f0;}

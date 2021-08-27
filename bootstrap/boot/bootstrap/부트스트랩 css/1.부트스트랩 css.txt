@@ -1,0 +1,705 @@
+1. 그리드 시스템
+
+- 그리드는 총 12열로 구성되어 있다.
+
+- 기기별 해상도에 따른 클래스 접두사
+  -모바일 (<768px)        .col-xs-
+  -태블릿 (>=768px)      .col-sm-
+  -데스트탑 (>=992px)   .col-md-
+  -와이드 (>=1200px)    .col-lg-
+
+ 
+- class="container"   => 레이아웃을 감싸는 역할   (grid.html)
+  -class="row"는 한 행을 구성한다. 한 행은 총 12열로 구성되어 있다.
+  -해상도가 1200px인 경우 자동으로 1170px로 변경
+  -해상도가 1200px보다 작게되면 970px로 변경 
+
+- class="container-fluid"  =>무조건 전체 화면을 처리한다.   (grid-fluid.html)
+
+- col-md-   => 1200px~992px 에서 사용하는 클래스 접두사
+  -적용된 컬럼의 최대 너비는 78px, 각 컬림들 사이의 너비는 좌우로 15px의 padding을 갖는다.
+
+- 중첩 그리드  (grid2.html)
+  -하나의 그리드 내부에 또 그리드를 만들수 있다. 
+  -내부에 만들어진 그리드는 또다시 12개의 그리드가 생성된다.
+
+- col-md-offset-  => 그리드 사이의 offset  (grid3.html)
+  -offset 값 까지 더한 총 개수가 12가 되어야 한다.  (grid4.html)->총합이 12를 넘겼을때.
+  -<div class="row">
+      <div class="col-md-5"></div>
+      <div class="col-md-5 col-md-offset-2"></div>
+   </div>
+
+- 그리드 샘플1-2단  (grid-sample1.html)  2:10
+- 그리드 샘플2-3단  (grid-sample2.html)  2:8:2
+- 그리드 중첩 레이아웃  (grid-Nesting -sample.html)  3:9(7:5)
+
+- col-md-push-  / col-md-pull-  =>레이아웃의 순서를 바꿀 수 있다.  
+  (grid-sample1-1.html)
+  -<div class="row">
+      <div class="col-md-2 col-md-push-10"></div>
+      <div class="col-md-10 col-md-pull-2"></div>
+   </div>
+
+----------------------------------------------------------
+2. 타이포그래피
+
+- 부트스트랩 기본 글꼴
+  - helvetica neue , helvetica , arial , sans-serif 계열 글꼴 설정.
+  - 글꼴의 크기 14px
+  - 행간 1.42857443
+  - 글자색상 #333
+
+- bootstrap.css   -275(line)
+  body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+  }
+
+
+- 구글(크롬) => 한글 글꼴(굴림체)
+  파이어폭스/IE11 => 한글 글꼴(맑은 고딕)
+  맥(사파리) => 한글 글꼴(산돌 고딕 Neo)
+  맥(크롬) => 한글 글꼴(애플 고딕)
+
+- 구글 폰트 사용
+- @font-face{}
+
+- 부트스트랩의 타이포 (typo-sample.html)
+  - h1~h6  (36,30,24,18,14,12)의 고정 px 크기를 갖음 
+    <small></small> 태그 지정시  65%(h1~h3) 75%(h4~h6) 로 
+      축소 색상은 #999
+  - <p> => 하단에 자동으로 10px의 마진값 적용
+  - class="lead"  => 16px, 살짝 두꺼운 글꼴  
+  - 문단 정렬시  class="text-left", class="text-center", class="text-right"
+  - 다양한 강조클래스
+    class="text-muted" ,class="text-primary", class="text-success", class="text-info",
+    class="text-warning", class="text-danger"
+  - <abbr> => 물음표와 원래 텍스트 표현
+  - 영문 약어는 class="initialism" 를 사용하게 되면 \
+     단어가 소문자인 경우에도 영문 대문자로 
+    변환되면서 글씨 크기는 90%정도로 변환
+  - 목록(list)를 표시
+     -ul/ol/li =>왼쪽에 20px 하단으로 10px의 여백
+     -ul 또는 ol 태그에 class="list-unstyled"를 적용한 부분입니다
+      .list-unstyled 클래스 선택자를 사용하면 
+      왼쪽 20px 여백이 0으로 바뀝니다.
+     -ul에 class="list-inline" 을 적용하면  목록이 세로에서 가로로 펼쳐집니다. 
+      각 li 사이는 오른쪽과 왼쪽으로 5픽셀의 패딩값이 적용됩니다.
+     -<dl class="dl-horizontal"> 설명들이 제목 옆으로 배치 된다.
+	***dl 유용함
+-------------------------------------------------------
+3. 코드와 테이블
+
+- <pre class="pre-scrollable"></pre>    
+   => 높이가 350px이 넘어가는 경우 자동으로 스크롤 생성
+  (code-sample.html)
+
+- 테이블 처리  (table-sample.html)
+  -<table class="table"></table> 을 적용하면 넓이가 100%인 테이블 생성, 행 사이에 보더 적용
+  -<table class="table table-striped"></table> 각 행에 색상(배경)을 넣어준다.
+  -<table class="table table-bordered"></table> 테이블 전체 테두리를 준다.
+  -<table class="table table-hover"></table> 각 행에 마우스 오버시 색상에 오버 기능 추가.
+  -<table class="table table-condensed"></table> 각행의 padding 값이 작아진다.
+  -class="active" class="success" class="warning" class="danger" 적용하면  각 셀에 색상을 지원
+   ex) <tr class="active"></tr>
+  -<div class="table-responsive"></div>  => 테이블을 감싸게 되면
+      768px 이하의 사이즈에서
+    자동으로 테이블에 스크롤 바가 생성된다.
+  -<table class="table table-bordered table-hover"></table>  
+       => 클래스를 중첩해서 사용 가능
+
+------------------------------------------------
+4. form  
+
+(form-sample.html)
+
+<form role="form">  
+    <div class="form-group">   
+        <label for="Name">이름</label>
+        <input type="text" class="form-control" placeholder="이름"> 
+    </div>       
+    <div class="form-group">  
+        <label for="emailaddress">이메일</label>
+        <input type="email" class="form-control" placeholder="이메일"> 
+    </div> 
+    <div class="form-group">     
+        <button type="submit"> 확인</button>    
+    </div>    
+</form>
+
+
+- role="form"   => role값은 리더기가 읽어준다(접근성)
+- class="form-control" => 넓이가 100%, 높이가 34px, 패딩 상하 6px 좌우 12px, border-radius:4px 적용
+- class="form-group"  => 하단에 15px의 마진이 생긴다.
+
+- 인라인 폼 => 브라우져 너비가 커지면 한 라인으로 구성된다.
+  <form role="form" class="form-inline"></form>
+  
+- class="sr-only"   => 라벨을 화면에서 안보이게 할때 적용
+  <label for="Name" class="sr-only">이름</label> 
+
+- 수평폼 => 라벨 오른쪽에 폼요소들을 배치합니다.
+  -<form class="form-horizontal">
+  -<label for="Name" class="col-xs-2 col-lg-2 control-label">이름</label>
+  -<div class="col-xs-10 col-lg-10">
+
+ <form class="form-horizontal" role="form">  
+    <div class="form-group">   
+        <label for="Name" class="col-xs-2 col-lg-2 control-label">이름</label>
+        <div class="col-xs-10 col-lg-10">
+            <input type="text" class="form-control" placeholder="이름"> 
+        </div>
+    </div>
+ </form> 
+
+
+
+(form-sample2.html)
+
+-<textarea>는 rows 값만 적용한다. 너비는 100%
+  <textarea  rows="5" class="form-control"></textarea>
+
+- 인라인 체크 박스
+  <label class="checkbox-inline">
+  
+        <label class="checkbox-inline">
+          <input type="checkbox" id="inlineCheckbox1" value="option1"> 여행
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" id="inlineCheckbox2" value="option2"> 독서
+        </label>
+
+- 인라인 라디오
+  <label class="radio-inline">
+
+            <label class="radio-inline">
+               <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>  r1
+            </label> 
+            <label class="radio-inline">
+               <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>  r2
+            </label>
+
+- <select class="form-control">....</select>
+  <select multiple class="form-control">....</select>
+
+- 폼에 텍스트를 삽입 하기 위해선 p class="form-control-static" 속성을 적용한다.
+  form-control-static을 적용하지 않을 경우 텍스트가 label 부분과의 정렬이 틀어진다.
+   => 패딩 7px, 마진바텀 0px 
+   <p class="form-control-static">email@example.com</p>
+
+-  disabled 속성을 주면 비활성화 상태가 된다.
+  <input type="text" class="form-control" disabled placeholder="이 부분은 disabled 상태입니다.">
+  <fieldset disabled> ...  </fieldset>
+
+- input에 다양한 색 지정 클래스 선택자
+  Input값이 성공적일(문제없을) 경우
+     <label class="control-label" for="inputSuccess">Input값이 성공적일(문제없을) 경우</label>
+  Input 값에 문제가 있어 경고를 내보낼 경우
+     <input type="text" class="form-control" id="inputWarning">
+  Input값에 에러가 있을 때
+     <input type="text" class="form-control" id="inputError">
+
+- input 크기 제어 => input-lg, 기본값, input-sm
+  <input type="text" class="form-control input-lg" placeholder="input-lg">      
+  <input type="text" class="form-control input-sm" placeholder="input-sm">
+
+- 그리드 시스템을 이용해서 컬럼 크기 조절
+  -<div> 태그로 감싼 후 클래스 선택자를 사용해서 처리한다.
+
+    <div class="row">
+          <div class="col-sm-2 col-lg-2">
+            <input type="text" class="form-control" placeholder="">
+          </div>
+          <div class="col-sm-3  col-lg-3">
+            <input type="text" class="form-control" placeholder="">
+          </div>
+          <div class="col-sm-4  col-lg-4">
+            <input type="text" class="form-control" placeholder="">
+          </div>
+     </div> 
+
+- input 부분에 대한 도움말
+   <span class="help-block">반드시 010-1234-5678 과 같은 형태로 입력해 주세요. </span>
+
+
+-----------------------------------------------------
+5. 버튼/이미지/헬퍼 클래스
+
+- 버튼  <button>, <input type="button">, <a href="#">
+   (button.html)   
+
+  - class="btn" 을 적용하여 다양한 버튼 효과를 줄수 있다
+  - class="btn btn-default" 기본 버튼 모양
+    class="btn btn-primary" 중요한 버튼
+    class="btn btn-success" 긍정적 의미의 버튼
+    class="btn btn-info" 정보제공 버튼
+    class="btn btn-warning" 주의를 알리는 버튼
+    class="btn btn-danger" 위험을 나타내는 버튼
+    class="btn btn-link" 단순 링크로 처리하는 버튼
+  - class="btn btn-lg" 큰 버튼 btn-lg
+    class="btn btn-sm" 작은 버튼
+    class="btn btn-xs" 아주 작은 버튼
+  - class="btn btn-block" 화면 전체 버튼 (width:100%)
+  - disabled 속성을 적용하여 버튼 작동 불가능하게 처리
+     <button type="button" class="btn btn-default" disabled="disabled" >버튼 작동 안함 </button>
+     <input type="submit" class="btn btn-default" value="버튼 작동 안함" disabled>
+     <a href="#" class="btn btn-default" disabled="disabled" >버튼 작동 안함 </a>
+
+- 이미지 
+  (image.html)
+ 
+   -class="img-rounded"    => 둥근 테두리
+    class="img-circle"         => 원형이미지
+    class="img-thumbnail"  => 썸네일 이미지
+      <img src="rose.jpg" alt="장미" class="img-thumbnail">
+
+   -반응형 이미지(유동 사이즈)  =>  class="img-responsive"
+      <img src="puppy.jpg" alt="개양귀비" class="img-rounded img-responsive"> 
+
+- 레이아웃을 디자인하기 위한 헬퍼(helper) 클래스
+   (etc.html)  
+
+  - 닫기 버튼 
+     <button type="button" class="close" aria-hidden="true">×</button>
+
+  - 박스모델 정렬(float과 같은 처리) => class="pull-right" ,  class="pull-left"
+        <section class="box1 pull-right">
+             이 부분은 pull-right을 적용해 준 상태입니다. 따라서 오른쪽에 박스가 배치되어 있습니다. 
+        </section>
+        <section class="box1 pull-left">
+             이 부분은 pull-left을 적용해 준 상태입니다. 따라서 왼쪽에 박스가 배치되어 있습니다. 
+        </section> 
+
+  - clear:both 와 같은 처리
+    <div class="clearfix"></div>
+ 
+  - class="show" , class="hide"
+    <div class="show">여기 콘텐츠는 보입니다.</div>
+    <div class="hide">여기 콘텐츠는 숨겨집니다.</div> 
+ 
+  - class="sr-only"
+    <a class="sr-only" href="#content">이 부분은 스크린 리더에서만 읽힙니다. </a>
+
+  - 텍스트는 숨기고 배경이미지로 대체 하는 방법(ir기법)  =>  class="text-hide"
+    <style>
+       .logo { background:url(logo.jpg) no-repeat; width: 317px; height: 60px; }
+    </style>
+    <h1 class="text-hide logo">9pixelstudio</h1>
+
+  - 해상도에 따라 요소들을 감추거나 나타나게하는 클래스 선택자 => visible-xs ... , hidden-xs ...
+    
+    <div class="container">  
+      <div class="visible-xs box cl1">.visible-xs (모바일폰) 해상도가 768px이하 에서 보임  </div>
+      <div class="visible-sm box cl1">.visible-sm (태블릿) 해상도가 768px 보다 크거나 같은 경우에서 보임</div>
+      <div class="visible-md box cl1">.visible-md (데스크탑) 해상도가 992px보다 크거나 같은 경우에서 보임 </div>
+      <div class="visible-lg box cl1">.visible-lg (데스크탑) 해상도가1200px보다 크거나 같은 경우에서 보임</div>
+
+      <div class="hidden-xs box cl2">.hidden-xs (모바일폰) 해상도가 768px이하에서 감춰짐  </div>
+      <div class="hidden-sm box cl2">.hidden-sm (태블릿) 해상도가 768px 보다 크거나 같은 경우 감춰짐 </div>
+      <div class="hidden-md box cl2">.hidden-md (데스크탑) 해상도가 992px보다 크거나 같은 경우 감춰짐 </div>
+      <div class="hidden-lg box cl2">.hidden-lg (데스크탑) 해상도가1200px보다 크거나 같은 경우 감춰짐 </div> 
+    </div>   
+
+  - 프린트시 요소들을 감추거나 나타나게하는 클래스 선택자 => visible-print , hidden-print
+   
+    <div class="visible-print box cl2">프린터로 출력하면 나오지만 화면에서는 안 나옴.</div>
+    <div class="hidden-print box cl1">화면에서는 나오지만 프린터에서는 안 나옴 </div>
+
+==========================================================
+
+ <부트스트랩 기반의 컴포넌트>
+
+1. 특수문자 전용 글꼴처리 : Glyphicons   (공식사이트 http://glyphicons.com)
+    (glyphicons-sample.html)
+
+   <span class="glyphicon glyphicon-align-left"></span>
+
+   <button type="button" class="btn btn-default btn-lg">
+         <span class="glyphicon glyphicon-cog"> </span> 설정 
+   </button>
+
+   - class="btn-group" 으로 묶어 사용할 수 있다.
+    <div class="btn-group">
+          <button type="button" class="btn btn-default">
+            <span class="glyphicon glyphicon-align-left"> </span>
+          </button>
+          <button type="button" class="btn btn-default">
+            <span class="glyphicon glyphicon-align-center"> </span>
+          </button>
+          <button type="button" class="btn btn-default">
+            <span class="glyphicon glyphicon-align-right"> </span>
+          </button>
+    </div>
+
+   -폰트이기 때문에 css로 컬러를 바꿀수 있다.
+    <style>
+      .red { color: #FF0000}
+    </style>
+
+    <button type="button" class="btn btn-default red">
+         <span class="glyphicon glyphicon-thumbs-up"> </span> 좋아요 
+    </button>
+
+  - 버튼의 스타일 변경 => class="btn-warning", class="btn-danger"  ...  
+     <button type="button" class="btn btn-default btn-lg btn-warning">   
+          <span class="glyphicon glyphicon-exclamation-sign"> </span> Info 
+     </button>
+  
+
+2. 드롭다운  (dropdown.html)
+   -단독으로 사용할 수 없고, 부트스트랩에 포함된 자바스크립트와 jQuery가 같이 있어야 동작한다.
+   -ul/li로 구성된 리스트 태그에 적용한다. => <ul class="dropdown-menu">
+   -클릭 메뉴에 <a data-toggle="dropdown"> 이 있어야 작동한다. (<button>,<input type="button">도 가능)
+   -<li role="presentation" class="divider"></li>     => 상단 부분에 구분선 처리
+   -tabindex="-1" 은 서브메뉴 부분에 tab키 적용을 받지 않게 하기위해 처리, 받으려면 생략
+
+  <div class="dropdown">
+   <a data-toggle="dropdown" href="#">여기를 클릭하세요.</a>
+   <ul class="dropdown-menu" role="menu">
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">메뉴 1</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">메뉴 2</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">메뉴 3</a></li>
+    <li role="presentation" class="divider"></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">분리된 메뉴 </a></li>
+  </ul>
+ </div>
+
+  -pull-right를 이용한 우측 정렬  => class="pull-right"
+   <ul class="dropdown-menu pull-right" role="menu"> ... </ul>
+
+  -드롭다운에 별도의 헤더 추가 가능  =>  class="dropdown-header"
+   <li role="presentation" class="dropdown-header">헤더 </li>
+
+  -li 에 disabled 속성 추가로 비활성화 가능
+   <li role="presentation" class="disabled">
+
+
+3. 버튼 그룹 (buttongrp.html) => 버튼들이 가로로 배치되고 간격은 0 한 묶음이 된다.
+  -버튼들을 <div class="btn-group">로 묶는다.
+
+  <div class="btn-group">
+       <button type="button" class="btn btn-default">버튼 1 </button>
+       <button type="button" class="btn btn-default">버튼 2 </button>
+       <button type="button" class="btn btn-default">버튼 3 </button>
+       <button type="button" class="btn btn-default">버튼 4 </button>
+    </div>
+ 
+  -버튼 그룹을 툴바 형식으로 변환 (좌우배치)  => class="btn-toolbar"
+   <div class="btn-toolbar">
+      <div class="btn-group">
+         <button type="button" class="btn btn-default">버튼 1 </button>
+         <button type="button" class="btn btn-default">버튼 2 </button>
+         <button type="button" class="btn btn-default">버튼 3 </button>       
+      </div> 
+      <div class="btn-group">
+         <button type="button" class="btn btn-default">버튼 4 </button>
+         <button type="button" class="btn btn-default">버튼 5 </button>      
+      </div>
+    </div>
+   
+  -버튼 그룹을 이용해서 버튼 크기 일괄 조절 => class="btn-group btn-group-lg" , btn-group-sm, btn-group-xs
+   <div class="btn-group btn-group-lg">
+       <button type="button" class="btn btn-default">버튼 1 </button>
+       <button type="button" class="btn btn-default">버튼 2 </button>
+       <button type="button" class="btn btn-default">버튼 3 </button>
+    </div>
+
+  -중첩하기(버튼 클릭시 드롭다운)
+    -반드시 드롭다운이 적용되는 버튼에 class="dropdown-toggle"을 주어야한다.
+    -클릭 메뉴에 data-toggle="dropdown" 이 있어야 작동한다.
+
+   <div class="btn-group">
+       <button type="button" class="btn btn-default">버튼 1 </button>
+       <button type="button" class="btn btn-default">버튼 2 </button>
+        <div class="btn-group">     
+           <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle"> 클릭 <span class="caret"> </span>
+           </button>
+           <ul class="dropdown-menu">
+            <li><a tabindex="-1" href="#">메뉴 1</a></li>
+            <li><a tabindex="-1" href="#">메뉴 2</a></li>
+          </ul>
+        </div>
+    </div>  
+
+  -수직정렬 하기
+    <div class="btn-group"> => <div class="btn-group-vertical">
+
+ -양쪽 정렬 하기
+   -<a> 태그로 이루어진 버튼에 한해서만 가능
+   -<div class="btn-group  btn-group-justified">
+
+   <div class="btn-group  btn-group-justified">
+      <a href="#" class="btn btn-default">버튼 1</a>
+      <a href="#" class="btn btn-default">버튼 2</a>
+      <a href="#" class="btn btn-default">버튼 3</a>
+      <a href="#" class="btn btn-default">버튼 4</a>        
+    </div>
+
+
+4. 버튼 드롭다운  (buttondropdown.html)
+
+  -class="btn dropdown-toggle" 선택자를 btn 클래스 선택자가 적용된 부분에 같이 사용.
+   (둥근모서리 사각형이 적용되지 않음)
+
+  -<span class="caret"></span>을 넣어주면 역삼각형 영역이 만들어진다. 
+   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+     버튼1<span class="caret"></span>
+   </button>
+
+  -일반적인 버튼 드롭다운
+    <div class="btn-group">
+         <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+            버튼1   <span class="caret"></span>
+         </button>
+       <ul class="dropdown-menu" role="menu">
+        <li><a href="#">메뉴 1</a></li>
+        <li><a href="#">메뉴 2</a></li>
+        <li><a href="#">메뉴 3</a></li>
+      </ul>
+    </div> 
+ 
+  -분할된 버튼 드롭 다운
+    <div class="btn-group">
+          <button type="button" class="btn btn-default"> 버튼1 </button> 
+          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+          <span class="caret"></span>
+         </button>
+       <ul class="dropdown-menu" role="menu">
+        <li><a href="#">메뉴 1</a></li>
+        <li><a href="#">메뉴 2</a></li>
+        <li><a href="#">메뉴 3</a></li>
+      </ul>
+    </div>
+
+  -버튼 드롭 다운 크기 조절  =>  class="btn btn-lg",  class="btn btn-sm"
+    <button type="button" class="btn btn-default btn-lg"> 버튼1 </button> 
+    <button type="button" class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown">
+        <span class="caret"></span>
+    </button>
+
+  -드롭업(위로 열리는 드롭다운)  =>  <div class="btn-group dropup"> ...  </div>
+   <div class="btn-group dropup">
+         <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+             버튼1   <span class="caret"></span>
+         </button>
+       <ul class="dropdown-menu" role="menu">
+        <li><a href="#">메뉴 1</a></li>
+        <li><a href="#">메뉴 2</a></li>
+        <li><a href="#">메뉴 3</a></li>
+        <li class="divider"></li>
+        <li><a href="#">다른 메뉴 </a></li>
+      </ul>
+    </div>
+
+
+5. 입력 그룹 (inputgroup.html)
+   -<div class="input-group">
+   -<input>가 위치한 앞/뒤에 <span class="input-group-addon"></span> 을 추가하면 된다.
+
+    <div class="input-group">
+        <span class="input-group-addon"> <span class="glyphicon glyphicon-user"> </span> </span>
+        <input type="text" class="form-control" placeholder="아이디">
+    </div>
+    <div class="input-group">
+        <input type="text" class="form-control">
+        <span class="input-group-addon">  Cm  </span>
+    </div> 
+ 
+  -입력 그룹 크기조절 => class="input-group input-group-lg" , class="input-group input-group-sm"
+    <div class="input-group input-group-lg">...</div>
+
+  -입력 그룹 체크 박스 또는 라디오 버튼 추가
+    <span class="input-group-addon">  <input type="checkbox"> </span>
+    <span class="input-group-addon">  <input type="radio"> </span>
+ 
+  -입력 그룹 버튼 애드온 추가 =>  class="input-group-btn"
+    <span class="input-group-btn"> <button class="btn btn-default" type="button">Go!</button> </span>
+
+  -입력 그룹 버튼 드롭다운 또는 드롭업 추가
+    -드롭다운
+      <div class="input-group">
+         <div class="input-group-btn"> 
+             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> 버튼1  <span class="caret"></span>
+         </button>
+           <ul class="dropdown-menu" role="menu">
+            <li><a href="#">메뉴 1</a></li>
+            <li><a href="#">메뉴 2</a></li>
+            <li><a href="#">메뉴 3</a></li>
+            <li class="divider"></li>
+            <li><a href="#">다른 메뉴 </a></li>
+          </ul>
+         </div>        
+        <input type="text" class="form-control">
+    </div>
+
+   -드롬업  => class="input-group-btn dropup"
+     <div class="input-group">
+        <span class="input-group-addon"> <span class="glyphicon glyphicon-user"> </span> </span>            
+        <input type="text" class="form-control">
+          <div class="input-group-btn dropup"> 
+             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> 버튼1  <span class="caret"></span>
+         </button>
+           <ul class="dropdown-menu" role="menu">
+            <li><a href="#">메뉴 1</a></li>
+            <li><a href="#">메뉴 2</a></li>
+            <li><a href="#">메뉴 3</a></li>
+            <li class="divider"></li>
+            <li><a href="#">다른 메뉴 </a></li>
+          </ul>
+         </div>         
+    </div>
+
+
+6. 네비게이션 (navigation.html)
+   -class="nav" 클래스 선택자를 사용한다.
+
+   -탭형 네비게이션  => class="nav nav-tabs"   <li class="active"> =>메뉴 활성화
+     <ul class="nav nav-tabs">
+         <li><a href="#">메뉴1</a></li>
+         <li class="active"><a href="#">메뉴2</a></li>
+         <li><a href="#">메뉴3</a></li>
+         <li><a href="#">메뉴4</a></li>
+     </ul>
+
+   -알약형 네비게이션   => class="nav nav-pills"
+     <ul class="nav nav-pills">
+         <li class="active"><a href="#">메뉴1</a></li>
+         <li><a href="#">메뉴2</a></li>
+         <li><a href="#">메뉴3</a></li>
+         <li><a href="#">메뉴4</a></li>
+     </ul>
+
+   -알약형 네비게이션은 수직으로 정렬 가능(탭형은 불가) => class="nav nav-pills nav-stacked" 추가
+     <ul class="nav nav-pills nav-stacked">
+         <li class="active"><a href="#">메뉴1</a></li>
+         <li><a href="#">메뉴2</a></li>
+         <li><a href="#">메뉴3</a></li>
+         <li><a href="#">메뉴4</a></li>
+     </ul>
+    
+  -네비게이션 양쪽 정렬
+     <ul class="nav nav-tabs nav-justified">   => 탭형
+     <ul class="nav nav-pills nav-justified">   => 알약형
+
+  -class="disabled"을 이용한 링크 비활성화
+    <li class="disabled"><a href="#">메뉴3</a></li>
+
+  -탭형 네비게이션 드롭다운
+    <ul class="nav nav-tabs">
+         <li class="active"><a href="#">메뉴1</a></li>
+         <li><a href="#">메뉴2</a></li>
+         <li><a href="#">메뉴3</a></li>
+         <li class="dropdown">
+               <a data-toggle="dropdown" href="#">여기 클릭 <span class="caret"></span></a>
+               <ul class="dropdown-menu" role="menu">
+                <li><a role="menuitem" href="#">메뉴 1</a></li>
+                <li><a role="menuitem" href="#">메뉴 2</a></li>
+                <li><a role="menuitem" href="#">메뉴 3</a></li>
+                <li class="divider"></li>
+                <li><a role="menuitem" href="#">분리된 메뉴 </a></li>
+              </ul>
+         </li>
+     </ul>
+
+ -알약형 형 네비게이션 드롭다운
+   <ul class="nav nav-pills">
+         <li  class="active"><a href="#">메뉴1</a></li>
+         <li><a href="#">메뉴2</a></li>
+         <li><a href="#">메뉴3</a></li>
+         <li class="dropdown">
+               <a data-toggle="dropdown" href="#">여기 클릭 <span class="caret"></span></a>
+               <ul class="dropdown-menu" role="menu">
+                <li><a role="menuitem" href="#">메뉴 1</a></li>
+                <li><a role="menuitem" href="#">메뉴 2</a></li>
+                <li><a role="menuitem" href="#">메뉴 3</a></li>
+                <li class="divider"></li>
+                <li><a role="menuitem" href="#">분리된 메뉴 </a></li>
+              </ul>
+         </li>
+     </ul>
+
+
+7. 네비게이션 바(반응형 네비)  
+   -html5의 <nav>요소를 사용한다.
+   -<nav class="navbar navbar-default">를 적용한다.
+   -<div class="navbar-header"></div>  => 주로 사이트의 로고/모바일에서 변하지 않는 영역
+   -<div class="collapse navbar-collapse navbar-ex1-collapse"></div> 
+         => 모바일에서는 센드위치메뉴로 바뀌면서 서브를 열리는 형태로 처리한다  
+   
+   -기본 구조
+   <nav class="navbar navbar-default" role="navigation">
+       <div class="navbar-header">
+         .....  
+      </div>
+     <div class="collapse navbar-collapse navbar-ex1-collapse">
+         .....
+     </div>
+  </nav>   
+  
+  -<div class="navbar-header">영역의 소스
+   <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">로고 </a>
+   </div>
+
+   -<div class="collapse navbar-collapse navbar-ex1-collapse"> 영역의 소스
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">메뉴1 </a></li>
+          <li><a href="#">메뉴2</a></li>
+          <li><a href="#">메뉴3</a></li>
+        </ul>
+    </div>
+  
+   -메뉴 위치를 오른쪽으로 이동하려면=>   class="navbar-right"를 추가한다.
+     (navbar-right.html)
+     <div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
+  
+   -드롭다운을 적용한 네비게이션 바 (navbar-dropdown.html)
+     <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">메뉴 1 <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">서브메뉴 1</a></li>
+              <li><a href="#">서브메뉴 2</a></li>
+              <li><a href="#">서브메뉴 3</a></li>
+            </ul>
+          </li>
+       </ul>
+     </div>
+    
+   -네비게이션 바를 오른쪽 정렬(드롭다운메뉴도 오른쪽 정렬)
+     -<ul class="nav navbar-nav navbar-right">
+     -<ul class="dropdown-menu dropdown-menu-left">  
+          => dropdown-menu-left, dropdown-menu-right
+
+    <div class="collapse navbar-collapse  navbar-ex1-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="#">메뉴1 </a></li>
+          <li><a href="#">메뉴2</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">드롭다운 <b class="caret"></b></a>
+            <ul class="dropdown-menu dropdown-menu-left">
+              <li><a href="#">서브메뉴 1</a></li>
+              <li><a href="#">서브메뉴 2</a></li>
+              <li><a href="#">서브메뉴 3</a></li>
+            </ul>
+          </li> 
+        </ul>
+   </div>
+
+
+
+
+
+
