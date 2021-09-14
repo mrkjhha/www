@@ -69,6 +69,7 @@
 		function reset_form()
 		{
 			document.find_pw_form.id.value = "";
+			document.find_pw_form.name.value = "";
 			document.find_pw_form.mail.value = "";
 			document.find_pw_form.id.focus();
 
@@ -127,11 +128,11 @@
 				</div>
 				<div class="find_pw_btn_wrap">
 					<div id="find_pw_button" class="find_pw">
-						<a href="#" onclick="submit()">PW찾기</a>
+						<button onclick="submit()">PW찾기</button>
 					<!-- <button type="submit">로그인</button> -->
 					</div>
 					<div id="find_cancel_button" class="find_pw">
-						<a href="#" onclick="reset_form()">취소하기</a>
+						<button type="button" onclick="reset_form()">취소하기</button>
 					</div>
 				</div>
 				<!-- end of form_login -->

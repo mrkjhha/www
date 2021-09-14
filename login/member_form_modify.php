@@ -226,8 +226,8 @@
                     </tr>
                     <tr>
                         <td colspan="2">
-                            <a href="#" onclick="check_input()">수정완료</a>&nbsp;&nbsp;
-                            <a href="#" onclick="reset_form()">취소하기</a>
+                            <button onclick="check_input()">수정완료</button>&nbsp;&nbsp;
+                            <button type="button" onclick="reset_form()">취소하기</button>
                         </td>
                     </tr>
                 </table>

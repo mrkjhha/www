@@ -124,11 +124,11 @@
 				</div>
 				<div class="login_btn_wrap">
 					<div id="login_button" class="login_cancel">
-						<a href="#" onclick="submit()">로그인</a>
+						<button class="loginBtn" onclick="submit()">로그인</button>
 					<!-- <button type="submit">로그인</button> -->
 					</div>
 					<div id="cancel_button" class="login_cancel">
-						<a href="#" onclick="reset_form()">취소하기</a>
+						<button class="loginBtn" type="button" onclick="reset_form()">취소하기</button>
 					</div>
 				</div>
 				<div class="find_id_pw_wrap">

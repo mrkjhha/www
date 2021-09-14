@@ -124,11 +124,11 @@
 				</div>
 				<div class="find_id_btn_wrap">
 					<div id="find_id_button" class="find_id">
-						<a href="#" onclick="submit()">ID찾기</a>
+						<button onclick="submit()">ID찾기</button>
 					<!-- <button type="submit">로그인</button> -->
 					</div>
 					<div id="find_cancel_button" class="find_id">
-						<a href="#" onclick="reset_form()">취소하기</a>
+						<button type="button" onclick="reset_form()">취소하기</button>
 					</div>
 				</div>
 				<!-- end of form_login -->

@@ -65,7 +65,8 @@ img{border: 0; vertical-align: top}
 input, select{display:block; width:92%; border-radius:10px; margin:0 auto 20px; padding:15px 20px; font-size:1em; border:0; background:#eee; outline:0;}
 .find_id_btn_wrap {width:500px; margin:40px auto 0; overflow:hidden;}
 .find_id_btn_wrap .find_id {background:#eee; border-radius:50px; overflow:hidden;}
-.find_id_btn_wrap .find_id a {display:block; font-family:'Nanum Gothic', sans-serif; color:#fff; letter-spacing:2px; padding:15px 30px; border-radius:20px; text-align:center;}
+.find_id_btn_wrap .find_id button {display:block; width:100%; font-family:'Nanum Gothic', sans-serif; color:#fff; letter-spacing:2px; padding:15px 0; border:0; background:none; 
+  font-size:18px; border-radius:20px; text-align:center;}
 .find_id_btn_wrap #find_id_button {width:220px; background:rgba(218,41,28,.8); float:left;}
 .find_id_btn_wrap #find_cancel_button {width:220px; background:rgb(101,100,96); float:right;}
 

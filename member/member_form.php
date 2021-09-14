@@ -263,8 +263,8 @@
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <a href="#" onclick="check_input()">가입하기</a>
-                        <a href="#" onclick="reset_form()">취소하기</a>
+                        <button onclick="check_input()">가입하기</button>
+                        <button type="button" onclick="reset_form()">취소하기</button>
                     </td>
                 </tr>
             </table>
